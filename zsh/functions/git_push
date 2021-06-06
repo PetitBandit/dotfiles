@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+if [ "$__GIT_REMOTE_STATUS" = "local" ]
+then
+    # The branch doesn't have a remote set. List the configured remotes on
+    # the repository.
+    REMOTES=( $(git remote) )
+    if [ ${#REMOTES[@]} -eq 1 ]
+    then
+        # Consider the user wants to put on the only remote available
+        echo "Automatically setting upstream"
+        git push --set-upstream ${REMOTES[1]} $__GIT_BRANCH_NAME $@
+    fi
+else
+    # Just do git push
+    git push $@
+fi

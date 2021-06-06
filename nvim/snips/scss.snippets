@@ -1,0 +1,209 @@
+
+
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansio.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+extends css 
+
+snippet sel "add selector" 
+
+$1 {
+	$2
+}
+
+endsnippet
+
+snippet Tag "Description" b
+<$1 ${2:class='$3'}>
+
+</$1>
+endsnippet
+
+snippet box "width & height"
+
+--size: $1;
+height: var(--size);
+width: var(--size);
+
+endsnippet
+
+
+snippet selho "selector hover"
+
+&:hover {
+	$1
+}
+
+endsnippet
+
+
+# Grid
+
+snippet gta "grid template area"
+grid-template-areas: '$1';
+endsnippet
+
+snippet gtc "grid template column"
+grid-template-columns: $1;
+endsnippet
+
+snippet ga "grid area"
+grid-area: '$1',
+endsnippet
+
+snippet gridselector "gridselection"
+& > [gridkey=$1] { grid-area: $1 };
+endsnippet
+
+snippet gridcenter "dg & place items center"
+display: grid;
+place-items: center;
+endsnippet
+
+
+#end GRID
+
+#position start 
+snippet pos "position"
+position: ${1|absolute,relative,sticky|};
+endsnippet
+
+#position end
+
+#display start
+snippet displ "Description" b
+display: ${1|flex,grid,none,block|};
+endsnippet
+
+snippet dg "display grid"
+display: grid;
+endsnippet
+
+snippet df "display flex"
+display: flex;
+endsnippet
+
+snippet dn "display none"
+display: none;
+endsnippet
+
+#display end 
+
+snippet ov: "overflow"
+overflow: ${1|hidden, auto|};
+endsnippet
+
+
+
+snippet fxd "flex direction"
+flex-direction: ${1|column,row|};
+endsnippet
+
+snippet flexcenter "flexcenter"
+display: flex;
+justify-content: center;
+align-items: center;
+endsnippet
+
+snippet ai: "alignItems"
+align-items: ${1:center};
+endsnippet
+
+#flexbox end 
+
+snippet curp "cursor pointer"
+cursor: pointer;
+endsnippet
+
+#margin padding start
+
+snippet marg "Description" b
+margin${1|:,-top:,-bottom:,-left:,-right:|} ${2:px};
+endsnippet
+
+snippet padd "Description" b
+padding${1|:,-top:,-bottom:,-left:,-right:|} $2;
+endsnippet
+
+snippet mT "Description" b
+margin-top: $1;
+endsnippet
+
+snippet mB "Description" b
+margin-bottom: $1;
+endsnippet
+
+
+snippet mL "Description" b
+margin-left: $1;
+endsnippet
+
+snippet mR "Description" b
+margin-right: $1;
+endsnippet
+
+#margin padding end
+
+snippet bgct "tomato for the win"
+background-color: tomato; //TODO: petit bandit <-- remove this
+endsnippet
+
+
+snippet bgcl "lavender for the win"
+background-color: lavender; //TODO: petit bandit <-- remove this
+endsnippet
+
+snippet bgc "background color"
+background-color: $1;
+endsnippet
+
+snippet bgi "backgroundImg"
+background: url(/static/images/$1);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+endsnippet
+
+snippet bd "border"
+border: $1px solid $2;
+endsnippet
+
+snippet bd50 "50%"
+border-radius: 50%;
+endsnippet
+
+snippet childrendot "childrendot"
+& > * {border: 1px dotted blue;}
+endsnippet
+
+snippet borderdot "borderdot"
+border: 1px dotted blue;
+endsnippet
+
+
+
+
+
+

@@ -1,0 +1,301 @@
+#!/bin/zsh
+# Works with git 2.12.1
+
+# Configuration
+local SHA1_SIZE=8
+
+# Exported variables
+unset __GIT_TOP_LEVEL
+unset __GIT_NAME
+unset __GIT_IS_SUBMODULE
+
+unset __GIT_BRANCH_NAME
+unset __GIT_COMMIT_SHA
+unset __GIT_REMOTE_STATUS
+unset __GIT_IS_DIRTY
+unset __GIT_HAS_DELETED_FILE
+unset __GIT_HAS_MODIF_ADDED
+unset __GIT_HAS_UNMERGED_FILES
+unset __GIT_HAS_UNTRACKED_FILES
+unset __GIT_HAS_SUBMODULE_DELETED
+
+unset __SUBMODULE_ADDED
+unset __SUBMODULE_DIVERGED
+unset __SUBMODULE_IS_DIRTY
+unset __SUBMODULE_HAS_UNTRACKED_FILES
+unset __SUBMODULE_IS_UNMERGED
+
+unset __GIT_OPERATION
+unset __GIT_NUM_STASHED
+unset __GIT_TAG
+
+
+
+# Determinate the git directory
+local git_dir="$(git rev-parse --absolute-git-dir 2> /dev/null)"
+
+# If the command failed, then we're not in a git repository
+if [ -n "$git_dir" ]
+then
+    # Write some info to terminal title. To indicate git prompt is working
+    if [ -n "$SSH_CLIENT" ]
+    then
+        print -Pn "\e]0;zsh %n@%m: %d%(1j,; %j job%(2j|s|),) \a"
+    else
+        print -Pn "\e]0;zsh: %d%(1j,; %j job%(2j|s|); ,) \a"
+    fi
+
+    if [ $(git rev-parse --is-inside-git-dir) = "true" ]
+    then
+        export __GIT_TOP_LEVEL="$(dirname "${git_dir}")"
+    else
+        # Get repository name (top folder name containing the repo)
+        # We'll need the path to the top level directory of the repository anyway
+        # so get the information now.
+        export __GIT_TOP_LEVEL="$(git rev-parse --show-toplevel)"
+        export CI_PROJECT_DIR=$__GIT_TOP_LEVEL
+    fi
+
+    if [ "$PREVIOUS_TOP_LEVEL" != "$__GIT_TOP_LEVEL" ]
+    then
+        unset PREVIOUS_BRANCH_NAME
+    fi
+
+    GIT_URL=$(git -C $__GIT_TOP_LEVEL config --get remote.origin.url)
+
+    # ___GIT_NAME="$(basename ${__GIT_TOP_LEVEL})"
+    __GIT_NAME="$(basename $(dirname ${git_dir}))"
+
+    # if [ -n "${GIT_URL}" ]
+    # then
+    #     export __GIT_NAME="$(git-url-parser "${GIT_URL}")"
+    # else
+    #     export __GIT_NAME="$(basename ${git_dir})"
+    # fi
+
+    export CI_PROJECT_PATH=$__GIT_NAME
+    export CI_PROJECT_NAME=${__GIT_NAME##*/}
+
+    # If the .git present at the git top level is a file then we're in a
+    # submodule inside a repository. This is for this reason we need to get the
+    # path to the git directory and the path to the top level. The git directory
+    # might not be simply $__GIT_TOP_LEVEL/.git
+    if [ ! -d $__GIT_TOP_LEVEL/.git ]
+    then
+        __GIT_IS_SUBMODULE=yes
+    fi
+
+    # Determinate entries and branch status.
+    local git_status
+    git_status=$(git -C $__GIT_TOP_LEVEL status --porcelain=v2 --branch 2> /dev/null)
+
+    # Output is formatted as:
+    # # branch.oid <current commit>
+    # # branch.head <HEAD REFERENCE>
+    # # branch.upstream <UPSTREAM REFERENCE>
+    # # branch.ab +<commits ahead> -<commits behind>
+    # <MODIFICATION LIST>
+    #
+    # The <HEAD REFERENCE> has for value '(detached)' if you're detached from
+    # any reference.
+    #
+    # Modification list as followed:
+    # For ordinary changed entries:
+    #   1 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <path>
+    #
+    # For renamed or copied entries
+    #   2 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <X><score> <path><sep><origPath>
+    #
+    # For unmerged entries
+    #   u <xy> <sub> <m1> <m2> <m3> <mW> <h1> <h2> <h3> <path>
+    #
+    # Untracked items have the following format:
+    #   ? <path>
+    local -a lines
+
+    lines=(${(f)git_status})
+
+    has_upstream="n"
+
+    for line in $lines
+    do
+        local -a words
+        words=(${=line})
+
+        case "$words[1]" in
+            \#) # Branch information start with this word.
+                case "$words[2]" in
+                    branch.head) # Get branch head reference name
+                        export __GIT_BRANCH_NAME=$words[3]
+                        export CI_COMMIT_REF_NAME=$__GIT_BRANCH_NAME
+                        ;;
+
+                    branch.oid) # Get SHA of the HEAD
+                        __GIT_COMMIT_SHA=$words[3]
+                        export CI_COMMIT_SHA=$__GIT_COMMIT_SHA
+                        __GIT_COMMIT_SHA_SHORT=${SHA:0:$SHA_SIZE}
+                        ;;
+
+                    branch.upstream)
+                        __GIT_REMOTE_REF=$words[3]
+                        export __GIT_REMOTE_COMMIT_SHA=$(git rev-parse $__GIT_REMOTE_REF 2> /dev/null)
+                        has_upstream="y"
+                        ;;
+
+                    branch.ab) # Determinate status to remote.
+                        if [ $words[3] = "+0" ]
+                        then
+                            if [ $words[4] = "-0" ]
+                            then
+                                export __GIT_REMOTE_STATUS='up-to-date'
+                            else
+                                export __GIT_REMOTE_STATUS='behind'
+                            fi
+                        else
+                            if [ $words[4] = "-0" ]
+                            then
+                                export __GIT_REMOTE_STATUS='ahead'
+                            else
+                                export __GIT_REMOTE_STATUS='diverged'
+                            fi
+                        fi
+                        ;;
+                esac
+                ;;
+
+            1|2)
+                local XY=$words[2]
+                local sub=$words[3]
+
+                if [ $sub = "N..." ]
+                then
+                    # Entry isn't a submodule.
+                    if [ ${XY:0:1} != "." ]
+                    then
+                        __GIT_HAS_MODIF_ADDED='1'
+                    fi
+
+                    case ${XY:1:1} in
+                        M)
+                            __GIT_IS_DIRTY='1'
+                            ;;
+                        D)
+                            __GIT_HAS_DELETED_FILE='1'
+                            ;;
+                    esac
+
+                else
+                    # Entry is a submodule.
+                    if [ ${XY:0:1} != "." ]
+                    then
+                        __SUBMODULE_ADDED='1'
+                    fi
+
+                    if [ ${XY:1:1} = "D" ]
+                    then
+                        __GIT_HAS_SUBMODULE_DELETED='1'
+                    fi
+
+                    if [ ${sub:1:1} = "C" ]
+                    then
+                        __SUBMODULE_DIVERGED='1'
+                    fi
+
+                    if [ ${sub:2:1} = "M" ]
+                    then
+                        __SUBMODULE_IS_DIRTY='1'
+                    fi
+
+                    if [ ${sub:3:1} = "U" ]
+                    then
+                        __SUBMODULE_HAS_UNTRACKED_FILES='1'
+                    fi
+                fi
+                ;;
+
+            u)
+                local sub=$words[3]
+
+                if [ $sub = "N..." ]
+                then
+                    # Entry isn't a submodule.
+                    __GIT_HAS_UNMERGED_FILES='1'
+                else
+                    # Entry is a submodule.
+                    __SUBMODULE_IS_UNMERGED='1'
+                fi
+                ;;
+
+            \?)
+                __GIT_HAS_UNTRACKED_FILES='1'
+                ;;
+        esac
+    done
+
+    # Set __GIT_REMOTE_STATUS to a value if it hasn't been set.
+    # If has_upstream is "y" then it means the remote is gone.
+    if [ -z $__GIT_REMOTE_STATUS ]
+    then
+        if [[ $has_upstream == "y" ]]
+        then
+            export __GIT_REMOTE_STATUS='gone'
+        else
+            export __GIT_REMOTE_STATUS='local'
+        fi
+    fi
+
+    # Find out the number of stashed list
+    __GIT_NUM_STASHED=0
+
+    stash_file="$git_dir/logs/refs/stash"
+
+    if [[ -e "${stash_file}" ]]
+    then
+        while IFS='' read -r wcline || [[ -n "$wcline" ]]
+        do
+            __GIT_NUM_STASHED=$((__GIT_NUM_STASHED+1))
+        done < ${stash_file}
+    fi
+
+    # Find out if an operation among 'rebase', 'merge', 'cherry-pick',
+    # 'bisect', 'am', 'revert" is currently in progress.
+    if [ -d $git_dir/rebase-apply ]
+    then
+        if [ -f $git_dir/rebase-apply/rebasing ]
+        then
+            __GIT_OPERATION+=" rebase"
+        else
+            __GIT_OPERATION+=" am"
+        fi
+
+    elif [ -d $git_dir/rebase-merge ]
+    then
+        __GIT_OPERATION+=" rebase"
+    fi
+
+    if [ -f $git_dir/BISECT_START ]
+    then
+        __GIT_OPERATION+=" bisect"
+    fi
+
+    if [ -f $git_dir/MERGE_HEAD ]
+    then
+        __GIT_OPERATION+=" merge"
+    fi
+
+    if [ -f $git_dir/REVERT_HEAD ]
+    then
+        __GIT_OPERATION+=" revert"
+    fi
+
+    if [ -f $git_dir/CHERRY_PICK_HEAD ]
+    then
+        __GIT_OPERATION+=" cherry-pick"
+    fi
+
+    # Get the current tag we're on if there is one associated with the commit.
+    __GIT_TAG=$(git -C $__GIT_TOP_LEVEL describe --tags --exact-match 2>& /dev/null)
+    # export CI_COMMIT_REF_NAME=$__GIT_TAG
+else
+    unset __GIT_GITLAB
+fi

@@ -1,0 +1,183 @@
+#!/bin/zsh
+if [ -n "$__GIT_NAME" ]
+then
+    local s
+
+    s+="%{${fg[cyan]}%}"
+    s+="┣━┫"
+
+    # Git name print
+    if [ -n "$__GIT_IS_SUBMODULE" ]
+    then
+        s+="%{${fg[red]}%}"
+    else
+        s+=%{${fg[green]}%}
+    fi
+
+    s+="$__GIT_NAME"
+    s+="%{${fg[cyan]}%}"
+    s+="|"
+
+    # Operation status print
+    if [ -n "$__GIT_OPERATION" ]
+    then
+        for op in $__GIT_OPERATION
+        do
+            s+="%{${fg[red]}%}"
+            s+=${op:1}
+            s+="%{${fg[cyan]}%}"
+            s+="|"
+        done
+    fi
+
+    # Print tag which we're on, if one.
+    if [ -n "$__GIT_TAG" ]
+    then
+        s+="%{${fg[yellow]}%}"
+        s+="$__GIT_TAG"
+        s+="%{${fg[cyan]}%}"
+        s+="|"
+    fi
+
+    # Current branch name print
+    s+="%{${fg[blue]}%}"
+    if [ "$__GIT_BRANCH_NAME" = "(detached)" ]
+    then
+        s+="$__GIT_COMMIT_SHA_SHORT"
+    else
+        s+="$__GIT_BRANCH_NAME"
+    fi
+
+    # Print branch remote status. We always print it.
+    s+="%{${fg[cyan]}%}"
+    s+="|"
+    s+="%{${fg_orange}%}"
+    if [ "$__GIT_BRANCH_NAME" = "(detached)" ]
+    then
+        s+=""
+    else
+        case "$__GIT_REMOTE_STATUS" in
+            ahead)
+                s+=""
+                ;;
+
+            diverged)
+                s+=""
+                ;;
+
+            behind)
+                s+=""
+                ;;
+
+            up-to-date)
+                s+=""
+                ;;
+
+            gone)
+                s+=""
+                ;;
+
+            local)
+                s+=""
+                ;;
+        esac
+    fi
+
+    # Print local repository status if there is changes.
+    # Print it in the same case as remote status. So no separator here
+    local loc
+    if [ -n "$__GIT_HAS_MODIF_ADDED" ]
+    then
+        loc+="◀"
+    fi
+
+    if [ -n "$__GIT_IS_DIRTY" ]
+    then
+        loc+="🦠"
+    fi
+
+    if [ -n "$__GIT_HAS_DELETED_FILE" ]
+    then
+        loc+="♻️"
+    fi
+
+    if [ -n "$__GIT_HAS_UNMERGED_FILES" ];
+    then
+        loc+=""
+    fi
+
+    if [ -n "$__GIT_HAS_UNTRACKED_FILES" ];
+    then
+        loc+="?"
+    fi
+
+    if [ -n "$loc" ]
+    then
+        s+="%{${fg[cyan]}%}"
+        s+="|"
+        s+="%{${fg[yellow]}%}"
+        s+=$loc
+    fi
+
+    # Print local submodules status if there is changes.
+    # Print it in the same case as remote status and local status. Same thing,
+    # no separator here.
+    local sub
+
+    if [ -n "$__SUBMODULE_ADDED" ]
+    then
+        sub+="◀"
+    fi
+
+    if [ -n "$__SUBMODULE_DIVERGED" ]
+    then
+        sub+=""
+    fi
+
+    if [ -n "$__GIT_HAS_SUBMODULE_DELETED" ]
+    then
+        sub+=""
+    fi
+
+    if [ -n "$__SUBMODULE_IS_DIRTY" ]
+    then
+        sub+=""
+    fi
+
+    if [ -n "$__SUBMODULE_IS_UNMERGED" ];
+    then
+        sub+=""
+    fi
+
+    if [ -n "$__SUBMODULE_HAS_UNTRACKED_FILES" ]
+    then
+        sub+="?"
+    fi
+
+    if [ -n "$sub" ]
+    then
+        s+="%{${fg[cyan]}%}"
+        s+="|"
+        s+="%{${fg[red]}%}"
+        s+=$sub
+    fi
+
+    # If we have stashes pending, show it.
+    if [ ! $__GIT_NUM_STASHED -eq 0 ]
+    then
+        s+="%{${fg[cyan]}%}"
+        s+="|"
+        s+="%{${fg[white]}%}"
+        s+=""
+    fi
+
+    if [ -n "$__GIT_GITLAB" ]
+    then
+        s+="%{${fg[cyan]}%}"
+        s+="|"
+        s+="$__GIT_GITLAB"
+    fi
+
+    # Print git prompt
+    printf "%s" $s
+fi
