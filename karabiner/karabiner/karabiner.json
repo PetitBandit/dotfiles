@@ -14,7 +14,51 @@
                     "basic.to_if_held_down_threshold_milliseconds": 500,
                     "mouse_motion_to_scroll.speed": 100
                 },
-                "rules": []
+                "rules": [
+                    {
+                        "description": "Shifts Move Forward and Backward by 1 word",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_shift"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "left_shift"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
             },
             "devices": [],
             "fn_function_keys": [
@@ -39,7 +83,7 @@
                         "key_code": "f3"
                     },
                     "to": {
-                        "key_code": "mission_control"
+                        "key_code": "f3"
                     }
                 },
                 {
@@ -47,7 +91,7 @@
                         "key_code": "f4"
                     },
                     "to": {
-                        "key_code": "launchpad"
+                        "key_code": "f4"
                     }
                 },
                 {
@@ -55,7 +99,7 @@
                         "key_code": "f5"
                     },
                     "to": {
-                        "key_code": "illumination_decrement"
+                        "key_code": "f5"
                     }
                 },
                 {
@@ -63,7 +107,7 @@
                         "key_code": "f6"
                     },
                     "to": {
-                        "key_code": "illumination_increment"
+                        "key_code": "f6"
                     }
                 },
                 {
@@ -123,10 +167,10 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "left_control"
+                        "key_code": "caps_lock"
                     },
                     "to": {
-                        "key_code": "left_command"
+                        "key_code": "right_command"
                     }
                 }
             ],
