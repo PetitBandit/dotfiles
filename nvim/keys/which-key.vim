@@ -47,6 +47,7 @@ let g:which_key_map["9"] = [ '`m'                                               
 let g:which_key_map["0"] = [ ':bprevious'                                          , 'last tab']
 let g:which_key_map["-"] = [ '<Plug>AirlineSelectPrevTab'                      , 'previous tab']
 let g:which_key_map["="] = [ '<Plug>AirlineSelectNextTab'                      , 'next tab']
+let g:which_key_map["p"] = [ ':PrettierAsync'                      , 'next tab']
 " }}}
 
 "-------------------------------- Group mappings -------------

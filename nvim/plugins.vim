@@ -8,7 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
     
-    Plug 'prettier/vim-prettier'
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'mhartington/oceanic-next'
     Plug 'junegunn/limelight.vim'
     Plug 'sheerun/vim-polyglot'                             " Better Syntax Support

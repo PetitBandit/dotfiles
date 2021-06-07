@@ -100,4 +100,4 @@ nmap <leader>G :Rg const <C-r><C-w><CR>
 nmap <leader>z z=1<cr>
 nnoremap <leader>8 *
 nnoremap <leader><leader> :Limelight!!<CR>
-nnoremap <leader>p mjgg=G:%s/\(\n\n\)\n\+/\1/<cr>'j
+" nnoremap <leader>p mjgg=G:%s/\(\n\n\)\n\+/\1/<cr>'j
