@@ -93,6 +93,7 @@ let g:which_key_map.l = {
       \ 'name' : '+lang' ,
       \ 'e' : [':setlocal spell spelllang=en_us'                , 'english'],
       \ 'f' : [':setlocal spell spelllang=fr'                , 'french'],
+      \ 'l' : [':set relativenumber!'                , 'relativenumber'],
       \ }
 " }}}
 " m is for marks {{{
