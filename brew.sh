@@ -78,4 +78,3 @@ git clone https://github.com/PetitBandit/dotfiles.git $HOME/dotfiles
 ##zsh
 echo "source  $HOME/.config/zsh/zshrc"> $HOME/.zshrc
 
-ssh-keygen

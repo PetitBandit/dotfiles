@@ -23,9 +23,11 @@ stow -vt ~/.config karabiner
 
 #     launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server
 
+chmod +x ~/dotfiles/yabai/yabairc
 
 
 
 
 
 
+ssh-keygen
