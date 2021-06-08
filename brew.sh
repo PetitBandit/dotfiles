@@ -30,6 +30,7 @@ python3 -m pip install --user --upgrade pynvim
 yarn global add neovim
 
 # regular utilities
+
 brew install --cask 1password
 brew install --cask alfred
 brew install --cask appcleaner
@@ -50,6 +51,8 @@ brew install --cask zoom
 brew install --cask pixelsnap
 brew install --cask cleanshot
 brew install --cask vscodium
+brew tap homebrew/cask-versions
+brew install --cask firefox-developer-edition
 
 #--------------------------------------
 # https://github.com/koekeishiya/yabai
