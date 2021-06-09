@@ -31,3 +31,5 @@ chmod +x ~/dotfiles/yabai/yabairc
 
 
 ssh-keygen
+ssh-add
+
