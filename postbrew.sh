@@ -26,7 +26,8 @@ stow -vt ~/.config karabiner
 chmod +x ~/dotfiles/yabai/yabairc
 
 
-
+git config --global user.email "raph.heb@gmail.com"
+git config --global user.name "Raphael HEBERT"
 
 
 
