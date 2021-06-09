@@ -300,14 +300,15 @@ source /$HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # requires bat to work
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" 
 
-#Autojump
+#Autojump {{{
 if [[ "$(uname -s)" == "Darwin" ]]
 then
     [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 else 
-    print 'to set up !'
+    source "/home/cid/.config/autojump/bin/autojump.sh"
 fi 
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
+#}}}
 
 #FZF ** autocomplete
 if command -v fzf &>/dev/null; then
@@ -316,7 +317,12 @@ if command -v fzf &>/dev/null; then
     source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
   # Key bindings
-  source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+    if [[ "$(uname -s)" == "Darwin" ]]
+    then
+        source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+    else #Linux
+        source "/usr/share/fzf/key-bindings.zsh" 
+    fi
 fi
 
 export NVM_DIR="$HOME/.nvm"
