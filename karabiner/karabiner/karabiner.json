@@ -59,7 +59,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + i/j/k/l == vim directional Keys",
+                        "description": "cmd + HJKL == > cmd + ctrl + HJKL",
                         "manipulators": [
                             {
                                 "from": {
