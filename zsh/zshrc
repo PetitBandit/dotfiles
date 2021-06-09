@@ -301,7 +301,12 @@ source /$HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" 
 
 #Autojump
-[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
+if [[ "$(uname -s)" == "Darwin" ]]
+then
+    [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
+else 
+    print 'to set up !'
+fi 
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
 
 #FZF ** autocomplete
@@ -313,7 +318,18 @@ if command -v fzf &>/dev/null; then
   # Key bindings
   source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 fi
+
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # }}}
+
+# unameOut="$(uname -s)"
+# case "${unameOut}" in
+#     Linux*)     machine=Linux;;
+#     Darwin*)    machine=Mac;;
+#     CYGWIN*)    machine=Cygwin;;
+#     MINGW*)     machine=MinGw;;
+#     *)          machine="UNKNOWN:${unameOut}"
+# esac
+# echo ${machine}
