@@ -82,10 +82,10 @@ ctrl + cmd - k : yabai -m window --focus north
 ctrl + cmd - l : yabai -m window --focus east 
 
 ## swap window
-ctrl + cmd + shift - h : yabai -m window --swap west
-ctrl + cmd + shift - j : yabai -m window --swap south
-ctrl + cmd + shift - k : yabai -m window --swap north
-ctrl + cmd + shift - l : yabai -m window --swap east 
+cmd + shift - h : yabai -m window --swap west
+cmd + shift - j : yabai -m window --swap south
+cmd + shift - k : yabai -m window --swap north
+cmd + shift - l : yabai -m window --swap east 
 
 
 ## focus display
