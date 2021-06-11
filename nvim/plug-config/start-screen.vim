@@ -15,6 +15,7 @@ let g:startify_lists = [
 
 let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'I': '~/dotfiles/i3/config' },
             \ { ',': '~/.config/nvim/plug-config/start-screen.vim' },
             \ { 'm': '~/.config/nvim/keys/mappings.vim' },
             \ { 'w': '~/.config/nvim/keys/which-key.vim' },
