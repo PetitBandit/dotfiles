@@ -57,6 +57,7 @@
   set laststatus=0                        " Always display the status line
   set signcolumn=yes
   set scrolloff=8
+  colorscheme gruvbox
 " }}}
   " Searching {{{
   noremap / /\v

@@ -15,7 +15,7 @@ source $HOME/.config/nvim/functions/openandsearch.vim
 source $HOME/.config/nvim/functions/bookmark.vim
 source $HOME/.config/nvim/functions/indentfile.vim
 
-source $HOME/.config/nvim/themes/gruvbox.vim
+" source $HOME/.config/nvim/themes/gruvbox.vim
 " source $HOME/.config/nvim/themes/oceanic.vim
 source $HOME/.config/nvim/themes/airline.vim
 
