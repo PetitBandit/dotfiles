@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.vero.flipeverything</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>69D1D72C-AFAC-4BF4-B321-F27E2134E445</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D53F73F4-CD41-4219-A2FB-197A73B9613D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7CC5CBCF-0B74-415D-9C60-A853F5676FB1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D53F73F4-CD41-4219-A2FB-197A73B9613D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9004E289-FCD2-434F-AD5E-CAD0E6FC3064</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9B3DF560-6B02-4754-973A-078E91A73ECF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>ECD69EDD-F982-439D-A7AA-FEC0319531FC</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>(ノಠ益ಠ)ノ彡 {query}</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7CC5CBCF-0B74-415D-9C60-A853F5676FB1</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>{query} ︵ \(°□°)/ ︵ {query}</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>69D1D72C-AFAC-4BF4-B321-F27E2134E445</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>{query} ︵ヽ(`Д´)ﾉ︵ {query}</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>BEDA20CF-BC85-4114-9625-CB71F8EE8BA2</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>ʕノ•ᴥ•ʔノ ︵ {query}</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9B3DF560-6B02-4754-973A-078E91A73ECF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D53F73F4-CD41-4219-A2FB-197A73B9613D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BEDA20CF-BC85-4114-9625-CB71F8EE8BA2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D53F73F4-CD41-4219-A2FB-197A73B9613D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D53F73F4-CD41-4219-A2FB-197A73B9613D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F7BEFA8F-B5C0-4447-A0F3-61753B839A10</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>ECD69EDD-F982-439D-A7AA-FEC0319531FC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D53F73F4-CD41-4219-A2FB-197A73B9613D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Vero Pepperrell</string>
+	<key>description</key>
+	<string>Flip a table or flip your world upside down!</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Flip Everything</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>flipper</key>
+					<string>(╯°□°）╯︵</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9B3DF560-6B02-4754-973A-078E91A73ECF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>flipper</key>
+					<string>(ノಠ益ಠ)ノ彡</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>ECD69EDD-F982-439D-A7AA-FEC0319531FC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>flip</string>
+				<key>subtext</key>
+				<string>(╯°□°）╯︵ {query}</string>
+				<key>text</key>
+				<string>What would you like to flip?</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>9004E289-FCD2-434F-AD5E-CAD0E6FC3064</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>#####################################
+# Default to a table if no argument #
+#####################################
+
+if [ -z "$1" ]; then
+  FLIPPED='┻━┻'
+else
+  FLIPPED=$(echo $1 | rev | tr 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?' 'ɐqɔpǝɟɓɥᴉſʞןɯuodbɹsʇnʌʍxʎzꓯꓭↃꓷƎℲ⅁ΗIᒋꓘ⅂ꟽNOꓒÒꓤSꓕꓵꓥꤵX⅄Z¡¿')
+fi
+
+####################################
+# Flip both sides or just one side #
+####################################
+
+if [ "$both" == "1" ]; then
+  echo -n "$FLIPPED $flipper $FLIPPED"
+else
+  echo -n "$flipper $FLIPPED"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D53F73F4-CD41-4219-A2FB-197A73B9613D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>F7BEFA8F-B5C0-4447-A0F3-61753B839A10</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>both</key>
+					<string>1</string>
+					<key>flipper</key>
+					<string>︵ \(°□°)/ ︵</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>7CC5CBCF-0B74-415D-9C60-A853F5676FB1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>both</key>
+					<string>1</string>
+					<key>flipper</key>
+					<string>︵ヽ(`Д´)ﾉ︵</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>69D1D72C-AFAC-4BF4-B321-F27E2134E445</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>flipper</key>
+					<string>ʕノ•ᴥ•ʔノ ︵</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>BEDA20CF-BC85-4114-9625-CB71F8EE8BA2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Use the keyword "flip" on its own to flip a table, or add your own text after it to flip it upside down. When you press Return, you'll be pasting the output to the frontmost app.
+
+Use a key modifier (Cmd, Option, Control or Shift) to get a different table flipping character.
+
+This workflow was inspired by Jan-Hendrik Kuperus who created the original Table Flip workflow:
+
+https://medium.com/@jhkuperus/table-flip-everything-157d7dec9589
+
+You can find our blog post about this workflow here:
+
+https://www.alfredapp.com/blog/tips-and-tricks/flip-everything/</string>
+	<key>uidata</key>
+	<dict>
+		<key>69D1D72C-AFAC-4BF4-B321-F27E2134E445</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>︵ヽ(`Д´)ﾉ︵</string>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>270</integer>
+		</dict>
+		<key>7CC5CBCF-0B74-415D-9C60-A853F5676FB1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>︵ \(°□°)/ ︵</string>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>190</integer>
+		</dict>
+		<key>9004E289-FCD2-434F-AD5E-CAD0E6FC3064</key>
+		<dict>
+			<key>note</key>
+			<string>Type flip into Alfred followed by some text to flip that text!
+
+Hold a modifier key and press return for alternative flippers.</string>
+			<key>xpos</key>
+			<integer>30</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+		<key>9B3DF560-6B02-4754-973A-078E91A73ECF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>(╯°□°）╯︵</string>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>30</integer>
+		</dict>
+		<key>BEDA20CF-BC85-4114-9625-CB71F8EE8BA2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>ʕノ•ᴥ•ʔノ ︵</string>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>350</integer>
+		</dict>
+		<key>D53F73F4-CD41-4219-A2FB-197A73B9613D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Run a script to flip your your text using the flipper set in the preceding Arg/Var.
+
+Some flips use the set "both" variable to put your flipped text either side of the flipper.</string>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+		<key>ECD69EDD-F982-439D-A7AA-FEC0319531FC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>(ノಠ益ಠ)ノ彡</string>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>110</integer>
+		</dict>
+		<key>F7BEFA8F-B5C0-4447-A0F3-61753B839A10</key>
+		<dict>
+			<key>note</key>
+			<string>Copy the flip to the clipboard, and paste it to the frontmost app.</string>
+			<key>xpos</key>
+			<integer>685</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://www.alfredapp.com</string>
+</dict>
+</plist>

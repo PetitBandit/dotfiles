@@ -63,6 +63,13 @@ let g:which_key_map.b = {
       \ '?' : ['Buffers'                 , 'fzf-buffer'],
       \ }
 " }}}
+" c is for config {{{
+let g:which_key_map.c = {
+      \ 'name' : '+buffer' ,
+      \ 'b' : [':set background=light', ':set bg=light'],
+      \ 'l' : [':set relativenumber!'                , 'relativenumber'],
+      \ }
+" }}}
 "f is for search {{{
  let g:which_key_map.f = {
        \ 'name' : '+search' ,
@@ -93,7 +100,6 @@ let g:which_key_map.l = {
       \ 'name' : '+lang' ,
       \ 'e' : [':setlocal spell spelllang=en_us'                , 'english'],
       \ 'f' : [':setlocal spell spelllang=fr'                , 'french'],
-      \ 'l' : [':set relativenumber!'                , 'relativenumber'],
       \ }
 " }}}
 " m is for marks {{{

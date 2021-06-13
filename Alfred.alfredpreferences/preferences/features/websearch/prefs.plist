@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>5A17D402-D675-40E3-A993-0FC8D60B43D0</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>j</string>
+			<key>text</key>
+			<string>Jira</string>
+			<key>url</key>
+			<string>https://jirachs.cegedim.com/browse/MAIIAPRO-{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>C39F8DED-136C-4725-A7A5-4FD0C87F2412</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>mdn</string>
+			<key>text</key>
+			<string>MDN</string>
+			<key>url</key>
+			<string>https://developer.mozilla.org/en/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
