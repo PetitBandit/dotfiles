@@ -272,8 +272,8 @@ exec --no-startup-id solaar
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec_always feh --bg-fill $HOME/Downloads/wallpaper.jpg  #wallpaper setup
 exec --no-startup-id $HOME/dotfiles/i3/default2screen.sh #double screen setup
+exec_always feh --bg-fill $HOME/Downloads/wallpaper.jpg  #wallpaper setup
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
