@@ -1,12 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
-DMEDITOR="st -e nvim"
+DMEDITOR='nvim'
 
 
-declare -a options={
+declare -a options=(
 "nvim - $HOME/dotfiles/nvim/init.vim"
 "zsh - $HOME/dotfiles/zsh/zshrc"
-}
+"quit"
+)
 
 
 choice=$(printf '%s\n' "$options[@]}" | dmenu -i -l 20 -p 'Edit config:')
@@ -17,8 +18,8 @@ if [[ "$choice" == "quit" ]]; then
   
 elif [ "$choice" ]; then
   cfg=$(printf '%s\n' "${choice}" awk '{print $NF}')
-  $DMEDITOR "$cfg"
-
+  echo "$cfg"
+  # nvim "$cfg"
 else 
   echo 'Program terminated' && exit 1
 fi
