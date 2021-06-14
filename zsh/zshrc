@@ -197,6 +197,7 @@ bindkey "^[[B" history-beginning-search-forward
 
 ## Aliases {{{
 alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs' 
+alias config='cd $HOME/dotfiles && nvim $(fzf)'
 alias configfolder='cd $HOME/.config' 
 alias la='ls -aG'                   # Shorcut
 alias ls='ls -G'                   # Shorcut
