@@ -44,10 +44,10 @@ bindsym $mod+d exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
+bindsym $mod+Ctrl+m exec pavucontrol
 # bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -57,16 +57,15 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-# bindsym $mod+1 exec firefoxdeveloperedition 
 bindsym $mod+e exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+Shift+$ exec scrot -u ~/Pictures/%Y-%m-%d-%H-%M-%S.png
+bindsym $mod+y exec scrot -u ~/Pictures/%Y-%m-%d-%H-%M-%S.png
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+y exec "scrot -e 'mv $f ~/tmp &&  xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
+# bindsym $mod+y exec "scrot -e 'mv $f ~/tmp &&  xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
@@ -174,15 +173,17 @@ bindsym $mod+Ctrl+less move workspace to output left
  
 # Open applications on specific workspaces
 # how to indentify class: terminal > xprop
-    #Work
-      assign [class="firefoxdeveloperedition"] $ws2
-      # assign [class="kitty"] $ws2
 
-    #fun
-      assign [class="TelegramDesktop"] $ws3
-
-    #web
+    #web 1
       assign [class="firefox"] $ws1
+
+    #Work 2
+      assign [class="firefoxdeveloperedition"] $ws2
+
+    #fun 3
+      assign [class="TelegramDesktop"] $ws3
+      assign [class="zoom"] $ws3
+
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -213,6 +214,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="zoom"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus

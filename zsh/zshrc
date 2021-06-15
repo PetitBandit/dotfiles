@@ -198,12 +198,11 @@ bindkey "^[[B" history-beginning-search-forward
 ## Aliases {{{
 alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs' 
 alias config='cd $HOME/dotfiles && nvim $(fzf)'
-alias configfolder='cd $HOME/.config' 
 alias la='ls -aG'                   # Shorcut
 alias ls='ls -G'                   # Shorcut
 alias gg='lazygit'                   # Shorcut
 alias meteo='curl http://wttr.in'
-alias uptodate='sh $HOME/.config/nvim/uptodate.sh'
+
 # Maiia specific aliases {{{
 MAIIA_PATH="${HOME}/work/doca/maiia-frontend/"
 alias gcf='git checkout feat-pro; git pull origin feat-pro; yarn'
