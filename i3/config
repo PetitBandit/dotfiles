@@ -63,6 +63,7 @@ bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+y exec scrot -u ~/Pictures/%Y-%m-%d-%H-%M-%S.png
+bindsym --release $mod+Shift+y exec scrot -s ~/Pictures/%Y-%m-%d-%H-%M-%S.png
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+y exec "scrot -e 'mv $f ~/tmp &&  xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
