@@ -70,12 +70,7 @@ brew install koekeishiya/formulae/skhd
 
 
 ##add config files to 
-#git clone https://github.com/PetitBandit/kitty.git $HOME/.config/kitty      #kitty config
-#git clone https://github.com/PetitBandit/zsh.git $HOME/.config/zsh          #zsh config
-#git clone https://github.com/PetitBandit/yabai.git $HOME/.config/yabai          #zsh config
-#git clone https://github.com/PetitBandit/skhd.git $HOME/.config/skhd
-#git clone https://github.com/PetitBandit/karabiner.git $HOME/.config/karabiner
-git clone https://github.com/PetitBandit/dotfiles.git $HOME/dotfiles
+# git clone https://github.com/PetitBandit/dotfiles.git $HOME/dotfiles
 
 
 ##zsh
