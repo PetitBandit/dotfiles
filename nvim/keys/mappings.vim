@@ -36,8 +36,8 @@
 " add lines with o {{{
       "add a line down == alt + o
       " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
-      nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-      nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+      " nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+      " nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
       " nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
       " nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
@@ -60,10 +60,7 @@
       xnoremap p "_dP
       nnoremap P "0p
 "}}}
-" Better window navigation {{{
-    " nnoremap <C-h> <C-w>h
-    " nnoremap <C-l> <C-w>l
-" }}}
+
 
 " Marks {{{
       nnoremap M m
@@ -93,5 +90,3 @@
 
       nmap <leader>G :Rg const <C-r><C-w><CR>
       nmap <leader>z z=1<cr>
-      nnoremap <leader><leader> :Limelight!!<CR>
-      " nnoremap <leader>p mjgg=G:%s/\(\n\n\)\n\+/\1/<cr>'j
