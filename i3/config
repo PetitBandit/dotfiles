@@ -57,6 +57,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+Ctrl+w exec brave; exec telegram-desktop; exec firefox-developer-edition; exec kitty; 
 bindsym $mod+e exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+t exec --no-startup-id pkill picom
@@ -64,9 +65,6 @@ bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+y exec scrot -u ~/Pictures/%Y-%m-%d-%H-%M-%S.png
 bindsym --release $mod+Shift+y exec scrot -s ~/Pictures/%Y-%m-%d-%H-%M-%S.png
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-# bindsym $mod+y exec "scrot -e 'mv $f ~/tmp &&  xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
@@ -176,14 +174,12 @@ bindsym $mod+Ctrl+less move workspace to output left
 # how to indentify class: terminal > xprop
 
     #web 1
-      assign [class="firefox"] $ws1
+      assign [class=firefox|vlc] $ws1
 
     #Work 2
       assign [class="firefoxdeveloperedition"] $ws2
-
     #fun 3
-      assign [class="TelegramDesktop"] $ws3
-      assign [class="zoom"] $ws3
+      assign [class=TelegramDesktop|Brave-browser|zoom] $ws3
 
 
 # Open specific applications in floating mode
@@ -272,7 +268,6 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id solaar --window=hide
 exec --no-startup-id xfce4-power-manager
@@ -280,9 +275,9 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id $HOME/dotfiles/i3/default2screen.sh #double screen setup
 exec_always feh --bg-fill $HOME/Downloads/wallpaper.jpg  #wallpaper setup
+exec --no-startup-id start_conky_maia
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util

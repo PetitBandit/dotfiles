@@ -23,7 +23,6 @@ brew install cask
 brew install nvm
 brew install karabiner-elements
 brew install stow
-#nvm install 14
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 python3 -m pip install --user --upgrade pynvim
@@ -74,5 +73,5 @@ brew install koekeishiya/formulae/skhd
 
 
 ##zsh
-echo "source  $HOME/.config/zsh/zshrc"> $HOME/.zshrc
+echo "source  $HOME/dotfiles/zsh/zshrc"> $HOME/.zshrc
 

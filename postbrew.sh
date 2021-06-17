@@ -34,3 +34,4 @@ git config --global user.name "Raphael HEBERT"
 ssh-keygen
 ssh-add
 
+nvm install 14
