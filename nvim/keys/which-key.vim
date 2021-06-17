@@ -67,7 +67,8 @@ let g:which_key_map.b = {
 let g:which_key_map.c = {
       \ 'name' : '+buffer' ,
       \ 'b' : [':set background=light', ':set bg=light'],
-      \ 'l' : [':set relativenumber!'                , 'relativenumber'],
+      \ 'n' : [':set relativenumber!' , 'relativenumber'],
+      \ 'l' : [':Limelight!!'         , 'limelight'],
       \ }
 " }}}
 "f is for search {{{
@@ -102,6 +103,7 @@ let g:which_key_map.l = {
       \ 'f' : [':setlocal spell spelllang=fr'                , 'french'],
       \ }
 " }}}
+
 " m is for marks {{{
 let g:which_key_map.m = {
       \ 'name' : '+Marks' ,
@@ -110,6 +112,17 @@ let g:which_key_map.m = {
       \ 'p' : ['[`'          , 'jump to previous mark']  ,
       \ }
 " }}}
+
+" q is for quickfixList {{{
+let g:which_key_map.q = {
+      \ 'name' : '+Marks' ,
+      \ 'o' : [':copen'          , 'open Quickfix']  ,
+      \ 'q' : [':cclose'         , 'close Quickfix']  ,
+      \ 'j' : [':cnext'          , 'next Quick']  ,
+      \ 'k' : [':cprev'          , 'prev Quick']  ,
+      \ }
+" }}}
+
 "o is for adding lines {{{
 let g:which_key_map.o = {
       \ 'name' : '+actions' ,
