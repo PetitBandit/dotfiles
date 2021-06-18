@@ -90,3 +90,5 @@
 
       nmap <leader>G :Rg const <C-r><C-w><CR>
       nmap <leader>z z=1<cr>
+      nnoremap Q q
+      nnoremap q :w<cr>

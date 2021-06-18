@@ -36,6 +36,7 @@ bindsym $mod+space exec --no-startup-id rofi -show drun
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 
+#ok
 # launch categorized menu
 bindsym $mod+d exec --no-startup-id morc_menu
 
@@ -60,7 +61,7 @@ bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+Ctrl+w exec brave; exec telegram-desktop; exec firefox-developer-edition; exec kitty; 
 bindsym $mod+e exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+t exec --no-startup-id pkill picom
+# bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+y exec scrot -u ~/Pictures/%Y-%m-%d-%H-%M-%S.png
@@ -146,30 +147,41 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
-# Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
+# # Move focused container to workspace
+ # bindsym $mod+Ctrl+1 move container to workspace $ws1
+# bindsym $mod+Ctrl+2 move container to workspace $ws2
+# bindsym $mod+Ctrl+3 move container to workspace $ws3
+# bindsym $mod+Ctrl+4 move container to workspace $ws4
+# bindsym $mod+Ctrl+5 move container to workspace $ws5
+# bindsym $mod+Ctrl+6 move container to workspace $ws6
+# bindsym $mod+Ctrl+7 move container to workspace $ws7
+# bindsym $mod+Ctrl+8 move container to workspace $ws8
 
 # # Move to workspace with focused container
-# bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
-# bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
-# bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
-# bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
-# bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
-# bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
-# bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
-# bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Ctrl+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8; workspace $ws8
 
 # move focused workspace between monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
  
+# Monitor setup
+set $monitor1 HDMI-A-1
+set $monitor2 HDMI-A-0
+
+#Bind the workspace to monitor 
+workspace $ws3 output $monitor2
+workspace $ws1 output $monitor1
+workspace $ws2 output $monitor1
+
+
+
 # Open applications on specific workspaces
 # how to indentify class: terminal > xprop
 
@@ -284,6 +296,17 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always setxkbmap -option ctrl:swapcaps
 
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources
@@ -331,29 +354,37 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
-
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
-    }
+   # bar background color
+        background $bg
+        # text color used for blocks that do not have a color specified.
+        statusline $yellow
+        # workspaces section            
+        #                    border  backgr. text
+        focused_workspace    $aqua $aqua $darkgray
+        inactive_workspace   $darkgray $darkgray $yellow
+        active_workspace     $darkgray $darkgray $yellow
+        urgent_workspace     $red $red $bg   
+        }
 }
 
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #00ff00 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
-  client.background       #2B2C2B
+# green gruvbox
+# class                 border|backgr|text|indicator|child_border
+
+# client.focused          $green $green $darkgray $purple $darkgray
+# client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+# client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+# client.urgent           $red $red $white $red $red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+
+client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.urgent           $red $red $white $red $red
 
 #############################
 ### settings for i3-gaps: ###
