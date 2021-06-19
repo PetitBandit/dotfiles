@@ -33,8 +33,8 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings {{{
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
+let g:which_key_map["p"] = [ ':PrettierAsync'                                  , 'next tab']
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
-let g:which_key_map["'"] = [ "ysiw'"                                           , "put '' word" ]
 let g:which_key_map["1"] = [ '<Plug>AirlineSelectTab1'                         , 'which_key_ignore']
 let g:which_key_map["2"] = [ '<Plug>AirlineSelectTab2'                         , 'which_key_ignore']
 let g:which_key_map["3"] = [ '<Plug>AirlineSelectTab3'                         , 'which_key_ignore']
@@ -43,11 +43,10 @@ let g:which_key_map["5"] = [ '<Plug>AirlineSelectTab5'                         ,
 let g:which_key_map["6"] = [ ''                                                , 'which_key_ignore']
 let g:which_key_map["7"] = [ ''                                                , 'which_key_ignore']
 let g:which_key_map["8"] = [ ''                                                , 'which_key_ignore']
-let g:which_key_map["9"] = [ '`m'                                                , 'which_key_ignore']
-let g:which_key_map["0"] = [ ':bprevious'                                          , 'last tab']
+let g:which_key_map["9"] = [ ''                                                , 'which_key_ignore']
+let g:which_key_map["0"] = [ '<C-^>'                                           , 'last tab']
 let g:which_key_map["-"] = [ '<Plug>AirlineSelectPrevTab'                      , 'previous tab']
 let g:which_key_map["="] = [ '<Plug>AirlineSelectNextTab'                      , 'next tab']
-let g:which_key_map["p"] = [ ':PrettierAsync'                      , 'next tab']
 " }}}
 
 "-------------------------------- Group mappings -------------
@@ -60,7 +59,7 @@ let g:which_key_map.b = {
       \ 'l' : [':blast'                  , 'last buffer'],
       \ 'n' : [':bnext'                  , 'next-buffer'],
       \ 'p' : [':bprevious'              , 'previous-buffer'],
-      \ '?' : ['Buffers'                 , 'fzf-buffer'],
+      \ 'b' : ['Buffers'                 , 'fzf-buffer'],
       \ }
 " }}}
 " c is for config {{{
@@ -103,7 +102,6 @@ let g:which_key_map.l = {
       \ 'f' : [':setlocal spell spelllang=fr'                , 'french'],
       \ }
 " }}}
-
 " m is for marks {{{
 let g:which_key_map.m = {
       \ 'name' : '+Marks' ,
@@ -112,7 +110,6 @@ let g:which_key_map.m = {
       \ 'p' : ['[`'          , 'jump to previous mark']  ,
       \ }
 " }}}
-
 " q is for quickfixList {{{
 let g:which_key_map.q = {
       \ 'name' : '+Marks' ,
@@ -122,7 +119,6 @@ let g:which_key_map.q = {
       \ 'k' : [':cprev'          , 'prev Quick']  ,
       \ }
 " }}}
-
 "o is for adding lines {{{
 let g:which_key_map.o = {
       \ 'name' : '+actions' ,
@@ -150,18 +146,6 @@ let g:which_key_map.S = {
       \ 'e' : [':CocCommand snippets.editSnippets'  , 'Edit Snips']  ,
       \ }
 " }}}
-
-" t is for terminal {{{
-let g:which_key_map.t = {
-      \ 'name' : '+terminal' ,
-      \ 'n' : [':FloatermNew'            , 'new terminal'],
-      \ 't' : [':FloatermToggle'         , '[f1] toggle'],
-      \ 'k' : [':FloatermKill!'          , 'kill all terminals'],
-      \ 'h' : [':FloatermNew htop'       , 'htop'],
-      \ 'g' : [':FloatermNew lazygit'    , 'git'],
-      \ }
-" }}}
- 
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
