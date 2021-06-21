@@ -58,7 +58,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+Ctrl+w exec 'Pale Moon'; exec telegram-desktop; exec firefox-developer-edition; exec kitty; 
+bindsym $mod+Ctrl+w exec chromium --app='https://app.slack.com/client/TBKBAUQ4V/DJPS8CQ2G'; exec telegram-desktop; exec firefox-developer-edition; exec kitty; exec chromium --app='https://jirachs.cegedim.com/secure/RapidBoard.jspa?rapidView=626&quickFilter=4875'
 bindsym $mod+e exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 # bindsym $mod+t exec --no-startup-id pkill picom
@@ -86,8 +86,8 @@ bindsym $mod+Shift+l move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+# bindsym $mod+b workspace back_and_forth
+# bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $alt+h split h;exec notify-send 'tile horizontally'
@@ -97,9 +97,9 @@ bindsym $alt+v split v;exec notify-send 'tile vertically'
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+o layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -111,7 +111,9 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
-# bindsym $mod+a focus parent
+bindsym $mod+a focus parent
+
+# SCRATCHPAD start
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -119,6 +121,11 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
+
+# scratchpad management
+bindsym $mod+t [instance="jirachs.cegedim.com__secure_RapidBoard.jspa"] scratchpad show
+
+#SCRATCHPAD end
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -186,12 +193,12 @@ workspace $ws2 output $monitor1
 # how to indentify class: terminal > xprop
 
     #web 1
-      assign [class=firefox|vlc] $ws1
+      assign [class=vlc] $ws1
 
     #Work 2
-      assign [class="firefoxdeveloperedition"] $ws2
+      assign [class=firefoxdeveloperedition] $ws2
     #fun 3
-      assign [class=TelegramDesktop|Brave-browser|zoom] $ws3
+      assign [class=TelegramDesktop|zoom] $ws3
 
 
 # Open specific applications in floating mode
@@ -224,7 +231,9 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="zoom"] floating enable
-
+for_window [class="Pcmanfm"] floating enable
+for_window [instance="jirachs.cegedim.com__secure_RapidBoard.jspa
+"] move scratchpad
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -275,7 +284,6 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 #COPY AND PASTE NONSENSE
 # bindsym --release $mod+v exec --no-startup-id $HOME/.i3/mac-paste.sh
-
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -360,7 +368,7 @@ bar {
         statusline $yellow
         # workspaces section            
         #                    border  backgr. text
-        focused_workspace    $aqua $aqua $darkgray
+        focused_workspace    $yellow $yellow $darkgray
         inactive_workspace   $darkgray $darkgray $yellow
         active_workspace     $darkgray $darkgray $yellow
         urgent_workspace     $red $red $bg   
@@ -381,7 +389,7 @@ bar {
 # blue gruvbox
 # class                 border|backgr|text|indicator|child_border
 
-client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused          $yellow $yellow $darkgray $purple $darkgray
 client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent           $red $red $white $red $red
@@ -442,3 +450,9 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+
+
+
+
+bindsym $mod+Shift+w  exec chromium --app='https://jirachs.cegedim.com/secure/RapidBoard.jspa?rapidView=626&quickFilter=4875'
