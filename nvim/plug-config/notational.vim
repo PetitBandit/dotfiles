@@ -1,1 +1,3 @@
-let g:nv_search_paths = ['~/Nextcloud/Documents/obsidian/Cid']
+let g:nv_search_paths = ['~/Sync/Documents/obsidian/Cid']
+
+

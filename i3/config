@@ -295,6 +295,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id $HOME/dotfiles/i3/default2screen.sh #double screen setup
 exec_always --no-startup-id feh --bg-fill $HOME/Downloads/wallpaper.jpg  #wallpaper setup
+exec_always --no-startup-id syncthing
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -302,7 +303,8 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
+# exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
+
 
 # set primary gruvbox colorscheme colors
 set $bg #282828

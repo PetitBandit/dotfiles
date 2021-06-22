@@ -44,7 +44,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kshenoy/vim-signature'                            " marks
 call plug#end()
 
-let g:vimwiki_list = [{'path':'~/Nextcloud/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
+let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_markdown_link_ext = 1
 
 
