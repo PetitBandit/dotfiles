@@ -72,7 +72,7 @@
     set nobackup                            " This is recommended by coc
     set nowritebackup                       " This is recommended by coc
 
-set spell spelllang=en_us
+" set spell spelllang=en_us
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set conceallevel=0                      " So that I can see `` in markdown files
 set updatetime=300                      " Faster completion

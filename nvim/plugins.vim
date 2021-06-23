@@ -42,6 +42,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/vim-peekaboo'                            " access to register and macro
     Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'kshenoy/vim-signature'                            " marks
+    Plug 'svermeulen/vim-subversive'                        " Substitution
+    " Plug 'svermeulen/vim-yoink'                        " Fix Yanking
 call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]

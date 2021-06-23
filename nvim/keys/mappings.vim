@@ -74,7 +74,7 @@
 " }}}
 
 "S for search and Substitute
-      nnoremap S yiw:%s/"//gc<left><left><left>
+      nnoremap <leader>s yiw:%s/"//gc<left><left><left>
       nnoremap s *
 
       " Fugitive remap {{{
@@ -92,3 +92,5 @@
       nmap <leader>z z=1<cr>
       nnoremap Q q
       nnoremap q :w<cr>
+
+      nnoremap <Leader><Leader> :Startify <CR>

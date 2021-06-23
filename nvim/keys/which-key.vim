@@ -132,20 +132,12 @@ let g:which_key_map.o = {
 " s is for session {{{
 let g:which_key_map.s = {
       \ 'name' : '+Save Splash Session' ,
-      \ 'c' : [':SClose'          , 'Close Session'] ,
-      \ 'd' : [':SDelete'         , 'Delete Session'],
-      \ 'l' : [':SLoad'           , 'Load Session']  ,
-      \ 's' : [':Startify'        , 'Start Page']    ,
       \ 'f' : [':q'               , 'save File']     ,
-      \ 'S' : [':SSave'           , 'Save Session']  ,
+      \ 'n' : [':CocCommand snippets.editSnippets'  , 'Edit Snips']  ,
       \ }
 " }}}
-" S is for Snippets {{{
-let g:which_key_map.S = {
-      \ 'name' : '+Snippets' ,
-      \ 'e' : [':CocCommand snippets.editSnippets'  , 'Edit Snips']  ,
-      \ }
-" }}}
+
+      " \ 's' : [':Startify'        , 'Start Page']    ,
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
