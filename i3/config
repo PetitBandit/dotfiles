@@ -199,6 +199,8 @@ workspace $ws2 output $monitor1
       assign [class=firefoxdeveloperedition] $ws2
     #fun 3
       assign [class=TelegramDesktop|zoom] $ws3
+      assign [instance="app.slack.com__client_TBKBAUQ4V_DJPS8CQ2G"] $ws3
+
 
 
 # Open specific applications in floating mode

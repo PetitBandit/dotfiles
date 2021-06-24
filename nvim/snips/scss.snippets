@@ -41,6 +41,34 @@ snippet Tag "Description" b
 </$1>
 endsnippet
 
+snippet :fc
+:first-child
+endsnippet
+
+snippet :lc
+:last-child
+endsnippet
+
+snippet :nc
+:nth-child($0)
+endsnippet
+
+snippet :nlc
+:nth-last-child($0)
+endsnippet
+
+snippet :oc
+:only-child
+endsnippet
+
+snippet :not
+:not($0)
+endsnippet
+
+snippet var "inject variable" 
+var(--$1);
+endsnippet
+
 snippet box "width & height"
 
 --size: $1;
@@ -144,11 +172,11 @@ margin${1|:,-top:,-bottom:,-left:,-right:|} ${2:px};
 endsnippet
 
 snippet padd "Description" b
-padding${1|:,-top:,-bottom:,-left:,-right:|} $2;
+padding${1|:,-top:,-bottom:,-left:,-right:|} ${2:px};
 endsnippet
 
 snippet mT "Description" b
-margin-top: $1;
+margin-top: ${1:px};
 endsnippet
 
 snippet mB "Description" b
@@ -167,12 +195,12 @@ endsnippet
 #margin padding end
 
 snippet bgct "tomato for the win"
-background-color: tomato; //TODO: petit bandit <-- remove this
+background-color: tomato; /* TODO: petit bandit <-- remove this */
 endsnippet
 
 
 snippet bgcl "lavender for the win"
-background-color: lavender; //TODO: petit bandit <-- remove this
+background-color: lavender; /* TODO: petit bandit <-- remove this */
 endsnippet
 
 snippet bgc "background color"
@@ -195,11 +223,11 @@ border-radius: 50%;
 endsnippet
 
 snippet childrendot "childrendot"
-& > * {border: 1px dotted blue;}
+& > * {border: 1px dotted blue;}/* TODO: petit bandit <-- remove this */
 endsnippet
 
 snippet borderdot "borderdot"
-border: 1px dotted blue;
+border: 1px dotted blue;/* TODO: petit bandit <-- remove this */
 endsnippet
 
 

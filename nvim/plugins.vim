@@ -8,6 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
+
+    Plug 'SirVer/ultisnips',
     Plug 'gruvbox-community/gruvbox',
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'mhartington/oceanic-next'
