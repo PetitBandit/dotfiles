@@ -10,6 +10,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/notational.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
+source $HOME/.config/nvim/plug-config/autopair.vim
 
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
