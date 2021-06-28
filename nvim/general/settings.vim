@@ -5,6 +5,13 @@
     set t_Co=256                           " Support 256 colors
     set background=dark                     " tell vim what the background color looks like
     set termguicolors
+" colorscheme base16-gruvbox-dark-hard
+" colorscheme base16-gruvbox-dark-medium
+" colorscheme base16-gruvbox-dark-pale
+" colorscheme base16-gruvbox-dark-soft
+" colorscheme base16-gruvbox-light-hard
+" colorscheme base16-gruvbox-light-medium
+" colorscheme base16-gruvbox-light-soft
 " }}}
   " Misc {{{
   syntax enable                           " Enables syntax highlighing

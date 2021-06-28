@@ -29,7 +29,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
-    Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
     Plug 'wellle/targets.vim'                               " allows to jump inside ' ) } ]
     Plug 'liuchengxu/vim-which-key'
     Plug 'mhinz/vim-startify'
@@ -45,10 +44,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'kshenoy/vim-signature'                            " marks
     Plug 'svermeulen/vim-subversive'                        " Substitution
-    " Plug 'svermeulen/vim-yoink'                        " Fix Yanking
-call plug#end()
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
+    Plug 'RRethy/nvim-base16'                      " colorize colors 
+    Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
+    call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_markdown_link_ext = 1
 
-
+" lua require'colorizer'.setup()
