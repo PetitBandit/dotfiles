@@ -47,6 +47,7 @@ let g:which_key_map["9"] = [ ''                                                ,
 let g:which_key_map["0"] = [ '<C-^>'                                           , 'last tab']
 let g:which_key_map["-"] = [ '<Plug>AirlineSelectPrevTab'                      , 'previous tab']
 let g:which_key_map["="] = [ '<Plug>AirlineSelectNextTab'                      , 'next tab']
+let g:which_key_map["T"] = [ ':Telescope'                      , 'Telescope']
 " }}}
 
 "-------------------------------- Group mappings -------------

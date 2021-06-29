@@ -39,14 +39,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/popup.nvim'                              " telescope
     Plug 'nvim-lua/plenary.nvim'                            " telescope
     Plug 'nvim-telescope/telescope.nvim'                    " telescope
-    Plug 'nvim-telescope/telescope-fzy-native.nvim'         " telescope
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     Plug 'junegunn/vim-peekaboo'                            " access to register and macro
     Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'kshenoy/vim-signature'                            " marks
     Plug 'svermeulen/vim-subversive'                        " Substitution
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
-    Plug 'RRethy/nvim-base16'                      " colorize colors 
     Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
+    Plug 'RRethy/nvim-base16'                     
+    Plug 'styled-components/vim-styled-components'                     
+    " Plug 'hrsh7th/nvim-compe'                    
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]

@@ -12,6 +12,8 @@ source $HOME/.config/nvim/plug-config/notational.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
 source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/telescope.vim
+" source $HOME/.config/nvim/plug-config/compe.vim
 
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim

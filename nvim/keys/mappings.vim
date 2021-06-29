@@ -49,8 +49,10 @@
       " nnoremap Ø O<Esc>j
 " }}}
 " Ctrl + TAB in general mode will move to text buffer {{{
-      nnoremap <S-TAB> :bnext<CR>
-      inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+      " nnoremap <S-TAB> :bnext<CR>
+      " inoremap <TAB> pumvisible() ? "<C-n>" : "<TAB>"
+      inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+      inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "}}}
 " Better tabbing {{{
       vnoremap < <gv
@@ -74,7 +76,7 @@
 " }}}
 
 "S for search and Substitute
-      nnoremap <leader>s yiw:%s/"//gc<left><left><left>
+      nnoremap <leader>S yiw:%s/"//gc<left><left><left>
       nnoremap s *
 
       " Fugitive remap {{{
