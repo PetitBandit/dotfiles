@@ -56,12 +56,12 @@ let g:which_key_map[","] = [ ':Telescope current_buffer_fuzzy_find'             
 " b is for buffer {{{
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
+      \ 'b' : ['Buffers'                 , 'fzf-buffer'],
       \ 'd' : [':bd'                     , 'delete-buffer'],
       \ 'f' : [':bfirst'                 , 'first-buffer'],
       \ 'l' : [':blast'                  , 'last buffer'],
       \ 'n' : [':bnext'                  , 'next-buffer'],
       \ 'p' : [':bprevious'              , 'previous-buffer'],
-      \ 'b' : ['Buffers'                 , 'fzf-buffer'],
       \ }
 " }}}
 " c is for config {{{

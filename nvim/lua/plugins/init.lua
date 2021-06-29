@@ -1,1 +1,1 @@
-require("plugins.colorizer")
+-- require("plugins.colorizer")
