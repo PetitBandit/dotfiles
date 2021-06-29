@@ -39,6 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/popup.nvim'                              " telescope
     Plug 'nvim-lua/plenary.nvim'                            " telescope
     Plug 'nvim-telescope/telescope.nvim'                    " telescope
+    Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     Plug 'junegunn/vim-peekaboo'                            " access to register and macro
     Plug 'vimwiki/vimwiki'                                  " wiki

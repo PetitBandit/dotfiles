@@ -48,6 +48,7 @@ let g:which_key_map["0"] = [ '<C-^>'                                           ,
 let g:which_key_map["-"] = [ '<Plug>AirlineSelectPrevTab'                      , 'previous tab']
 let g:which_key_map["="] = [ '<Plug>AirlineSelectNextTab'                      , 'next tab']
 let g:which_key_map["T"] = [ ':Telescope'                      , 'Telescope']
+let g:which_key_map[","] = [ ':Telescope current_buffer_fuzzy_find'                                           , 'fuzzy inside current file']
 " }}}
 
 "-------------------------------- Group mappings -------------
@@ -133,7 +134,7 @@ let g:which_key_map.o = {
 " s is for session {{{
 let g:which_key_map.s = {
       \ 'name' : '+Save Splash Session' ,
-      \ 'f' : [':q'               , 'save File']     ,
+      \ 'f' : [':source %<cr>'               , 'source File']     ,
       \ 'n' : [':CocCommand snippets.editSnippets'  , 'Edit Snips']  ,
       \ }
 " }}}
