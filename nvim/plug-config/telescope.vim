@@ -13,7 +13,7 @@ nnoremap <leader>sh <cmd>lua require('telescope.builtin').help_tags()<cr>
 lua << EOF
 require('telescope').setup{
     defaults = {
-        prompt_prefix = ">"
+        prompt_prefix = ">",
         mappings = {
             i = {
                 }
