@@ -24,8 +24,8 @@
       inoremap jk <Esc>
 "}}}
 " Jumps remap {{{
-      nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'gk'
-      nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'gj'
+      nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
+      nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
 " }}}
 " Breaking the habits - only hjkl {{{
       nnoremap <left> <nop>
@@ -77,7 +77,7 @@
 
 "S for search and Substitute
       nnoremap <leader>S yiw:%s/"//gc<left><left><left>
-      nnoremap s *
+      " nnoremap s *
 
       " Fugitive remap {{{
       nnoremap <leader>gf :diffget //3<CR>

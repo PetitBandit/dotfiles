@@ -48,7 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
     Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
     Plug 'RRethy/nvim-base16'                     
-    Plug 'styled-components/vim-styled-components'                     
+    Plug 'justinmk/vim-sneak'
     " Plug 'hrsh7th/nvim-compe'                    
     call plug#end()
 

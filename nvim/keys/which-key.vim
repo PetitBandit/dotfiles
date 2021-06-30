@@ -33,7 +33,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings {{{
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
-let g:which_key_map["p"] = [ ':PrettierAsync'                                  , 'next tab']
+let g:which_key_map["p"] = [ ':PrettierAsync'                                  , 'Prettier']
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map["1"] = [ '<Plug>AirlineSelectTab1'                         , 'which_key_ignore']
 let g:which_key_map["2"] = [ '<Plug>AirlineSelectTab2'                         , 'which_key_ignore']
@@ -66,10 +66,12 @@ let g:which_key_map.b = {
 " }}}
 " c is for config {{{
 let g:which_key_map.c = {
-      \ 'name' : '+buffer' ,
+      \ 'name' : 'config' ,
       \ 'b' : [':set background=light', ':set bg=light'],
       \ 'n' : [':set relativenumber!' , 'relativenumber'],
       \ 'l' : [':Limelight!!'         , 'limelight'],
+      \ 'i' : [':PlugInstall'               , 'install plugins']     ,
+      \ 'c' : [':PlugClean'  , 'Clean Plugins']  ,
       \ }
 " }}}
 "f is for search {{{
@@ -91,7 +93,7 @@ let g:which_key_map.c = {
 " }}}
 " g is for git or Go  {{{
 let g:which_key_map.g = {
-      \ 'name' : '+git' ,
+      \ 'name' : 'go' ,
       \ 't' : [':call OpenAndSearch()<CR>'       , 'Theme'],
       \ ';' : ['g;'       , 'previous change'],
       \ ',' : ['g,'       , 'next change'],
@@ -114,7 +116,7 @@ let g:which_key_map.m = {
 " }}}
 " q is for quickfixList {{{
 let g:which_key_map.q = {
-      \ 'name' : '+Marks' ,
+      \ 'name' : 'QList' ,
       \ 'o' : [':copen'          , 'open Quickfix']  ,
       \ 'q' : [':cclose'         , 'close Quickfix']  ,
       \ 'j' : [':cnext'          , 'next Quick']  ,
@@ -123,7 +125,7 @@ let g:which_key_map.q = {
 " }}}
 "o is for adding lines {{{
 let g:which_key_map.o = {
-      \ 'name' : '+actions' ,
+      \ 'name' : '+ lignes' ,
       \ 'J' : ['<C-j>'                      , 'remove line under[<C-j>]'],
       \ 'K' : ['<C-k>'                      , 'remove line top [<C-k>]'],
       \ 'j' : ['ø'                          , 'add a line under [Alt-o]'],
@@ -131,10 +133,12 @@ let g:which_key_map.o = {
       \ 'o' : [':call IsolateBracket()<cr>' , 'add a lign and after {'],
       \ }
 " }}}
+
+
 " s is for session {{{
 let g:which_key_map.s = {
-      \ 'name' : '+Save Splash Session' ,
-      \ 'f' : [':source %<cr>'               , 'source File']     ,
+      \ 'name' : 'source' ,
+      \ 'f' : [':so %'               , 'source File']     ,
       \ 'n' : [':CocCommand snippets.editSnippets'  , 'Edit Snips']  ,
       \ }
 " }}}
