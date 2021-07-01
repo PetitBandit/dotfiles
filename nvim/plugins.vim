@@ -49,10 +49,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
     Plug 'RRethy/nvim-base16'                     
     Plug 'justinmk/vim-sneak'
-    " Plug 'hrsh7th/nvim-compe'                    
+    " Plug 'phaazon/hop.nvim'
+    " Plug 'hrsh7th/nvim-compe'                  
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_markdown_link_ext = 1
 
-" lua require'colorizer'.setup()
+" lua require'hop'.setup()
+
+
+
+
