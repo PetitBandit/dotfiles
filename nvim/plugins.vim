@@ -41,6 +41,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope.nvim'                    " telescope
     Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'junegunn/vim-peekaboo'                            " access to register and macro
     Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'kshenoy/vim-signature'                            " marks
@@ -48,15 +49,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
     Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
     Plug 'RRethy/nvim-base16'                     
-    Plug 'justinmk/vim-sneak'
-    " Plug 'phaazon/hop.nvim'
+    " Plug 'justinmk/vim-sneak'
+    Plug 'phaazon/hop.nvim'
     " Plug 'hrsh7th/nvim-compe'                  
+    Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_markdown_link_ext = 1
 
-" lua require'hop'.setup()
 
 
 

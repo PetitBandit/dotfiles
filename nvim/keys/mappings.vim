@@ -93,6 +93,5 @@
       nmap <leader>G :Rg const <C-r><C-w><CR>
       nmap <leader>z z=1<cr>
       nnoremap Q q
-      nnoremap q :w<cr>
-
+      nnoremap <C-S> :w<cr>
       nnoremap <Leader><Leader> :Startify <CR>

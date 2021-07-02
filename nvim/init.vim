@@ -15,7 +15,9 @@ source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/colorizer.vim
-source $HOME/.config/nvim/plug-config/sneak.vim
+" source $HOME/.config/nvim/plug-config/sneak.vim
+source $HOME/.config/nvim/plug-config/hop.vim
+source $HOME/.config/nvim/plug-config/rainbow.vim
 
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
