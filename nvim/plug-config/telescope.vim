@@ -3,7 +3,7 @@ lua require("plugins.telescope")
 
 " Using lua functions
 
-nnoremap <leader>sg <cmd>lua require('telescope.builtin').git_files()<cr>
+nnoremap <leader>sg <cmd>lua require('telescope.builtin').git_branches()<cr>
 nnoremap <leader>st <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>sd <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>sb <cmd>lua require('telescope.builtin').buffers()<cr>
