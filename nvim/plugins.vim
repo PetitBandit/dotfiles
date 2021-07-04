@@ -34,7 +34,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'unblevable/quick-scope'                           " F and f highlight
     Plug 'kana/vim-textobj-user'                            " allows custom text object
     Plug 'kana/vim-textobj-indent'                          " indentation as a text object
-    Plug 'ThePrimeagen/vim-be-good'
     Plug 'nvim-lua/popup.nvim'                              " telescope
     Plug 'nvim-lua/plenary.nvim'                            " telescope
     Plug 'nvim-telescope/telescope.nvim'                    " telescope
@@ -49,9 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'folke/which-key.nvim'
     Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
     Plug 'kshenoy/vim-signature'                            " marks
-    " Plug 'liuchengxu/vim-which-key'
-    " Plug 'junegunn/vim-peekaboo'                            " access to register and macro
-    " Plug 'hrsh7th/nvim-compe'                  
+    Plug 'mattn/emmet-vim'
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]

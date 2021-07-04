@@ -118,8 +118,8 @@ wk.register({
   m = {
     name = "marks", -- optional group name
     m = { "m,", "m, place next mark"}, 
-    n = { "]`", " ]` go to next mark"}, 
-    p = { "[`", " [` go to previous mark"}, 
+    n = { "]`", "]` go to next mark"}, 
+    p = { "[`", "[` go to previous mark"}, 
   },
 
   n = {":let @/ = ''<cr>", "remove Highlight"},
