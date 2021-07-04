@@ -89,7 +89,7 @@
       nnoremap <leader>gp :Git pull<CR>
 "}}}
 
-      nmap <leader>G :Rg const <C-r><C-w><CR>
-      nmap <leader>z z=1<cr>
       nnoremap Q q
       nnoremap <C-S> :w<cr>
+      nnoremap <C-j> :bprev<cr>
+      nnoremap <C-k> :bnext<cr>
