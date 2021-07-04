@@ -3,6 +3,8 @@
 "# :SDelete[!]  delete a session
 "# :SClose      close a session
 
+      nnoremap <Leader><Leader> :Startify <CR>
+
 let g:startify_session_dir = '~/.config/nvim/session'
 
 let g:startify_lists = [
@@ -18,7 +20,7 @@ let g:startify_bookmarks = [
             \ { 'I': '~/dotfiles/i3/config' },
             \ { ',': '~/.config/nvim/plug-config/start-screen.vim' },
             \ { 'm': '~/.config/nvim/keys/mappings.vim' },
-            \ { 'w': '~/.config/nvim/keys/which-key.vim' },
+            \ { 'w': '~/.config/nvim/lua/plugins/whichkey.lua' },
             \ { 'p': '~/.config/nvim/plugins.vim' },
             \ { 'K': '~/.config/kitty/kitty.conf'},
             \ { 'z': '~/.config/zsh/zshrc'},

@@ -76,8 +76,7 @@
 " }}}
 
 "S for search and Substitute
-      nnoremap <leader>S yiw:%s/"//gc<left><left><left>
-      " nnoremap s *
+      nnoremap <leader>S :call ReplaceWordUnderCursor()<cr>
 
       " Fugitive remap {{{
       nnoremap <leader>gf :diffget //3<CR>
@@ -94,4 +93,3 @@
       nmap <leader>z z=1<cr>
       nnoremap Q q
       nnoremap <C-S> :w<cr>
-      nnoremap <Leader><Leader> :Startify <CR>

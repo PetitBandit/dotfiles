@@ -30,7 +30,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
     Plug 'wellle/targets.vim'                               " allows to jump inside ' ) } ]
-    Plug 'liuchengxu/vim-which-key'
     Plug 'mhinz/vim-startify'
     Plug 'unblevable/quick-scope'                           " F and f highlight
     Plug 'kana/vim-textobj-user'                            " allows custom text object
@@ -41,18 +40,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope.nvim'                    " telescope
     Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-    Plug 'nvim-telescope/telescope-fzy-native.nvim'
-    Plug 'junegunn/vim-peekaboo'                            " access to register and macro
     Plug 'vimwiki/vimwiki'                                  " wiki
-    Plug 'kshenoy/vim-signature'                            " marks
     Plug 'svermeulen/vim-subversive'                        " Substitution
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
     Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
     Plug 'RRethy/nvim-base16'                     
-    " Plug 'justinmk/vim-sneak'
     Plug 'phaazon/hop.nvim'
-    " Plug 'hrsh7th/nvim-compe'                  
+    Plug 'folke/which-key.nvim'
     Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
+    Plug 'kshenoy/vim-signature'                            " marks
+    " Plug 'liuchengxu/vim-which-key'
+    " Plug 'junegunn/vim-peekaboo'                            " access to register and macro
+    " Plug 'hrsh7th/nvim-compe'                  
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
