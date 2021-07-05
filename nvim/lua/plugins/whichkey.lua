@@ -86,9 +86,25 @@ wk.register({
   ['3'] = {"<Plug>AirlineSelectTab3", "which_key_ignore"},
   ['4'] = {"<Plug>AirlineSelectTab4", "which_key_ignore"},
   ['<tab>'] = {"<C-^>", "previous tab"},
-  [']<spc>'] = { "add empty ligne below" }, -- just a label. don't create any mapping
-  ['[<spc>'] = { "add empty ligne up" }, -- just a label. don't create any mapping
   ['E'] = "which_key_ignore",
+
+  ['['] = {
+  name = "up/previous", -- optional group name
+  ['<spc>'] = { "add empty ligne up" }, -- just a label. don't create any mapping
+  ['e'] = { "move lign up" }, -- just a label. don't create any mapping
+  ['q'] = { "next QList" }, -- just a label. don't create any mapping
+  ['b'] = { "next buffer" }, -- just a label. don't create any mapping
+  ['B'] = { "First buffer" }, -- just a label. don't create any mapping
+  },
+  
+  [']'] = {
+  name = "below/next", -- optional group name
+  ['<spc>'] = { "add empty ligne below" }, -- just a label. don't create any mapping
+  ['e'] = { "move lign below" }, -- just a label. don't create any mapping
+  ['q'] = { "previous QList" }, -- just a label. don't create any mapping
+  ['b'] = { "previous buffer" }, -- just a label. don't create any mapping
+  ['B'] = { "last buffer" }, -- just a label. don't create any mapping
+  },
 
   f = {
     name = "file", -- optional group name
