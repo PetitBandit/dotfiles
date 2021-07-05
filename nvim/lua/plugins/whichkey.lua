@@ -85,15 +85,9 @@ wk.register({
   ['2'] = {"<Plug>AirlineSelectTab2", "which_key_ignore"},
   ['3'] = {"<Plug>AirlineSelectTab3", "which_key_ignore"},
   ['4'] = {"<Plug>AirlineSelectTab4", "which_key_ignore"},
-
-  c = {
-    name = "config", -- optional group name
-    c = { ":PlugClean<cr>", "clean plugins"}, 
-    i = { ":PlugInstall<cr>", "install plugins"}, 
-    l = { ":Limelight!!<cr>", "Limelight"}, 
-    n = { ":set relativenumber<cr>", "relative numbers"}, 
-  },
-
+  ['<tab>'] = {"<C-^>", "previous tab"},
+  [']<spc>'] = { "add empty ligne below" }, -- just a label. don't create any mapping
+  ['[<spc>'] = { "add empty ligne up" }, -- just a label. don't create any mapping
   ['E'] = "which_key_ignore",
 
   f = {
@@ -127,8 +121,7 @@ wk.register({
   o = {
     name = "Lines", -- optional group name
     o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 
-    ['<Alt-o>'] = { "add empty ligne below" }, -- just a label. don't create any mapping
-    ['<Alt-O>'] = { "add empty ligne up" }, -- just a label. don't create any mapping
+
   },
 
   p = {":PrettierAsync<cr>", "Prettier"},
@@ -149,9 +142,20 @@ wk.register({
 
   S = {'yiw:%s/"//gc<left><left><left>', "replace word under cursor"},
   T = {":Telescope<cr>", "Telescope"},
-  v = {":vsplit<cr>", "vsplit"},
+  v = {":vsplit<cr><C-w>l", "vsplit"},
 
+  y = {
+    name = "config+", -- optional group name
+    ['ob'] = { "background" }, -- just a label. don't create any mapping
+    ['oc'] = { "cursorline" }, -- just a label. don't create any mapping
+    ['ol'] = { ":Limelight!!<cr>", "Limelight"}, 
+    ['or'] = { "numbers" }, -- just a label. don't create any mapping
+    ['ow'] = { "wrap" }, -- just a label. don't create any mapping
+    ['pi'] = { ":PlugInstall<cr>", "Install plugins"}, 
+    ['pc'] = { ":PlugClean<cr>", "clean plugins"}, 
+  },
 }, { prefix = "<leader>" })
+
 
 
 

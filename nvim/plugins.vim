@@ -8,7 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
-
+" okokokok
     Plug 'SirVer/ultisnips',
     Plug 'gruvbox-community/gruvbox',
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -49,6 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
     Plug 'kshenoy/vim-signature'                            " marks
     Plug 'mattn/emmet-vim'
+    Plug 'tpope/vim-unimpaired'
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]

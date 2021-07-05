@@ -18,6 +18,7 @@ source $HOME/.config/nvim/plug-config/colorizer.vim
 source $HOME/.config/nvim/plug-config/hop.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
+source $HOME/.config/nvim/plug-config/emmet.vim
 lua require('plugins')
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
@@ -28,4 +29,3 @@ source $HOME/.config/nvim/functions/indentfile.vim
 source $HOME/.config/nvim/themes/airline.vim
 
 
-let g:user_emmet_leader_key=','

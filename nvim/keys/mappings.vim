@@ -76,7 +76,7 @@
 " }}}
 
 "S for search and Substitute
-      nnoremap <leader>S :call ReplaceWordUnderCursor()<cr>
+      " nnoremap <leader>S :call ReplaceWordUnderCursor()<cr>
 
       " Fugitive remap {{{
       nnoremap <leader>gf :diffget //3<CR>
@@ -90,6 +90,22 @@
 "}}}
 
       nnoremap Q q
+      map H ^
+      map L $
       nnoremap <C-S> :w<cr>
       nnoremap <C-j> :bprev<cr>
       nnoremap <C-k> :bnext<cr>
+      nnoremap <Leader>x *``cgn
+      nnoremap <leader>cd :cd %:p:h<CR>
+      nnoremap <bs> <c-O>
+      nnoremap <silent> <C-q> :bd<CR>
+
+      " map <silent> <C-h> 5<C-w><
+      " map <silent> <C-j> 5<C-W>-
+      " map <silent> <C-k> 5<C-W>+
+      " map <silent> <C-l> 5<C-w>>
+
+      nnoremap + :<C-u>+m.<left><left>
+      nnoremap - :<C-u>-m.<left><left>
+"This I got from another thread, in normal mode press + and than a relative line number(for lines below the cursor, i.e. if you want the 20th line below just type 20 after the +) and press enter to copy that relative line and paste it where ever your cursor is(and of course press - for lines above)
+
