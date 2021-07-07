@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/limelight.vim'
     " Plug 'sheerun/vim-polyglot'                             " Better Syntax Support
     Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
@@ -46,11 +46,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kshenoy/vim-signature'                            " marks
     Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-unimpaired'
+    Plug 'hrsh7th/nvim-compe'
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_markdown_link_ext = 1
-
-
-
 

@@ -17,6 +17,7 @@ source $HOME/.config/nvim/plug-config/hop.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
+source $HOME/.config/nvim/plug-config/compe.vim
 lua require('plugins')
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
