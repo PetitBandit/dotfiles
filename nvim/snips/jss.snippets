@@ -25,6 +25,10 @@
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 extends javascript, 
 
+snippet clog "console log" b
+console.log('%c', 'background-color: black; color: tomato;' $1); // Remove this  
+endsnippet
+
 snippet sel "add selector" b
 '&$1':{
 	$2
@@ -282,8 +286,21 @@ snippet tag. "add a jsx tag" b
 </$1>
 endsnippet
 
+snippet importtrans "add translation" 
+import { useTranslation } from '../src/i18n';
+
+  const { t } = useTranslation();
+
+{t('common:${1:key}')}
+endsnippet
+
+snippet class. "add a classname" 
+className=${1{classes.$2}}
+endsnippet
+
 snippet trans "add translation" 
 {t('common:${1:key}')}
 endsnippet
+
 # END JSX SNIPPET }}}
 

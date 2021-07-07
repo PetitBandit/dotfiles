@@ -14,9 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'mhartington/oceanic-next'
     Plug 'junegunn/limelight.vim'
-    Plug 'sheerun/vim-polyglot'                             " Better Syntax Support
-    Plug 'tpope/vim-haml'                                   " Syntax Haml, Sass, and SCSS 
-    Plug 'plasticboy/vim-markdown'                          "mardown syntax
+    " Plug 'sheerun/vim-polyglot'                             " Better Syntax Support
     Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
     Plug 'vim-airline/vim-airline'
@@ -32,8 +30,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wellle/targets.vim'                               " allows to jump inside ' ) } ]
     Plug 'mhinz/vim-startify'
     Plug 'unblevable/quick-scope'                           " F and f highlight
-    Plug 'kana/vim-textobj-user'                            " allows custom text object
-    Plug 'kana/vim-textobj-indent'                          " indentation as a text object
     Plug 'nvim-lua/popup.nvim'                              " telescope
     Plug 'nvim-lua/plenary.nvim'                            " telescope
     Plug 'nvim-telescope/telescope.nvim'                    " telescope
@@ -44,7 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
     Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
     Plug 'RRethy/nvim-base16'                     
-    Plug 'phaazon/hop.nvim'
+    Plug 'phaazon/hop.nvim'                                 " text navigation
     Plug 'folke/which-key.nvim'
     Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
     Plug 'kshenoy/vim-signature'                            " marks
@@ -54,7 +50,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_markdown_link_ext = 1
-
 
 
 

@@ -33,26 +33,11 @@
       nnoremap <up> <nop>
       nnoremap <down> <nop>
 " }}}
-" add lines with o {{{
-      "add a line down == alt + o
-      " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
-      " nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-      " nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-      " nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-      " nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
-  "add a line up == alt + shift + o
-
-      nnoremap <A-O> :set paste<CR>m`O<Esc>``:set nopaste<CR>
-      nnoremap <A-o> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-
-      " nnoremap Ø O<Esc>j
-" }}}
-" Ctrl + TAB in general mode will move to text buffer {{{
-      " nnoremap <S-TAB> :bnext<CR>
-      " inoremap <TAB> pumvisible() ? "<C-n>" : "<TAB>"
-      inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-      inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" " TAB completion {{{
+"       inoremap <expr> <Tab> pumvisible() ? '\<C-n>' : '\<Tab>'
+"       inoremap <expr> <S-Tab> pumvisible() ? '\<C-p>' : '\<S-Tab>'
+      
 "}}}
 " Better tabbing {{{
       vnoremap < <gv
@@ -99,7 +84,6 @@
       nnoremap <leader>cd :cd %:p:h<CR>
       nnoremap <bs> <c-O>
       nnoremap <silent> <C-q> :bd<CR>
-
       " map <silent> <C-h> 5<C-w><
       " map <silent> <C-j> 5<C-W>-
       " map <silent> <C-k> 5<C-W>+
