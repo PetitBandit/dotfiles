@@ -70,7 +70,7 @@
 				<key>hotkey</key>
 				<integer>18</integer>
 				<key>hotmod</key>
-				<integer>1048576</integer>
+				<integer>262144</integer>
 				<key>hotstring</key>
 				<string>1</string>
 				<key>leftcursor</key>
@@ -135,7 +135,7 @@
 				<key>hotkey</key>
 				<integer>19</integer>
 				<key>hotmod</key>
-				<integer>1048576</integer>
+				<integer>262144</integer>
 				<key>hotstring</key>
 				<string>2</string>
 				<key>leftcursor</key>
@@ -183,7 +183,7 @@
 				<key>hotkey</key>
 				<integer>20</integer>
 				<key>hotmod</key>
-				<integer>1048576</integer>
+				<integer>262144</integer>
 				<key>hotstring</key>
 				<string>3</string>
 				<key>leftcursor</key>
@@ -248,9 +248,9 @@ A hotkey needs to contain a modifier (Cmd, Ctrl or Alt) and a keyboard character
 		<key>AD1697AA-158F-42D5-BD66-A284B4CBE7F4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>275</integer>
+			<integer>305</integer>
 			<key>ypos</key>
-			<integer>505</integer>
+			<integer>525</integer>
 		</dict>
 		<key>FE597553-AFB7-4DD7-AB0A-4F3B3EDC1123</key>
 		<dict>
