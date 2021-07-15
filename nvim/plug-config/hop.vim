@@ -5,4 +5,4 @@ require'hop'.setup()
 EOF
 
 map <silent>q :HopWord<CR>
-map <silent>s :HopChar1<CR>
+map <silent>S :HopChar1<CR>

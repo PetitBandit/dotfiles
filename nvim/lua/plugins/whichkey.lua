@@ -26,7 +26,8 @@ local wk = require("which-key")
   },
   -- add operators that will trigger motion and text object completion
   -- to enable all native operators, set the preset / operators plugin above
-  operators = { gc = "Comments", ss = "substitution" },
+  operators = { gc = "Comments" },
+  -- operators = { gc = "Comments", ss = "substitution", ys = "add surround"},
 
   key_labels = {
     -- override the label used to display some keys. It doesn't effect WK in any other way.
@@ -45,8 +46,8 @@ local wk = require("which-key")
 
 
   window = {
-    border = "none", -- none, single, double, shadow
-    position = "top", -- bottom, top
+    border = "single", -- none, single, double, shadow
+    position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
   },

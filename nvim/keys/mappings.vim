@@ -44,8 +44,8 @@
       vnoremap > >gv
 " }}}
 "Pasting {{{
-      xnoremap p "_dP
-      nnoremap P "0p
+      " xnoremap p "_dP
+      " nnoremap P "0p
 "}}}
 
 

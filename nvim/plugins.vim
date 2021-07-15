@@ -46,6 +46,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kshenoy/vim-signature'                            " marks
     Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-unimpaired'
+    Plug 'svermeulen/vim-yoink'
     " Plug 'hrsh7th/nvim-compe'
     call plug#end()
 
