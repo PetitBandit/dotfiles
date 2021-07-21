@@ -47,7 +47,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-unimpaired'
     Plug 'svermeulen/vim-yoink'
-    " Plug 'hrsh7th/nvim-compe'
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]

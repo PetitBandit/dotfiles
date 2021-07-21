@@ -116,7 +116,7 @@ wk.register({
     p = { "<cmd>lua require('plugins.telescope').search_profiles", "search pro maiia"}, 
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
     t = { ":Rg<cr>", "Find Text"}, 
-    w = { ":NV<cr>", "Find Wiki"}, 
+    w = { ":NV!<cr>", "Find Wiki"}, 
   },
 
   g = {

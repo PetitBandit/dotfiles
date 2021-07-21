@@ -6,3 +6,4 @@ EOF
 
 map <silent>q :HopWord<CR>
 map <silent>S :HopChar1<CR>
+map <silent>sd :HopChar1<CR>
