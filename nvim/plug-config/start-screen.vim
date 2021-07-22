@@ -5,7 +5,7 @@
 
       nnoremap <Leader><Leader> :Startify <CR>
 
-let g:startify_session_dir = '~/.config/nvim/session'
+let g:startify_session_dir = '~/dotfiles/nvim/session'
 
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   Files']            },
@@ -16,14 +16,14 @@ let g:startify_lists = [
 
 
 let g:startify_bookmarks = [
-            \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'i': '~/dotfiles/nvim/init.vim' },
             \ { 'I': '~/dotfiles/i3/config' },
-            \ { ',': '~/.config/nvim/plug-config/start-screen.vim' },
-            \ { 'm': '~/.config/nvim/keys/mappings.vim' },
-            \ { 'w': '~/.config/nvim/lua/plugins/whichkey.lua' },
-            \ { 'p': '~/.config/nvim/plugins.vim' },
-            \ { 'K': '~/.config/kitty/kitty.conf'},
-            \ { 'z': '~/.config/zsh/zshrc'},
+            \ { ',': '~/dotfiles/nvim/plug-config/start-screen.vim' },
+            \ { 'm': '~/dotfiles/nvim/keys/mappings.vim' },
+            \ { 'w': '~/dotfiles/nvim/lua/plugins/whichkey.lua' },
+            \ { 'p': '~/dotfiles/nvim/plugins.vim' },
+            \ { 'K': '~/dotfiles/kitty/kitty.conf'},
+            \ { 'z': '~/dotfiles/zsh/zshrc'},
             \ { 'b': '~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Write/life.txt' },
             \ ]
 
