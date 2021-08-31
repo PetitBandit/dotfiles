@@ -78,8 +78,8 @@
       map H ^
       map L $
       nnoremap <C-S> :w<cr>
-      nnoremap <C-j> :bprev<cr>
-      nnoremap <C-k> :bnext<cr>
+      nnoremap <C-k> :cprev<cr>
+      nnoremap <C-j> :cnext<cr>
       nnoremap <Leader>x *``cgn
       nnoremap <leader>cd :cd %:p:h<CR>
       nnoremap <bs> <c-O>

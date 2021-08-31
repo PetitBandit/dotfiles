@@ -8,10 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
-" okokokok
     Plug 'SirVer/ultisnips',
     Plug 'gruvbox-community/gruvbox',
-    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'mhartington/oceanic-next'
     Plug 'junegunn/limelight.vim'
     " Plug 'sheerun/vim-polyglot'                             " Better Syntax Support
@@ -47,6 +45,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-unimpaired'
     Plug 'svermeulen/vim-yoink'
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
