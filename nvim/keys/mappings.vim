@@ -75,11 +75,21 @@
 "}}}
 
       nnoremap Q q
+      nnoremap Y yg_
+      " keeping centered while browsing
+      nnoremap n nzz
+      nnoremap N nzz
+      nnoremap <C-k> :cprev<cr>zz
+      nnoremap <C-j> :cnext<cr>zz
+      " undo break point 
+      inoremap , ,<c-g>u
+      inoremap . .<c-g>u
+      inoremap ! !<c-g>u
+      inoremap ? ?<c-g>u
+
       map H ^
       map L $
       nnoremap <C-S> :w<cr>
-      nnoremap <C-k> :cprev<cr>
-      nnoremap <C-j> :cnext<cr>
       nnoremap <Leader>x *``cgn
       nnoremap <leader>cd :cd %:p:h<CR>
       nnoremap <bs> <c-O>
