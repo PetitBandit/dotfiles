@@ -107,6 +107,11 @@ wk.register({
   ['B'] = { "last buffer" }, -- just a label. don't create any mapping
   },
 
+  c = {
+    name = "class", -- optional group name
+    e = {"class --> '& .class'" }, -- create a binding with label", -- same as above
+    c = { "classes.tomate --> 'tomate'" }, -- just a label. don't create any mapping
+  },
   f = {
     name = "file", -- optional group name
     d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 

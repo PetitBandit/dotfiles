@@ -109,3 +109,12 @@
 " - Smash that dot '.' multiple times to change all the other occurrences of the word
 " It's quicker than searching or replacing. It's pure magic.
  nnoremap cn *``cgn
+
+
+ " jss specific
+
+    " classes.tomate --> 'tomate'
+     nmap <leader>cc  /classesdiwxysiw'
+    " class --> '& .class'
+     nmap <leader>ce ysiw'li& .
+
