@@ -78,7 +78,7 @@
       nnoremap Y yg_
       " keeping centered while browsing
       nnoremap n nzz
-      nnoremap N nzz
+      nnoremap N Nzz
       nnoremap <C-k> :cprev<cr>zz
       nnoremap <C-j> :cnext<cr>zz
       " undo break point 
@@ -112,9 +112,13 @@
 
 
  " jss specific
-
+    " <div> --> <div className="">
+     nmap <leader>cc f>i className="li
     " classes.tomate --> 'tomate'
-     nmap <leader>cc  /classesdiwxysiw'
+     nmap <leader>cs  /classesdiwxysiw'
     " class --> '& .class'
      nmap <leader>ce ysiw'li& .
-
+     " className='tomate' --> className={clsx('tomate')}
+     nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxwwwli,
+     " className={test} --> className={clsx(test, )}
+    nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 

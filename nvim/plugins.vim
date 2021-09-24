@@ -44,6 +44,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kshenoy/vim-signature'                            " marks
     Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-unimpaired'
+    Plug 'tpope/vim-repeat'
     Plug 'svermeulen/vim-yoink'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     call plug#end()

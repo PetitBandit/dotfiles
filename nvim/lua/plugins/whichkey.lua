@@ -110,7 +110,11 @@ wk.register({
   c = {
     name = "class", -- optional group name
     e = {"class --> '& .class'" }, -- create a binding with label", -- same as above
-    c = { "classes.tomate --> 'tomate'" }, -- just a label. don't create any mapping
+    s = { "classes.tomate --> 'tomate'" }, -- just a label. don't create any mapping
+    l = { "className='to' --> className={clsx('to')}" }, -- just a label. don't create any mapping
+    c = { "<div> --> <div className=''>" }, -- just a label. don't create any mapping
+    s = { " className={test} --> className={clsx(test, )}" }, -- just a label. don't create any mapping
+
   },
   f = {
     name = "file", -- optional group name
