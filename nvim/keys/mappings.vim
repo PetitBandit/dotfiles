@@ -73,6 +73,11 @@
       nnoremap <leader>gP :Git push<CR>
       nnoremap <leader>gp :Git pull<CR>
 "}}}
+      " navigation {{{
+      map H ^
+      map L $
+      nnoremap B :Buffers<cr>
+      " }}}
 
       nnoremap Q q
       nnoremap Y yg_
@@ -87,8 +92,8 @@
       inoremap ! !<c-g>u
       inoremap ? ?<c-g>u
 
-      map H ^
-      map L $
+      
+     
       nnoremap <C-S> :w<cr>
       nnoremap <Leader>x *``cgn
       nnoremap <leader>cd :cd %:p:h<CR>
@@ -110,6 +115,7 @@
 " It's quicker than searching or replacing. It's pure magic.
  nnoremap cn *``cgn
 
+ nnoremap <leader>yoh :HardTimeToggle <cr>
 
  " jss specific
     " <div> --> <div className="">

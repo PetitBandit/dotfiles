@@ -173,6 +173,7 @@ wk.register({
   y = {
     name = "config+", -- optional group name
     ['ob'] = { "background" }, -- just a label. don't create any mapping
+    ['oh'] = { "hard times" }, -- just a label. don't create any mapping
     ['oc'] = { "cursorline" }, -- just a label. don't create any mapping
     ['ol'] = { ":Limelight!!<cr>", "Limelight"}, 
     ['or'] = { "numbers" }, -- just a label. don't create any mapping
