@@ -46,6 +46,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat'
     Plug 'svermeulen/vim-yoink'
+    Plug 'windwp/nvim-ts-autotag'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     call plug#end()
 

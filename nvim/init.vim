@@ -11,6 +11,7 @@ source $HOME/.config/nvim/plug-config/notational.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
 source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/autotag.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/colorizer.vim
 source $HOME/.config/nvim/plug-config/hop.vim
