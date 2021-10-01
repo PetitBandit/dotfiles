@@ -35,6 +35,27 @@ snippet sel "add selector" b
 },
 endsnippet
 
+snippet :before "before"
+position: 'relative',
+
+'&::before' : {
+  content: ''
+  position: 'absolute',
+  top: 0, 
+  right: 0,
+  left: 0,
+  bottom: 0,
+},
+endsnippet
+
+snippet h100 "Description" b
+height: '100%', 
+endsnippet
+
+snippet w100 "Description" b
+width: '100%', 
+endsnippet
+
 snippet css "console log" b
 $1 : '$2',
 endsnippet
@@ -69,9 +90,6 @@ snippet px "pixel" i
 endsnippet
 
 
-snippet w100 "pixel" i
-width: '100%', 
-endsnippet
 
 snippet box "width & height" b
 "--size": ${1:theme.spacing($2)},
@@ -117,6 +135,11 @@ endsnippet
 snippet pos "position" b
 position: '${1|absolute,relative,sticky|}',
 endsnippet
+
+snippet posa "Description" b
+position: 'absolute',
+endsnippet
+
 #position end
 
 #display start {{{
