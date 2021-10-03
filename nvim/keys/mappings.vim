@@ -87,6 +87,7 @@
       nnoremap <C-k> :cprev<cr>zz
       nnoremap <C-j> :cnext<cr>zz
       " undo break point 
+
       inoremap , ,<c-g>u
       inoremap . .<c-g>u
       inoremap ! !<c-g>u
@@ -128,3 +129,6 @@
      nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxwwwli,
      " className={test} --> className={clsx(test, )}
     nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 
+
+
+    " nnoremap <leader>ce yap<S-}>p
