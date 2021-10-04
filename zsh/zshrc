@@ -335,6 +335,8 @@ export NVM_DIR="$HOME/.nvm"
     fi
 # }}}
 
+eval $(ssh-agent);
+ssh-add;
 # unameOut="$(uname -s)"
 # case "${unameOut}" in
 #     Linux*)     machine=Linux;;
