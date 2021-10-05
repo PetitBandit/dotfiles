@@ -56,7 +56,7 @@
 
 
 " Bookmark and go file{{{
-      nnoremap <leader>bs :Bookmark<cr>
+      " nnoremap <leader>bs :Bookmark<cr>
       nnoremap gf gF
 " }}}
 
@@ -96,7 +96,6 @@
       
      
       nnoremap <C-S> :w<cr>
-      nnoremap <Leader>x *``cgn
       nnoremap <leader>cd :cd %:p:h<CR>
       nnoremap <bs> <c-O>
       nnoremap <silent> <C-q> :bd<CR>

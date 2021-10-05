@@ -118,18 +118,22 @@ wk.register({
   },
   f = {
     name = "file", -- optional group name
-    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
-    b = { ":GBranches checkout<cr>", "Branches"}, 
+    b = { ":Buffers<cr>", "buffers"}, 
     f = { ":GFiles<cr>", "Find File" }, -- create a binding with label
-    p = { "<cmd>lua require('plugins.telescope').search_profiles", "search pro maiia"}, 
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
+    h = { ":History<cr>", "recent files" }, -- create a binding with label
     t = { ":Rg<cr>", "Find Text"}, 
     w = { ":NV!<cr>", "Find Wiki"}, 
+    l = { ":Lines<cr>", "lines in buffers"}, 
+    m = { ":Marks<cr>", "Marks"}, 
+    -- p = { "<cmd>lua require('plugins.telescope').search_profiles", "search pro maiia"}, 
+    -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
+    -- d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
   },
 
   g = {
     name = "go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
+    b = { ":GBranches checkout<cr>", "Branches"}, 
   },
 
   h = {":hsplit<cr>", "hsplit"},
@@ -149,8 +153,12 @@ wk.register({
 
   },
 
-  p = {":PrettierAsync<cr>", "Prettier"},
-
+  p = {
+    name = "quickfix list", -- optional group name
+    r =  {":PrettierAsync<cr>", "Prettier"},
+    j = { ":cnext<cr>", "next Qlist"}, 
+    k = { ":cprev<cr>", "previous Qlist"}, 
+  },
   q = {
     name = "quickfix list", -- optional group name
     o = { ":copen<cr>", "open QList"}, 

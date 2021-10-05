@@ -12,7 +12,7 @@ source $HOME/.config/nvim/plug-config/subversive.vim
 source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/autotag.vim
-source $HOME/.config/nvim/plug-config/telescope.vim
+" source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/colorizer.vim
 source $HOME/.config/nvim/plug-config/hop.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
@@ -24,7 +24,7 @@ lua require('plugins')
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
 source $HOME/.config/nvim/functions/openandsearch.vim
-source $HOME/.config/nvim/functions/bookmark.vim
+" source $HOME/.config/nvim/functions/bookmark.vim
 source $HOME/.config/nvim/functions/indentfile.vim
 
 source $HOME/.config/nvim/themes/airline.vim
