@@ -314,7 +314,7 @@ export PATH=$PATH:$HOME/Library/Python/3.9/bin
 if command -v fzf &>/dev/null; then
   # Auto-completion
   [[ $- == *i* ]] &&
-    source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+    source "/usr/share/fzf/completion.zsh" 2> /dev/null
 
   # Key bindings
     if [[ "$(uname -s)" == "Darwin" ]]

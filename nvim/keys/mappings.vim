@@ -132,3 +132,6 @@
 
 
     " nnoremap <leader>ce yap<S-}>p
+    nnoremap ; :
+    nmap <leader>' ysiw'
+    nmap <leader>` ysiw`

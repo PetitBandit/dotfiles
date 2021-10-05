@@ -119,8 +119,7 @@ wk.register({
   f = {
     name = "file", -- optional group name
     d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
-    B = { ":GBranches<cr>", "Branches"}, 
-    b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Branches"}, 
+    b = { ":GBranches checkout<cr>", "Branches"}, 
     f = { ":GFiles<cr>", "Find File" }, -- create a binding with label
     p = { "<cmd>lua require('plugins.telescope').search_profiles", "search pro maiia"}, 
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
@@ -166,7 +165,7 @@ wk.register({
     b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
   },
 
-  S = {'yiw:%s/"//gc<left><left><left>', "replace word under cursor"},
+  S = {'yiw:s/"//g<left><left>', "replace word under cursor"},
   T = {":Telescope<cr>", "Telescope"},
   v = {":vsplit<cr><C-w>l", "vsplit"},
 

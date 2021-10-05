@@ -28,11 +28,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wellle/targets.vim'                               " allows to jump inside ' ) } ]
     Plug 'mhinz/vim-startify'
     Plug 'unblevable/quick-scope'                           " F and f highlight
-    Plug 'nvim-lua/popup.nvim'                              " telescope
-    Plug 'nvim-lua/plenary.nvim'                            " telescope
-    Plug 'nvim-telescope/telescope.nvim'                    " telescope
-    Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
     Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'svermeulen/vim-subversive'                        " Substitution
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
