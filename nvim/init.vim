@@ -31,3 +31,4 @@ source $HOME/.config/nvim/themes/airline.vim
 
 
 source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/keys/temporaryMappings.vim

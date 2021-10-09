@@ -87,7 +87,11 @@ wk.register({
   ['3'] = {"<Plug>AirlineSelectTab3", "which_key_ignore"},
   ['4'] = {"<Plug>AirlineSelectTab4", "which_key_ignore"},
   ['<tab>'] = {"<C-^>", "previous tab"},
+  ['b'] = { ":Buffers<cr>", "buffers"}, 
   ['E'] = "which_key_ignore",
+  ['<c-s>'] = "save file",
+  ['<c-q>'] = "quite buffer",
+
 
   ['['] = {
   name = "up/previous", -- optional group name

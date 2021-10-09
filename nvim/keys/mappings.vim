@@ -86,8 +86,8 @@
       nnoremap N Nzz
       nnoremap <C-k> :cprev<cr>zz
       nnoremap <C-j> :cnext<cr>zz
-      " undo break point 
 
+      " undo break point 
       inoremap , ,<c-g>u
       inoremap . .<c-g>u
       inoremap ! !<c-g>u
@@ -117,7 +117,7 @@
 
  nnoremap <leader>yoh :HardTimeToggle <cr>
 
- " jss specific
+ " jss specific {{{
     " <div> --> <div className="">
      nmap <leader>cc f>i className="li
     " classes.tomate --> 'tomate'
@@ -130,16 +130,19 @@
      " className={test} --> className={clsx(test, )}
     nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 
 
-" add import clsx on top of the file and then teleports back to the line we were before
+    " add import clsx on top of the file and then teleports back to the line we were before
     nnoremap <leader>ic mjggoimport clsx from 'clsx';'j
+    " }}}
 
+   "copy paragraph under cursor and paste it under  
     nnoremap <leader>cp yap<S-}>p
     " nnoremap ; :
+    
     nmap <leader>' ysiw'
     nmap <leader>` ysiw`
 
 
 
+    "add the filename 
     imap \fn <C-R>=expand("%")<CR>
-    nnoremap <leader>story 2jmmi<C-R>=expand("%")<CR>?componentsd0y3t/d3t//title<CR>di'h"0p'mxwDdiw:%s/Badge/<C-R>+/g<CR>?args<CR>jdi{
 
