@@ -325,6 +325,10 @@ const useStyles = makeStyles(theme => ({
   className={classes.$1}
 endsnippet
 
+snippet mkthemeOnly "add makestyle bases" b
+const useStyles = makeStyles(theme => ({
+endsnippet
+
 snippet tag. "add a jsx tag" b
 <$1${2: className=$3}>
 
@@ -347,5 +351,20 @@ snippet trans "add translation"
 {t('common:${1:key}')}
 endsnippet
 
+snippet story "Description" b
+import React from 'react';
+import Badge from './Badge';
+
+export default {
+  title: 'components/atoms/Badge',
+  component: Badge,
+  args: {
+    color: 'primary',
+    badgeContent: 4,
+  },
+};
+
+export const Default = (args) => <Badge {...args} />;
+endsnippet
 # END JSX SNIPPET }}}
 

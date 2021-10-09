@@ -136,7 +136,14 @@ wk.register({
     b = { ":GBranches checkout<cr>", "Branches"}, 
   },
 
+
   h = {":hsplit<cr>", "hsplit"},
+
+
+  i = {
+    name = "import", -- optional group name
+    c = { "add the import of clsx"}, 
+  },
 
   m = {
     name = "marks", -- optional group name
@@ -159,12 +166,18 @@ wk.register({
     j = { ":cnext<cr>", "next Qlist"}, 
     k = { ":cprev<cr>", "previous Qlist"}, 
   },
+
   q = {
     name = "quickfix list", -- optional group name
     o = { ":copen<cr>", "open QList"}, 
     q = { ":cclose<cr>", "close QList"}, 
     j = { ":cnext<cr>", "next Qlist"}, 
     k = { ":cprev<cr>", "previous Qlist"}, 
+  },
+
+  r = {
+    name = "repeat", -- optional group name
+    s = { "g&", "repeat last search and replace"}, 
   },
 
   s = {

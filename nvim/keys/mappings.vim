@@ -126,11 +126,20 @@
      nmap <leader>ce ysiw'li& .
      " className='tomate' --> className={clsx('tomate')}
      nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxwwwli,
+
      " className={test} --> className={clsx(test, )}
     nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 
 
+" add import clsx on top of the file and then teleports back to the line we were before
+    nnoremap <leader>ic mjggoimport clsx from 'clsx';'j
 
-    " nnoremap <leader>ce yap<S-}>p
-    nnoremap ; :
+    nnoremap <leader>cp yap<S-}>p
+    " nnoremap ; :
     nmap <leader>' ysiw'
     nmap <leader>` ysiw`
+
+
+
+    imap \fn <C-R>=expand("%")<CR>
+    nnoremap <leader>story 2jmmi<C-R>=expand("%")<CR>?componentsd0y3t/d3t//title<CR>di'h"0p'mxwDdiw:%s/Badge/<C-R>+/g<CR>?args<CR>jdi{
+
