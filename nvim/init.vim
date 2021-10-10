@@ -34,9 +34,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/temporaryMappings.vim
 
 if has('mac')
-    set background=light                     " tell vim what the background color looks like
     source $HOME/.config/nvim/general/mac.vim
 elseif has('unix')
-       set background=dark                     " tell vim what the background color looks like.....
+    source $HOME/.config/nvim/general/linux.vim
 endif
 
