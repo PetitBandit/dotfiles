@@ -2,12 +2,14 @@
       inoremap <expr> <c-TAB> ("\<C-n>")
       inoremap <expr> <c-k> ("\<C-p>")
 "}}}
+
 " Mac remap {{{
       nmap ∆   <A-j>
       nmap ˚   <A-k>
       nmap Ø   <A-O>
       nmap ø   <A-o>
 " }}}
+
 " Use alt + hjkl  {{{
       " alt h = ˙
       " alt j = ∆
@@ -20,13 +22,19 @@
       nnoremap <A-j>   ddp    
       nnoremap <A-k>   ddkkp
 " }}}
+
+
 " ESC {{{
       inoremap jk <Esc>
 "}}}
+
+
 " Jumps remap {{{
       nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
       nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
 " }}}
+
+
 " Breaking the habits - only hjkl {{{
       nnoremap <left> <nop>
       nnoremap <right> <nop>
@@ -34,19 +42,11 @@
       nnoremap <down> <nop>
 " }}}
 
-" " TAB completion {{{
-"       inoremap <expr> <Tab> pumvisible() ? '\<C-n>' : '\<Tab>'
-"       inoremap <expr> <S-Tab> pumvisible() ? '\<C-p>' : '\<S-Tab>'
-      
-"}}}
+
 " Better tabbing {{{
       vnoremap < <gv
       vnoremap > >gv
 " }}}
-"Pasting {{{
-      " xnoremap p "_dP
-      " nnoremap P "0p
-"}}}
 
 
 " Marks {{{
@@ -56,12 +56,10 @@
 
 
 " Bookmark and go file{{{
-      " nnoremap <leader>bs :Bookmark<cr>
       nnoremap gf gF
 " }}}
 
 "S for search and Substitute
-      " nnoremap <leader>S :call ReplaceWordUnderCursor()<cr>
 
       " Fugitive remap {{{
       nnoremap <leader>gf :diffget //3<CR>
@@ -76,11 +74,14 @@
       " navigation {{{
       map H ^
       map L $
-      nnoremap B :Buffers<cr>
+
+      nnoremap <bs> :Buffers<cr>
+     
       " }}}
 
       nnoremap Q q
       nnoremap Y yg_
+
       " keeping centered while browsing
       nnoremap n nzz
       nnoremap N Nzz
@@ -93,19 +94,13 @@
       inoremap ! !<c-g>u
       inoremap ? ?<c-g>u
 
-      
-     
-      nnoremap <C-S> :w<cr>
-      nnoremap <leader>cd :cd %:p:h<CR>
-      nnoremap <bs> <c-O>
+      nnoremap <silent> <C-S> :w<cr>
       nnoremap <silent> <C-q> :bd<CR>
-      " map <silent> <C-h> 5<C-w><
-      " map <silent> <C-j> 5<C-W>-
-      " map <silent> <C-k> 5<C-W>+
-      " map <silent> <C-l> 5<C-w>>
+      nnoremap <leader>cd :cd %:p:h<CR>
 
       nnoremap + :<C-u>+m.<left><left>
       nnoremap - :<C-u>-m.<left><left>
+
 "This I got from another thread, in normal mode press + and than a relative line number(for lines below the cursor, i.e. if you want the 20th line below just type 20 after the +) and press enter to copy that relative line and paste it where ever your cursor is(and of course press - for lines above)
 
 " - Go on top of a word you want to change
@@ -113,6 +108,7 @@
 " - Type the new word you want to replace it with
 " - Smash that dot '.' multiple times to change all the other occurrences of the word
 " It's quicker than searching or replacing. It's pure magic.
+
  nnoremap cn *``cgn
 
  nnoremap <leader>yoh :HardTimeToggle <cr>

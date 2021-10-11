@@ -44,6 +44,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ggandor/lightspeed.nvim'
     Plug 'takac/vim-hardtime'                               "prevents from relying on jj too much
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-lua/plenary.nvim' "Telescope
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
@@ -52,7 +55,4 @@ let g:vimwiki_markdown_link_ext = 1
 "retired plugins
 "
     " Plug 'phaazon/hop.nvim'                                 " text navigation
-    " Plug 'nvim-lua/plenary.nvim' "Telescope
-    " Plug 'nvim-telescope/telescope.nvim'
-    " Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     " Plug 'sheerun/vim-polyglot'                             " Better Syntax Support

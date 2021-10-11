@@ -5,8 +5,8 @@ source $HOME/.config/nvim/general/settings.vim
 
 source $HOME/.config/nvim/plug-config/coc.vim
 " source $HOME/.config/nvim/plug-config/lightspeed.vim
-" source $HOME/.config/nvim/plug-config/telescope.vim
 " source $HOME/.config/nvim/plug-config/hop.vim
+source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/colorizer.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
