@@ -214,22 +214,22 @@ alias pros='cd $MAIIA_PATH; yarn; yarn pro:dev'
 function maiiaswitch() {
     if [ $# -ge 2 ]
  then
-  cd $MAIIA_PATH && git fetch --all && git checkout "$1/MAIIAPRO-$2" && git pull && yarn 
+  cd $MAIIA_PATH ; git fetch --all ; git checkout "$1/MAIIAPRO-$2" ; git pull && yarn 
  else
-  cd $MAIIA_PATH && git fetch --all && git checkout "feat/MAIIAPRO-$1" && git pull && yarn 
+  cd $MAIIA_PATH ; git fetch --all ; git checkout "feat/MAIIAPRO-$1" ; git pull ; yarn 
  fi
 }
 
 function maiia() {
-  cd $MAIIA_PATH && git checkout feat-pro && git pull && yarn && git checkout -b "$1/MAIIAPRO-$2"
+  cd $MAIIA_PATH ; git checkout feat-pro ; git pull origin feat-pro; yarn ; git checkout -b "$1/MAIIAPRO-$2"
 }
 # fix {{ticket}}
 function fix() {
-  cd $MAIIA_PATH && git checkout staging && git pull && yarn && git checkout -b "fix/MAIIAPRO-$1"
+  cd $MAIIA_PATH ; git checkout staging ; git pull origin staging ; yarn ; git checkout -b "fix/MAIIAPRO-$1"
 }
 # hotfix {{ticket}}
 function hotfix() {
-  cd $MAIIA_PATH && git checkout master && git pull && yarn && git checkout -b "hotfix/MAIIAPRO-$1"
+  cd $MAIIA_PATH ; git checkout master ; git pull origin master; yarn ; git checkout -b "hotfix/MAIIAPRO-$1"
 }
 
 

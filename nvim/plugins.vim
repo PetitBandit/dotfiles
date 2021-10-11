@@ -12,7 +12,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'gruvbox-community/gruvbox',
     Plug 'mhartington/oceanic-next'
     Plug 'junegunn/limelight.vim'
-    " Plug 'sheerun/vim-polyglot'                             " Better Syntax Support
     Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
     Plug 'vim-airline/vim-airline'
@@ -28,16 +27,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wellle/targets.vim'                               " allows to jump inside ' ) } ]
     Plug 'mhinz/vim-startify'
     Plug 'unblevable/quick-scope'                           " F and f highlight
-    " Plug 'nvim-lua/plenary.nvim' "Telescope
-    " Plug 'nvim-telescope/telescope.nvim'
-    " Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
     Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'svermeulen/vim-subversive'                        " Substitution
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
     Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
     Plug 'RRethy/nvim-base16'                     
-    Plug 'phaazon/hop.nvim'                                 " text navigation
     Plug 'folke/which-key.nvim'
     Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
     Plug 'kshenoy/vim-signature'                            " marks
@@ -46,10 +41,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-repeat'
     Plug 'svermeulen/vim-yoink'
     Plug 'windwp/nvim-ts-autotag'
-    Plug 'takac/vim-hardtime'
+    Plug 'ggandor/lightspeed.nvim'
+    Plug 'takac/vim-hardtime'                               "prevents from relying on jj too much
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
 let g:vimwiki_markdown_link_ext = 1
 
+"retired plugins
+"
+    " Plug 'phaazon/hop.nvim'                                 " text navigation
+    " Plug 'nvim-lua/plenary.nvim' "Telescope
+    " Plug 'nvim-telescope/telescope.nvim'
+    " Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    " Plug 'sheerun/vim-polyglot'                             " Better Syntax Support
