@@ -323,7 +323,7 @@ import clsx from 'clsx';
 endsnippet
 
 snippet mkstyle "add makestyle bases" b
-import {makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   ${1:rootClass}: {
     backgroundColor: 'tomato',
@@ -333,9 +333,6 @@ const useStyles = makeStyles(theme => ({
   className={classes.$1}
 endsnippet
 
-snippet mkthemeOnly "add makestyle bases" b
-const useStyles = makeStyles(theme => ({
-endsnippet
 
 snippet tag. "add a jsx tag" b
 <$1${2: className=$3}>

@@ -118,6 +118,7 @@ wk.register({
     l = { "className='to' --> className={clsx('to')}" }, -- just a label. don't create any mapping
     c = { "<div> --> <div className=''>" }, -- just a label. don't create any mapping
     s = { " className={test} --> className={clsx(test, )}" }, -- just a label. don't create any mapping
+    S = { "'tomate' --> classes.tomate" }, -- just a label. don't create any mapping
 
   },
   f = {
@@ -147,6 +148,12 @@ wk.register({
   i = {
     name = "import", -- optional group name
     c = { "add the import of clsx"}, 
+  },
+
+  j = {
+    name = "import", -- optional group name
+    c = { "add the import of clsx"}, 
+    ['tc'] = { "makestyle --> makestyle + theme" }, -- just a label. don't create any mapping
   },
 
   m = {
