@@ -90,7 +90,8 @@ wk.register({
   ['b'] = { ":Buffers<cr>", "buffers"}, 
   ['E'] = "which_key_ignore",
   ['<c-s>'] = "save file",
-  ['<c-q>'] = "quite buffer",
+  ['<c-q>'] = "quit buffer",
+  ['<c-/>'] = "search line in current file",
 
 
   ['['] = {
