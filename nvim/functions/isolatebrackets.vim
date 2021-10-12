@@ -1,5 +1,5 @@
 function! IsolateBracket()
 " normal! f{%ojkk%Oj
-normal! mm?{%ojkk%O'm
+normal! mp?{%ojkk%O'p
 endfunction
 
