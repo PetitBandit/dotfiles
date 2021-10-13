@@ -107,12 +107,12 @@
 " - Type the new word you want to replace it with
 " - Smash that dot '.' multiple times to change all the other occurrences of the word
 " It's quicker than searching or replacing. It's pure magic.
-nnoremap <cr> }
  nnoremap cn *``cgn
 
  nnoremap <leader>yoh :HardTimeToggle <cr>
 
  " jss specific {{{
+nmap <leader>cv f>i className={clsx( 
     " <div> --> <div className="">
      nmap <leader>cc f>i className="li
     " classes.tomate --> 'tomate'
@@ -126,27 +126,30 @@ nnoremap <cr> }
     " class --> '& .class'
      nmap <leader>ce ysiw'li& .
      " className='tomate' --> className={clsx('tomate')}
-     nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxwwwli,
+     nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
 
      " className={test} --> className={clsx(test, )}
     nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 
 
     " add import clsx on top of the file and then teleports back to the line we were before
     nnoremap <leader>ic mjggoimport clsx from 'clsx';'j
-    " }}}
+
     " class --> '& .class'
      nmap <leader>ce ysiw'li& .
+
      " className='tomate' --> className={clsx('tomate')}
-     nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxwwwli,
+     nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf)i,
 
      " className={test} --> className={clsx(test, )}
     nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 
 
     " add import clsx on top of the file and then teleports back to the line we were before
     nnoremap <leader>ic mjggoimport clsx from 'clsx';'j
+
+    "changes makestyle --> makestyle(theme ...
+    nnoremap <leader>jtc ?useStyles = makewwwC(theme => ({
     " }}}
 
-    nnoremap <leader>jtc ?useStyles = makewwwC(theme => ({
     "copy paragraph under cursor and paste it under  
     nnoremap <leader>cp yap<S-}>p
     " nnoremap ; :
@@ -158,4 +161,3 @@ nnoremap <cr> }
 
     "add the filename 
     imap \fn <C-R>=expand("%")<CR>
-

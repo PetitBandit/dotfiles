@@ -46,6 +46,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-lua/plenary.nvim' "Telescope
+    Plug 'akinsho/toggleterm.nvim' "toggleterm
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     call plug#end()
 
