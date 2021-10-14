@@ -202,6 +202,7 @@ alias config='cd $HOME/dotfiles && nvim $(fzf)'
 alias la='ls -aG'                   # Shorcut
 alias ls='ls -G'                   # Shorcut
 alias gg='lazygit'                   # Shorcut
+alias nn='nvim'                   # Shorcut
 alias meteo='curl http://wttr.in'
 
 # Maiia specific aliases {{{
@@ -209,7 +210,7 @@ MAIIA_PATH="${HOME}/work/doca/maiia-frontend/"
 alias gcf='git checkout feat-pro; git pull origin feat-pro; yarn'
 alias gfa='git fetch --all'
 alias pros='cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev'
-alias launchpro='kitty @ set-tab-title code ; kitty @ launch --type=tab --tab-title "server" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
+alias launchpro='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
 # alias launchpro='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
 
 # alias test='cd $MAIIA_PATH; cd packages/pro-frontend'

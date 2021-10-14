@@ -225,6 +225,18 @@ snippet pR "Description" b
 paddingRight:${1:theme.spacing($2)},
 endsnippet
 
+snippet margTopBottom "top and bottom margin" b
+"--size": ${1:theme.spacing($2)},
+marginTop: 'var(--size)',
+marginBottom: 'var(--size)',
+endsnippet
+
+snippet margLeftRight "left and right margin" b
+"--size": ${1:theme.spacing($2)},
+marginLeft: 'var(--size)',
+marginRight: 'var(--size)',
+endsnippet
+
 snippet marg "Description" b
 margin: ${1:theme.spacing($2)},
 endsnippet
@@ -277,8 +289,17 @@ endsnippet
 # END BORDER }}}
 
 #COLORS {{{
+
 snippet cmain "color theme" 
 theme.palette.main.${1:main},
+endsnippet
+
+snippet cdestructive "color theme" 
+theme.palette.destructive.${1:main},
+endsnippet
+
+snippet cwarning "color theme" 
+theme.palette.warning.${1:main},
 endsnippet
 
 snippet caccent "color theme" 
