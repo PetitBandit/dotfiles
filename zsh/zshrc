@@ -3,6 +3,7 @@ setopt NO_CASE_GLOB
 export XDG_CONFIG_HOME="${HOME}/.config"
 export EDITOR=nvim
 ZSH_DIR="${XDG_CONFIG_HOME}/zsh"
+set -o vi
 # Autoload functions {{{
 fpath=(${ZSH_DIR}/functions $fpath)
 autoload -U ${ZSH_DIR}/functions/*(:t)
