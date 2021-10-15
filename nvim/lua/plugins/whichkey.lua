@@ -152,7 +152,11 @@ wk.register({
   },
 
   j = {
-    name = "import", -- optional group name
+    name = "jss", -- optional group name
+    a = {
+name ='test',
+c = {"testing"}
+    },
     c = { "add the import of clsx"}, 
     ['tc'] = { "makestyle --> makestyle + theme" }, -- just a label. don't create any mapping
   },
@@ -195,7 +199,6 @@ wk.register({
   s = {
     name = "s+", -- optional group name
     f = { ":so % <cr>", "source file"}, 
-    b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
   },
 
   S = {'yiw:s/"//g<left><left>', "replace word under cursor"},
@@ -210,8 +213,11 @@ wk.register({
     ['ol'] = { ":Limelight!!<cr>", "Limelight"}, 
     ['or'] = { "numbers" }, -- just a label. don't create any mapping
     ['ow'] = { "wrap" }, -- just a label. don't create any mapping
-    ['pi'] = { ":PlugInstall<cr>", "Install plugins"}, 
-    ['pc'] = { ":PlugClean<cr>", "clean plugins"}, 
+    p = {
+      name = "plugins",
+    i = { ":PlugInstall<cr>", "Install plugins"}, 
+    c = { ":PlugClean<cr>", "clean plugins"}, 
+    }
   },
 }, { prefix = "<leader>" })
 

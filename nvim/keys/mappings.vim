@@ -113,35 +113,23 @@
 
  " jss specific {{{
 nmap <leader>cv f>i className={clsx( 
-    " <div> --> <div className="">
-     nmap <leader>cc f>i className="li
+
     " classes.tomate --> 'tomate'
      nmap <leader>cs  /classesdiwxysiw'
     "  'tomate' --> classes.tomate
      nmap <leader>cS /classwwyiwda"i{classes.pbds"
+
     " <div> --> <div className="">
      nmap <leader>cc f>i className="li
-    " classes.tomate --> 'tomate'
-     nmap <leader>cs  /classesdiwxysiw'
+
+
     " class --> '& .class'
      nmap <leader>ce ysiw'li& .
+
      " className='tomate' --> className={clsx('tomate')}
      nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
-
      " className={test} --> className={clsx(test, )}
-    nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 
-
-    " add import clsx on top of the file and then teleports back to the line we were before
-    nnoremap <leader>ic mjggoimport clsx from 'clsx';'j
-
-    " class --> '& .class'
-     nmap <leader>ce ysiw'li& .
-
-     " className='tomate' --> className={clsx('tomate')}
-     nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf)i,
-
-     " className={test} --> className={clsx(test, )}
-    nmap <leader>cs f{wi f}i bysiW(iclsxf)i, 
+    nmap <leader>cL f{wi f}i bysiW(iclsxf)i, 
 
     " add import clsx on top of the file and then teleports back to the line we were before
     nnoremap <leader>ic mjggoimport clsx from 'clsx';'j

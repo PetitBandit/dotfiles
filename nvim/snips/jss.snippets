@@ -35,11 +35,11 @@ snippet sel "add selector" b
 },
 endsnippet
 
-snippet :before "before"
+snippet before "before"
 position: 'relative',
 
 '&::before' : {
-  content: ''
+  content: '',
   position: 'absolute',
   top: 0, 
   right: 0,
@@ -296,6 +296,10 @@ endsnippet
 
 snippet cdestructive "color theme" 
 theme.palette.destructive.${1:main},
+endsnippet
+
+snippet cvalidation "color theme" 
+theme.palette.validation.${1:main},
 endsnippet
 
 snippet cwarning "color theme" 
