@@ -112,20 +112,24 @@
  nnoremap <leader>yoh :HardTimeToggle <cr>
 
  " jss specific {{{
-nmap <leader>cv f>i className={clsx( 
-
-    " classes.tomate --> 'tomate'
-     nmap <leader>cs  /classesdiwxysiw'
-    "  'tomate' --> classes.tomate
-     nmap <leader>cS /classwwyiwda"i{classes.pbds"
 
     " <div> --> <div className="">
      nmap <leader>cc f>i className="li
+    " <div> --> <div className={classes.
+    nmap <leader>cC f>i className={classes.
+
+    " classes.tomate --> 'tomate'
+    nmap <leader>cs  /classesdiwxysiw'ds{
+    "  'tomate' --> classes.tomate
+     nmap <leader>cS /classwwyiwda"i{classes.pbds"
+
 
 
     " class --> '& .class'
      nmap <leader>ce ysiw'li& .
 
+    " <div> --> <div className={clsx()}>
+    nmap <leader>co f>i className={clsx(
      " className='tomate' --> className={clsx('tomate')}
      nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
      " className={test} --> className={clsx(test, )}
@@ -140,7 +144,6 @@ nmap <leader>cv f>i className={clsx( 
 
     "copy paragraph under cursor and paste it under  
     nnoremap <leader>cp yap<S-}>p
-    " nnoremap ; :
     
     nmap <leader>' ysiw'
     nmap <leader>` ysiw`

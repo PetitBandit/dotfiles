@@ -114,13 +114,14 @@ wk.register({
 
   c = {
     name = "class", -- optional group name
-    e = {"class --> '& .class'" }, -- create a binding with label", -- same as above
-    s = { "classes.tomate --> 'tomate'" }, -- just a label. don't create any mapping
-    l = { "className='to' --> className={clsx('to')}" }, -- just a label. don't create any mapping
-    c = { "<div> --> <div className=''>" }, -- just a label. don't create any mapping
-    s = { " className={test} --> className={clsx(test, )}" }, -- just a label. don't create any mapping
-    S = { "'tomate' --> classes.tomate" }, -- just a label. don't create any mapping
-
+    c = { "div ➜ div className=''" }, -- just a label. don't create any mapping
+    C = { "div ➜ div className={classes.}" }, -- just a label. don't create any mapping
+    o = { "div ➜ div className={clsx()}" }, -- just a label. don't create any mapping
+    l = { "className='to' ➜ className={clsx('to')}" }, -- just a label. don't create any mapping
+    L = { "className={test} ➜ className={clsx(test, )}" }, -- just a label. don't create any mapping
+    s = { "classes.tomate ➜ 'tomate'" }, -- just a label. don't create any mapping
+    S = { "'tomate' ➜ classes.tomate" }, -- just a label. don't create any mapping
+    e = {"class ➜ '& .class'" }, -- create a binding with label", -- same as above
   },
   f = {
     name = "file", -- optional group name
@@ -155,10 +156,9 @@ wk.register({
     name = "jss", -- optional group name
     a = {
 name ='test',
-c = {"testing"}
     },
     c = { "add the import of clsx"}, 
-    ['tc'] = { "makestyle --> makestyle + theme" }, -- just a label. don't create any mapping
+    ['tc'] = { "makestyle ➜ makestyle + theme" }, -- just a label. don't create any mapping
   },
 
   m = {
