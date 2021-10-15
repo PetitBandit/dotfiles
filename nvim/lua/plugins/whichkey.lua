@@ -115,10 +115,10 @@ wk.register({
   c = {
     name = "class", -- optional group name
     c = { "div ➜ div className=''" }, -- just a label. don't create any mapping
-    C = { "div ➜ div className={classes.}" }, -- just a label. don't create any mapping
-    o = { "div ➜ div className={clsx()}" }, -- just a label. don't create any mapping
-    l = { "className='to' ➜ className={clsx('to')}" }, -- just a label. don't create any mapping
-    L = { "className={test} ➜ className={clsx(test, )}" }, -- just a label. don't create any mapping
+    C = { "div ➜ div className={classes." }, -- just a label. don't create any mapping
+    o = { "div ➜ div className={clsx(" }, -- just a label. don't create any mapping
+    l = { "className='to' ➜ className={clsx('to'" }, -- just a label. don't create any mapping
+    L = { "className={test} ➜ className={clsx(test," }, -- just a label. don't create any mapping
     s = { "classes.tomate ➜ 'tomate'" }, -- just a label. don't create any mapping
     S = { "'tomate' ➜ classes.tomate" }, -- just a label. don't create any mapping
     e = {"class ➜ '& .class'" }, -- create a binding with label", -- same as above
@@ -144,7 +144,7 @@ wk.register({
   },
 
 
-  h = {":hsplit<cr>", "hsplit"},
+  h = {":split<cr>", "hsplit"},
 
 
   i = {
