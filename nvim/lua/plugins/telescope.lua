@@ -71,6 +71,14 @@ M.search_profiles = function()
     })
 end
 
+M.search_gitfiles = function()
+    require("telescope.builtin").git_files({
+        prompt_title = "< GIT >",
+        file_ignore_patterns = {"index.ts", "index.stories.js"},
+    })
+end
+
+
 
 require('telescope').load_extension('fzf')
 return M

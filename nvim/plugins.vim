@@ -39,6 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat'
+    Plug 'rafcamlet/nvim-luapad'
     Plug 'svermeulen/vim-yoink'
     Plug 'windwp/nvim-ts-autotag'
     Plug 'ggandor/lightspeed.nvim'
@@ -47,7 +48,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-lua/plenary.nvim' "Telescope
     Plug 'akinsho/toggleterm.nvim' "toggleterm
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'quangnguyen30192/cmp-nvim-ultisnips'
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]

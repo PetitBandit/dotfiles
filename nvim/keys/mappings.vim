@@ -75,7 +75,7 @@
       map H ^
       map L $
 
-      nnoremap <bs> :Buffers<cr>
+      " nnoremap <bs> :Buffers<cr>
      
       " }}}
       nnoremap Q q
