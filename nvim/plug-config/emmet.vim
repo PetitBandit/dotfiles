@@ -2,11 +2,24 @@
 
 let g:user_emmet_mode = 'inv'
 
-  " map <C-e><C-e>  <plug>(emmet-expand-abbr)
-  " map   <C-e>u   <plug>(emmet-update-tag)
-  " map   <C-e>i  <plug>(emmet-balance-tag-inward)
-  " map   <C-e>o  <plug>(emmet-balance-tag-outward)
-  " " imap   <C-y>n   <plug>(emmet-move-next)
-  " " imap   <C-y>N   <plug>(emmet-move-prev)
-  " " imap   <C-y>k   <plug>(emmet-remove-tag)
+  vmap ,  <plug>(emmet-expand-abbr)
+  vmap u   <plug>(emmet-update-tag)
+  vmap e <plug>(emmet-balance-tag-inward)
+  vmap r  <plug>(emmet-balance-tag-outword)
+  " imap   <C-y>n   <plug>(emmet-move-next)
+  " imap   <C-y>N   <plug>(emmet-move-prev)
+  vmap k <plug>(emmet-remove-tag)
   
+  " <div class="tomate">
+"   <ul>
+"     <li>01</li>
+"     <li>02</li>
+"     <li>03</li>
+"   </ul>
+  "   </ul>
+  "   <ul>
+  "     <li>01</li>
+  "     <li>02</li>
+  "     <li>03</li>
+  "   </ul>
+  " </div>

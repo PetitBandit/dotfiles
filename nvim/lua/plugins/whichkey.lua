@@ -132,15 +132,13 @@ wk.register({
     w = { ":NV!<cr>", "Find Wiki"}, 
     l = { ":Lines<cr>", "lines in buffers"}, 
     m = { ":Marks<cr>", "Marks"}, 
-    -- p = { "<cmd>lua require('plugins.telescope').search_profiles", "search pro maiia"}, 
-    -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
-    -- d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
   },
 
   g = {
     name = "go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
-    b = { ":GBranches checkout<cr>", "Branches"}, 
+    b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
+
   },
 
 
@@ -199,11 +197,18 @@ name ='test',
   s = {
     name = "s+", -- optional group name
     f = { ":so % <cr>", "source file"}, 
+    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
+    h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
+    p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
+    r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
+    t = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "text"}, 
   },
 
-  S = {'yiw:s/"//g<left><left>', "replace word under cursor"},
+  M = {"<cmd>lua require('telescope.builtin').marks()<cr>", "marks"},
+  S = {'yiw:%s/"//g<left><left>', "replace word under cursor"},
   T = {":Telescope<cr>", "Telescope"},
   v = {":vsplit<cr><C-w>l", "vsplit"},
+  t = {"<leader>t <cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
 
   y = {
     name = "config+", -- optional group name
