@@ -1,24 +1,7 @@
-" Better nav for omnicomplete {{{
-      inoremap <expr> <c-TAB> ("\<C-n>")
-      inoremap <expr> <c-k> ("\<C-p>")
-"}}}
-
-" Mac remap {{{
-      nmap ∆   <A-j>
-      nmap ˚   <A-k>
-      nmap Ø   <A-O>
-      nmap ø   <A-o>
-" }}}
-
 " Use alt + hjkl  {{{
-      " alt h = ˙
-      " alt j = ∆
-      " alt k = ˚
-      " alt l = ¬
-      " 
-      " alt + j = move downwards the line and alt + k move upwards
-      nnoremap ˙   :vertical resize +30<CR>
-      nnoremap ¬   :vertical resize -30<CR>
+" alt + j = move downwards the line and alt + k move upwards
+      nnoremap <A-=>   :vertical resize +30<CR>
+      nnoremap <A-->   :vertical resize -30<CR>
       nnoremap <A-j>   ddp    
       nnoremap <A-k>   ddkkp
       nnoremap <A-h> :cprev<cr>zz
@@ -61,7 +44,9 @@
       nnoremap gf gF
 " }}}
 
+
 "S for search and Substitute
+
 
       " Fugitive remap {{{
       nnoremap <leader>gf :diffget //3<CR>
@@ -73,13 +58,13 @@
       nnoremap <leader>gP :Git push<CR>
       nnoremap <leader>gp :Git pull<CR>
 "}}}
+
+
       " navigation {{{
       map H ^
       map L $
-
-      " nnoremap <bs> :Buffers<cr>
-     
       " }}}
+
       nnoremap Q q
       nnoremap Y yg_
 
@@ -123,15 +108,15 @@
     "  'tomate' --> classes.tomate
      nmap <leader>cS /classwwyiwda"i{classes.pbds"
 
-
-
     " class --> '& .class'
      nmap <leader>ce ysiw'li& .
 
     " <div> --> <div className={clsx()}>
     nmap <leader>co f>i className={clsx(
+
      " className='tomate' --> className={clsx('tomate')}
      nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
+
      " className={test} --> className={clsx(test, )}
     nmap <leader>cL f{wi f}i bysiW(iclsxf)i, 
 
@@ -149,9 +134,6 @@
     nmap <leader>` ysiw`
 
 
-
-    nnoremap <leader>fr :lua vim.lsp.buf.references()<CR>
     "add the filename 
     imap \fn <C-R>=expand("%")<CR>
-
-
+    nmap fr :lua vim.lsp.buf.references()<CR>

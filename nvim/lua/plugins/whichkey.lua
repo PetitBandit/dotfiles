@@ -88,7 +88,7 @@ wk.register({
   ['4'] = {"<Plug>AirlineSelectTab4", "which_key_ignore"},
   ['<tab>'] = {"<C-^>", "previous tab"},
   ['b'] = { "buffers"}, 
-  ['E'] = "which_key_ignore",
+  -- ['E'] = "which_key_ignore",
   ['<c-s>'] = "save file",
   ['<c-q>'] = "quit buffer",
   ['<c-/>'] = "search line in current file",
@@ -97,37 +97,38 @@ wk.register({
   ['['] = {
   name = "up/previous", -- optional group name
   ['<spc>'] = { "add empty ligne up" }, -- just a label. don't create any mapping
-  ['e'] = { "move lign up" }, -- just a label. don't create any mapping
-  ['q'] = { "next QList" }, -- just a label. don't create any mapping
-  ['b'] = { "next buffer" }, -- just a label. don't create any mapping
-  ['B'] = { "First buffer" }, -- just a label. don't create any mapping
+  ['e'] = { "move lign up" }, 
+  ['q'] = { "next QList" }, 
+  ['b'] = { "next buffer" },
+  ['B'] = { "First buffer" },
   },
   
   [']'] = {
   name = "below/next", -- optional group name
   ['<spc>'] = { "add empty ligne below" }, -- just a label. don't create any mapping
-  ['e'] = { "move lign below" }, -- just a label. don't create any mapping
-  ['q'] = { "previous QList" }, -- just a label. don't create any mapping
-  ['b'] = { "previous buffer" }, -- just a label. don't create any mapping
-  ['B'] = { "last buffer" }, -- just a label. don't create any mapping
+  ['e'] = { "move lign below" }, 
+  ['q'] = { "previous QList" }, 
+  ['b'] = { "previous buffer" }, 
+  ['B'] = { "which_key_ignore" },
   },
 
   c = {
     name = "class", -- optional group name
     c = { "div ➜ div className=''" }, -- just a label. don't create any mapping
-    C = { "div ➜ div className={classes." }, -- just a label. don't create any mapping
-    o = { "div ➜ div className={clsx(" }, -- just a label. don't create any mapping
-    l = { "className='to' ➜ className={clsx('to'" }, -- just a label. don't create any mapping
-    L = { "className={test} ➜ className={clsx(test," }, -- just a label. don't create any mapping
-    s = { "classes.tomate ➜ 'tomate'" }, -- just a label. don't create any mapping
-    S = { "'tomate' ➜ classes.tomate" }, -- just a label. don't create any mapping
-    e = {"class ➜ '& .class'" }, -- create a binding with label", -- same as above
+    C = { "div ➜ div className={classes." }, 
+    o = { "div ➜ div className={clsx(" }, 
+    l = { "className='to' ➜ className={clsx('to'" }, 
+    L = { "className={test} ➜ className={clsx(test," }, 
+    s = { "classes.tomate ➜ 'tomate'" }, 
+    S = { "'tomate' ➜ classes.tomate" },
+    e = {"class ➜ '& .class'" }, 
   },
+
   f = {
     name = "file", -- optional group name
     b = { ":Buffers<cr>", "buffers"}, 
     f = { ":GFiles<cr>", "Find File" }, -- create a binding with label
-    h = { ":History<cr>", "recent files" }, -- create a binding with label
+    h = { ":History<cr>", "recent files" }, 
     t = { ":Rg<cr>", "Find Text"}, 
     w = { ":NV!<cr>", "Find Wiki"}, 
     l = { ":Lines<cr>", "lines in buffers"}, 
@@ -138,7 +139,6 @@ wk.register({
     name = "go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
     b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
-
   },
 
 
@@ -170,7 +170,6 @@ name ='test',
   o = {
     name = "Lines", -- optional group name
     o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 
-
   },
 
   p = {
@@ -212,11 +211,9 @@ name ='test',
   y = {
     name = "config+", -- optional group name
     ['ob'] = { "background" }, -- just a label. don't create any mapping
-    ['oh'] = { "hard times" }, -- just a label. don't create any mapping
-    ['oc'] = { "cursorline" }, -- just a label. don't create any mapping
-    ['ol'] = { ":Limelight!!<cr>", "Limelight"}, 
-    ['or'] = { "numbers" }, -- just a label. don't create any mapping
-    ['ow'] = { "wrap" }, -- just a label. don't create any mapping
+    ['oh'] = { "hard times" }, 
+    ['oc'] = { "cursorline" },
+    ['ow'] = { "wrap" }, 
     p = {
       name = "plugins",
     i = { ":PlugInstall<cr>", "Install plugins"}, 
