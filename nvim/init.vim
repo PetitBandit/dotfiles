@@ -6,7 +6,6 @@ source $HOME/.config/nvim/general/auto.vim
 
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/toggleterm.vim
-" source $HOME/.config/nvim/plug-config/cmp.vim
 source $HOME/.config/nvim/lua/lspconfig.rc.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/colorizer.vim
@@ -23,6 +22,7 @@ source $HOME/.config/nvim/plug-config/whichkeylua.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
 source $HOME/.config/nvim/plug-config/yoink.vim
 source $HOME/.config/nvim/plug-config/hardtime.vim
+source $HOME/.config/nvim/plug-config/harpoon.vim
 lua require('plugins')
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
@@ -40,4 +40,5 @@ if has('mac')
 elseif has('unix')
     source $HOME/.config/nvim/general/linux.vim
 endif
+
 

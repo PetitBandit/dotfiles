@@ -142,7 +142,6 @@ wk.register({
   },
 
 
-  h = {":split<cr>", "hsplit"},
 
 
   i = {

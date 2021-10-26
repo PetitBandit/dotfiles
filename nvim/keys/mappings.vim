@@ -21,6 +21,8 @@
       nnoremap ¬   :vertical resize -30<CR>
       nnoremap <A-j>   ddp    
       nnoremap <A-k>   ddkkp
+      nnoremap <A-h> :cprev<cr>zz
+      nnoremap <A-l> :cnext<cr>zz
 " }}}
 
 
@@ -84,8 +86,6 @@
       " keeping centered while browsing
       nnoremap n nzz
       nnoremap N Nzz
-      nnoremap <C-k> :cprev<cr>zz
-      nnoremap <C-j> :cnext<cr>zz
 
       " undo break point 
       inoremap , ,<c-g>u
@@ -150,5 +150,8 @@
 
 
 
+    nnoremap <leader>fr :lua vim.lsp.buf.references()<CR>
     "add the filename 
     imap \fn <C-R>=expand("%")<CR>
+
+
