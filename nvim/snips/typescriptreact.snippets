@@ -1,0 +1,400 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+extends javascript, 
+
+snippet clog "console log" b
+console.log('%c', 'background-color: black; color: tomato;' $1); // Remove this  
+endsnippet
+
+snippet sel "add selector" b
+'&$1':{
+	$2
+},
+endsnippet
+
+snippet before "before"
+position: 'relative',
+
+'&::before' : {
+  content: '',
+  position: 'absolute',
+  top: 0, 
+  right: 0,
+  left: 0,
+  bottom: 0,
+},
+endsnippet
+
+snippet h100 "Description" b
+height: '100%', 
+endsnippet
+
+snippet w100 "Description" b
+width: '100%', 
+endsnippet
+
+snippet css "console log" b
+$1 : '$2',
+endsnippet
+
+snippet seltest "add selector" b
+'&$1':{
+	backgroundColor: 'tomato', //TODO: petit bandit <-- remove this
+	$2
+},
+endsnippet
+
+snippet selho "selector hover" b
+'&:hover': {
+	$1
+},
+endsnippet
+
+snippet interpol "string interpolation" 
+\`${$1}\`,
+endsnippet
+
+snippet fontS "font theme" b
+fontSize: theme.size.font.${1:md},
+endsnippet
+
+snippet space "spacing theme" 
+theme.spacing($1),
+endsnippet
+
+snippet px "pixel" i
+'$1px',
+endsnippet
+
+
+
+snippet box "width & height" b
+"--size": ${1:theme.spacing($2)},
+height: 'var(--size)',
+width: 'var(--size)',
+endsnippet
+
+snippet var "use css variable" 
+'var(--$1)',
+endsnippet
+
+
+# Grid {{{
+snippet gridfull "Description" b
+display: 'grid',
+gridTemplateAreas: \`'$1'\`,
+gridTemplateColumns: '$2',
+endsnippet
+
+snippet gta "grid template area" b
+gridTemplateAreas: \`'$1'\`,
+endsnippet
+
+snippet gtc "grid template column" b
+gridTemplateColumns: '$1',
+endsnippet
+
+snippet ga "grid area" b
+gridArea: '$1',
+endsnippet
+
+snippet gridselectorKey "gridselection" b
+'& > [gridkey=$1]': { gridArea: '$1' },
+endsnippet
+
+snippet gridselectorClass "gridselection" b
+'& .$1': { gridArea: '$1' },
+endsnippet
+
+snippet gridcenter "dg & place items center" b
+display: 'grid',
+placeItems: 'center',
+endsnippet
+#end GRID }}}
+
+#position start 
+snippet pos "position" b
+position: '${1|absolute,relative,sticky|}',
+endsnippet
+
+snippet posa "Description" b
+position: 'absolute',
+endsnippet
+
+snippet posr "Description" b
+position: 'relative',
+endsnippet
+
+#position end
+
+#display start {{{
+snippet displ "Description" b
+display: '${1|flex,grid,none,block|}',
+endsnippet
+
+snippet dg "display grid" b
+display: 'grid',
+endsnippet
+
+snippet df "display flex" b
+display: 'flex',
+endsnippet
+
+snippet dn "display none" b
+display: 'none',
+endsnippet
+#display end }}}
+
+
+#Flex {{{
+snippet flexfull "Description" b
+display: 'flex',
+justifyContent: '$1',
+alignItems: '$2',
+endsnippet
+
+snippet fxd "flex direction" b
+flexDirection: '${1|column,row|}',
+endsnippet
+
+snippet flexcenter "flexcenter" b
+display: 'flex',
+justifyContent: 'center',
+alignItems: 'center',
+endsnippet
+
+snippet jcsb "justify content space between" b
+justifyContent: 'space-between',
+endsnippet
+
+snippet jcc "justify content center" b
+justifyContent: 'center',
+endsnippet
+
+
+snippet ai: "alignItems" b
+alignItems: '${1:center}',
+endsnippet
+#flexbox end }}}
+
+snippet curp "cursor pointer" b
+cursor: 'pointer',
+endsnippet
+
+#margin padding start {{{
+snippet padd "Description" b
+padding${1|:,Top:,Bottom:,Left:,Right:|} ${2:theme.spacing($3)},
+endsnippet
+
+snippet pT "Description" b
+paddingTop: ${1:theme.spacing($2)},
+endsnippet
+
+snippet pB "Description" b
+paddingBottom: ${1:theme.spacing($2)},
+endsnippet
+
+snippet pL "Description" b
+paddingLeft: ${1:theme.spacing($2)},
+endsnippet
+
+snippet pR "Description" b
+paddingRight:${1:theme.spacing($2)},
+endsnippet
+
+snippet margTopBottom "top and bottom margin" b
+"--size": ${1:theme.spacing($2)},
+marginTop: 'var(--size)',
+marginBottom: 'var(--size)',
+endsnippet
+
+snippet margLeftRight "left and right margin" b
+"--size": ${1:theme.spacing($2)},
+marginLeft: 'var(--size)',
+marginRight: 'var(--size)',
+endsnippet
+
+snippet marg "Description" b
+margin: ${1:theme.spacing($2)},
+endsnippet
+
+snippet mT "Description" b
+marginTop: ${1:theme.spacing($2)},
+endsnippet
+
+snippet mB "Description" b
+marginBottom: ${1:theme.spacing($2)},
+endsnippet
+
+snippet mL "Description" b
+marginLeft: ${1:theme.spacing($2)},
+endsnippet
+
+snippet mR "Description" b
+marginRight:${1:theme.spacing($2)},
+endsnippet
+#margin padding end }}}
+
+snippet bgi "backgroundImg" b
+background: 'url(/static/images/$1)',
+backgroundRepeat: 'no-repeat',
+backgroundSize: 'contain',
+backgroundPosition: 'center',
+endsnippet
+
+# Border {{{
+snippet bd "border" b
+border: \`$1px solid ${theme.palette.$2}\`,
+endsnippet
+
+snippet brds "border radius" b
+borderRadius: $1, 
+endsnippet
+
+snippet brds50 "50%" b
+borderRadius: '50%',
+endsnippet
+
+snippet childrendot "childrendot"
+border: '1px dotted red',
+'& > *': {border: '1px dotted blue'},//TODO: petit bandit <-- remove this
+endsnippet
+
+snippet borderdot "borderdot" 
+border: '1px dotted blue',//TODO: petit bandit <-- remove this
+endsnippet
+# END BORDER }}}
+
+#COLORS {{{
+
+snippet cmain "color theme" 
+theme.palette.main.${1:main},
+endsnippet
+
+snippet cdestructive "color theme" 
+theme.palette.destructive.${1:main},
+endsnippet
+
+snippet cvalidation "color theme" 
+theme.palette.validation.${1:main},
+endsnippet
+
+snippet cwarning "color theme" 
+theme.palette.warning.${1:main},
+endsnippet
+
+snippet caccent "color theme" 
+theme.palette.accent.${1:main},
+endsnippet
+
+snippet ccommon "color common" 
+theme.palette.common.${1|white,body,inputPlaceholder,black|}
+endsnippet
+
+snippet bgct "tomato for the win"
+backgroundColor: 'tomato', //TODO: petit bandit <-- remove this
+endsnippet
+
+snippet bgcl "lavender for the win"
+backgroundColor: 'lavender', //TODO: petit bandit <-- remove this
+endsnippet
+
+snippet bgc "background color"
+backgroundColor: theme.palette.${1|accent,main,common|}.${3|main,light,dark|},
+$4
+endsnippet
+#END COLORS }}}
+
+snippet ov: "overflow" b
+overflow: '${1|hidden, auto|}',
+endsnippet
+
+#JSX SNIPPET {{{
+snippet clsx "Description" 
+className={clsx($1, $2)}
+endsnippet
+
+snippet div. "div className" b
+<div className=$1 >
+
+</div>
+endsnippet
+
+snippet importclsx "" b
+import clsx from 'clsx';
+endsnippet
+
+snippet mkstyle "add makestyle bases" b
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles(theme => ({
+  ${1:rootClass}: {
+    backgroundColor: 'tomato',
+  }
+}));
+  const classes = useStyles();
+  className={classes.$1}
+endsnippet
+
+
+snippet tag. "add a jsx tag" b
+<$1${2: className=$3}>
+
+</$1>
+endsnippet
+
+snippet importtrans "add translation" 
+import { useTranslation } from '../src/i18n';
+
+  const { t } = useTranslation();
+
+{t('common:${1:key}')}
+endsnippet
+
+snippet class. "add a classname" 
+className=${1{classes.$2}}
+endsnippet
+
+snippet trans "add translation" 
+{t('common:${1:key}')}
+endsnippet
+
+snippet story "Description" b
+import React from 'react';
+import Badge from './Badge';
+
+export default {
+  title: 'components/atoms/Badge',
+  component: Badge,
+  args: {
+    color: 'primary',
+    badgeContent: 4,
+  },
+};
+
+export const Default = (args) => <Badge {...args} />;
+endsnippet
+# END JSX SNIPPET }}}
+

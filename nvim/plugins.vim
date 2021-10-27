@@ -12,7 +12,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'gruvbox-community/gruvbox',
     Plug 'mhartington/oceanic-next'
     Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
@@ -48,6 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'onsails/lspkind-nvim'
+    Plug 'tpope/vim-fugitive'
     " Plug 'L3MON4D3/LuaSnip'
     " Plug 'saadparwaiz1/cmp_luasnip'
     Plug 'ThePrimeagen/harpoon'
@@ -55,7 +56,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'hrsh7th/cmp-vsnip'
     " Plug 'hrsh7th/vim-vsnip'
     " Plug 'hrsh7th/vim-vsnip-integ'
-    " Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+    Plug 'quangnguyen30192/cmp-nvim-ultisnips'
     call plug#end()
 
 let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
@@ -67,7 +68,6 @@ let g:vimwiki_markdown_link_ext = 1
     " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     " Plug 'rafcamlet/nvim-luapad'
     " Plug 'vimwiki/vimwiki'                                  " wiki
-    " Plug 'tpope/vim-fugitive'
     " Plug 'alok/notational-fzf-vim'
     " Plug 'junegunn/limelight.vim'
     " Plug 'stsewd/fzf-checkout.vim'                          " FZF change branch

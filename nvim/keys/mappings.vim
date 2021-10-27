@@ -137,3 +137,7 @@
     "add the filename 
     imap \fn <C-R>=expand("%")<CR>
     nmap fr :lua vim.lsp.buf.references()<CR>
+
+    "navigate the changeList
+    nnoremap e g;
+ nnoremap E g,

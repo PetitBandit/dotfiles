@@ -24,7 +24,7 @@ let g:startify_bookmarks = [
             \ { 'p': '~/dotfiles/nvim/plugins.vim' },
             \ { 'K': '~/dotfiles/kitty/kitty.conf'},
             \ { 'z': '~/dotfiles/zsh/zshrc'},
-            \ { 'c': '~/dotfiles/nvim/snips/css.snippets' },
+            \ { 'c': '~/dotfiles/nvim/snips/scss.snippets' },
             \ { 'j': '~/dotfiles/nvim/snips/jss.snippets' },
             \ ]
 
