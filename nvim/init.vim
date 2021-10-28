@@ -4,7 +4,7 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/auto.vim
 
-" source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/nvimtree.vim
 source $HOME/.config/nvim/plug-config/ultisnip.vim
 source $HOME/.config/nvim/plug-config/toggleterm.vim
 source $HOME/.config/nvim/lua/lspconfig.rc.vim

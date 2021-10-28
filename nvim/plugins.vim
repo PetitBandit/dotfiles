@@ -49,13 +49,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'onsails/lspkind-nvim'
     Plug 'tpope/vim-fugitive'
-    " Plug 'L3MON4D3/LuaSnip'
-    " Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'kyazdani42/nvim-tree.lua'
     Plug 'ThePrimeagen/harpoon'
-    " Plug 'rafamadriz/friendly-snippets'
-    " Plug 'hrsh7th/cmp-vsnip'
-    " Plug 'hrsh7th/vim-vsnip'
-    " Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'quangnguyen30192/cmp-nvim-ultisnips'
     call plug#end()
 
@@ -70,5 +65,3 @@ let g:vimwiki_markdown_link_ext = 1
     " Plug 'vimwiki/vimwiki'                                  " wiki
     " Plug 'alok/notational-fzf-vim'
     " Plug 'junegunn/limelight.vim'
-    " Plug 'stsewd/fzf-checkout.vim'                          " FZF change branch
-    " Plug 'sheerun/vim-polyglot'                             " Better Syntax Support
