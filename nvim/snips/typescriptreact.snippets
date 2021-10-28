@@ -24,14 +24,53 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet clog "console log" b
-console.log('%c', 'background-color: black; color: tomato;' $1); // Remove this  
-endsnippet
 
 snippet sel "add selector" b
+
 '&$1':{
 	$2
 },
+
+endsnippet
+
+snippet seltest "add selector" b
+'&$1':{
+${2:backgroundColor: 'tomato', //TODO: petit bandit <-- remove this }
+},
+endsnippet
+
+snippet selho "selector hover" b
+'&:hover': {
+	$1
+},
+endsnippet
+
+snippet :fc
+:first-child
+endsnippet
+
+snippet :lc
+:last-child
+endsnippet
+
+snippet :nc
+:nth-child($0)
+endsnippet
+
+snippet :nlc
+:nth-last-child($0)
+endsnippet
+
+snippet :oc
+:only-child
+endsnippet
+
+snippet :not
+:not($0)
+endsnippet
+
+snippet tac "text align center" b
+textAlign: 'center',
 endsnippet
 
 snippet before "before"
@@ -51,6 +90,46 @@ snippet h100 "Description" b
 height: '100%', 
 endsnippet
 
+snippet lef "left" b
+left: $1, 
+endsnippet
+
+snippet rig "right" b
+right: $1, 
+endsnippet
+
+snippet bot "bottom" b
+bottom: $1, 
+endsnippet
+
+snippet top "top" b
+top: $1, 
+endsnippet
+
+snippet hei "height" b
+height: ${1:theme.spacing($2)},
+endsnippet
+
+snippet mih "min height" b
+minHeight: ${1:theme.spacing($2)},
+endsnippet
+
+snippet mah "max height" b
+maxHeight: ${1:theme.spacing($2)},
+endsnippet
+
+snippet miw "min width" b
+minWidth: ${1:theme.spacing($2)},
+endsnippet
+
+snippet maw "max width" b
+maxWidth: ${1:theme.spacing($2)},
+endsnippet
+
+snippet wid "width" b
+width: ${1:theme.spacing($2)},
+endsnippet
+
 snippet w100 "Description" b
 width: '100%', 
 endsnippet
@@ -59,25 +138,22 @@ snippet css "console log" b
 $1 : '$2',
 endsnippet
 
-snippet seltest "add selector" b
-'&$1':{
-	backgroundColor: 'tomato', //TODO: petit bandit <-- remove this
-	$2
-},
-endsnippet
 
-snippet selho "selector hover" b
-'&:hover': {
-	$1
-},
-endsnippet
 
 snippet interpol "string interpolation" 
 \`${$1}\`,
 endsnippet
 
-snippet fontS "font theme" b
+snippet fos "font theme" b
 fontSize: theme.size.font.${1:md},
+endsnippet
+
+snippet fof "font family" b
+fontSize: theme.typography.fontFamily,
+endsnippet
+
+snippet fow "font family" b
+fontWeight: '${1|bold, normal, 500, 600, 700}'
 endsnippet
 
 snippet space "spacing theme" 
@@ -193,9 +269,18 @@ justifyContent: 'center',
 alignItems: 'center',
 endsnippet
 
+snippet jc: "justify content " b
+justifyContent: '${1|flex-start, flex-end, center, space-between, space-around|}',
+endsnippet
+
 snippet jcsb "justify content space between" b
 justifyContent: 'space-between',
 endsnippet
+
+snippet jcse "justify content space evenly" b
+justifyContent: 'space-evenly',
+endsnippet
+
 
 snippet jcc "justify content center" b
 justifyContent: 'center',
