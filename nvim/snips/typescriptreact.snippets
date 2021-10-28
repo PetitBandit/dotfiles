@@ -23,7 +23,6 @@
 #		endsnippet
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
-extends javascript, 
 
 snippet clog "console log" b
 console.log('%c', 'background-color: black; color: tomato;' $1); // Remove this  
@@ -177,7 +176,15 @@ alignItems: '$2',
 endsnippet
 
 snippet fxd "flex direction" b
-flexDirection: '${1|column,row|}',
+flexDirection: '${1|column,row, column-reverse, row-reverse|}',
+endsnippet
+
+snippet fxdc "flex direction column" b
+flexDirection: 'column',
+endsnippet
+
+snippet fwrap "flex wrap " b
+flexWrap: '${1|wrap,nowrap}'
 endsnippet
 
 snippet flexcenter "flexcenter" b
@@ -196,7 +203,23 @@ endsnippet
 
 
 snippet ai: "alignItems" b
-alignItems: '${1:center}',
+alignItems: '${1|flex-start,flex-end,center,baseline,stretch,start,end,self-start,self-end|}',
+endsnippet
+
+snippet aib "alignItems baseline" b
+alignItems: 'baseline',
+endsnippet
+
+snippet aic "alignItems center" b
+alignItems: 'center',
+endsnippet
+
+snippet aifs "alignItems flex-start" b
+alignItems: 'flex-start',
+endsnippet
+
+snippet aife "alignItems flex-end" b
+alignItems: 'flex-end',
 endsnippet
 #flexbox end }}}
 
@@ -266,16 +289,41 @@ backgroundPosition: 'center',
 endsnippet
 
 # Border {{{
-snippet bd "border" b
+
+snippet bor "border" b
 border: \`$1px solid ${theme.palette.$2}\`,
 endsnippet
 
-snippet brds "border radius" b
+snippet borb "border bottom" b
+borderBottom: \`$1px solid ${theme.palette.$2}\`,
+endsnippet
+
+snippet bort "border top" b
+borderTop: \`$1px solid ${theme.palette.$2}\`,
+endsnippet
+
+snippet borl "border left" b
+borderLeft: \`$1px solid ${theme.palette.$2}\`,
+endsnippet
+
+snippet borr "border right" b
+borderRight: \`$1px solid ${theme.palette.$2}\`,
+endsnippet
+
+snippet born "border none" b
+border: 'none',
+endsnippet
+
+snippet br "border radius" b
 borderRadius: $1, 
 endsnippet
 
-snippet brds50 "50%" b
+snippet br50 "50%" b
 borderRadius: '50%',
+endsnippet
+
+snippet col "color" b
+color: theme.palette.${1:color}.${2:variant},
 endsnippet
 
 snippet childrendot "childrendot"
