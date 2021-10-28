@@ -50,6 +50,7 @@
 
       " Fugitive remap {{{
       nnoremap <leader>gf :diffget //3<CR>
+      "ok
       nnoremap <leader>gj :diffget //2<CR>
       nnoremap <leader>gs :G<CR>
       nnoremap <leader>gb :GBranches<CR>
@@ -85,6 +86,7 @@
       nnoremap + :<C-u>+m.<left><left>
       nnoremap - :<C-u>-m.<left><left>
 
+      "testing
 "This I got from another thread, in normal mode press + and than a relative line number(for lines below the cursor, i.e. if you want the 20th line below just type 20 after the +) and press enter to copy that relative line and paste it where ever your cursor is(and of course press - for lines above)
 
 " - Go on top of a word you want to change
@@ -140,4 +142,4 @@
 
     "navigate the changeList
     nnoremap e g;
- nnoremap E g,
+    nnoremap E g,
