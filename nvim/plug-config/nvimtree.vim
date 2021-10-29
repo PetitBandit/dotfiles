@@ -6,7 +6,7 @@ let g:lua_tree_bindings = {
 let g:nvim_tree_gitignore = 1 "0 by default
 let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
-let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
+let g:nvim_tree_hide_dotfiles = 0 "0 by default, this option hides files and folders starting with a dot `.`
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
 let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
 let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
@@ -83,6 +83,12 @@ highlight NvimTreeFolderIcon guibg=blue
 
 
 lua << EOF
+local g = vim.g
+local tree_cb = require "nvim-tree.config".nvim_tree_callback
+local list = {
+  { key = {"l"}, cb = tree_cb("edit") },
+  { key = {"h"}, cb = tree_cb("close_node") },
+}
 -- following options are the default
 require'nvim-tree'.setup {
   -- disables netrw completely
@@ -153,7 +159,7 @@ require'nvim-tree'.setup {
       -- if true, it will only use your list to set the mappings
       custom_only = false,
       -- list of mappings to set on the tree manually
-      list = {}
+      list = list
     }
   }
 }
