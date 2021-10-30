@@ -7,6 +7,7 @@ source $HOME/.config/nvim/general/auto.vim
 source $HOME/.config/nvim/plug-config/nvimtree.vim
 source $HOME/.config/nvim/plug-config/ultisnip.vim
 source $HOME/.config/nvim/plug-config/toggleterm.vim
+" source $HOME/.config/nvim/plug-config/signature.vim
 source $HOME/.config/nvim/lua/lspconfig.rc.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/colorizer.vim

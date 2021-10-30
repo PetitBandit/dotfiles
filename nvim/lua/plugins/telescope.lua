@@ -53,6 +53,14 @@ M.search_dotfiles = function()
     })
 end
 
+M.search_color = function()
+    require("telescope.builtin").colorscheme({
+        prompt_title = "< colors >",
+        enable_preview = 1,
+    })
+end
+
+
 
 M.search_docfile= function()
     require("telescope.builtin").help_tags({

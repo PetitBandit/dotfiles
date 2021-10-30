@@ -9,10 +9,10 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
     Plug 'SirVer/ultisnips',
+    Plug 'code-biscuits/nvim-biscuits',
     Plug 'gruvbox-community/gruvbox',
     Plug 'mhartington/oceanic-next'
     Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
@@ -65,3 +65,5 @@ let g:vimwiki_markdown_link_ext = 1
     " Plug 'vimwiki/vimwiki'                                  " wiki
     " Plug 'alok/notational-fzf-vim'
     " Plug 'junegunn/limelight.vim'
+
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
