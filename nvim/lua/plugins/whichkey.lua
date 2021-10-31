@@ -175,9 +175,7 @@ name ='test',
 
   p = {
     name = "quickfix list", -- optional group name
-    r =  {":PrettierAsync<cr>", "Prettier"},
-    j = { ":cnext<cr>", "next Qlist"}, 
-    k = { ":cprev<cr>", "previous Qlist"}, 
+    p = { "yap<S-}>p", "copy paragraph under"}, 
   },
 
   q = {
@@ -188,10 +186,9 @@ name ='test',
     k = { ":cprev<cr>", "previous Qlist"}, 
   },
 
-  r = {
-    name = "repeat", -- optional group name
-    s = { "g&", "repeat last search and replace"}, 
-  },
+  -- r = {
+  --   name = "repeat", -- optional group name
+  -- },
 
   s = {
     name = "s+", -- optional group name
@@ -220,6 +217,7 @@ name ='test',
       name = "plugins",
     i = { ":PlugInstall<cr>", "Install plugins"}, 
     c = { ":PlugClean<cr>", "clean plugins"}, 
+    u = { ":PlugUpdate<cr>", "update plugins"}, 
     }
   },
 }, { prefix = "<leader>" })

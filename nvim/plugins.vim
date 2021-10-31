@@ -8,7 +8,9 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
+source ~/dotfiles/nvim/plugins/hop.vim
     Plug 'SirVer/ultisnips',
+    Plug 'phaazon/hop.nvim'
     Plug 'code-biscuits/nvim-biscuits',
     Plug 'gruvbox-community/gruvbox',
     Plug 'mhartington/oceanic-next'
@@ -36,7 +38,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-repeat'
     Plug 'svermeulen/vim-yoink'
     Plug 'windwp/nvim-ts-autotag'
-    Plug 'ggandor/lightspeed.nvim'
     Plug 'takac/vim-hardtime'                               "prevents from relying on jj too much
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -65,5 +66,5 @@ let g:vimwiki_markdown_link_ext = 1
     " Plug 'vimwiki/vimwiki'                                  " wiki
     " Plug 'alok/notational-fzf-vim'
     " Plug 'junegunn/limelight.vim'
-
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
+    " Plug 'ggandor/lightspeed.nvim'

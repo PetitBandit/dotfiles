@@ -9,6 +9,7 @@ lua require("plugins.telescope")
 " nnoremap <leader>sh <cmd>lua require('telescope.builtin').oldfiles()<cr>
 " nnoremap <leader>st <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <bs> <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 nnoremap <leader>yop <cmd>lua require('telescope.telescope').search_color()<cr>
 " nnoremap <leader>sr <cmd>lua require('plugins.telescope').search_dotfiles()<CR>
 " nnoremap <leader>sp <cmd>lua require('plugins.telescope').search_profiles()<cr>

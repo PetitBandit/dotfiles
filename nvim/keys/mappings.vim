@@ -8,11 +8,9 @@
       nnoremap <A-l> :cnext<cr>zz
 " }}}
 
-
 " ESC {{{
       inoremap jk <Esc>
 "}}}
-
 
 " Jumps remap {{{
       nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
@@ -21,10 +19,10 @@
 
 
 " Breaking the habits - only hjkl {{{
-      nnoremap <left> <nop>
-      nnoremap <right> <nop>
-      nnoremap <up> <nop>
-      nnoremap <down> <nop>
+      " nnoremap <left> <Nop>
+      " nnoremap <right> <Nop>
+      " nnoremap <up> <nop>
+      " nnoremap <down> <nop>
 " }}}
 
 
@@ -41,7 +39,6 @@
 
 
 " Bookmark and go file{{{
-      nnoremap gf gF
 " }}}
 
 
@@ -137,9 +134,15 @@
 
 
     "add the filename 
-    imap \fn <C-R>=expand("%")<CR>
-    nmap fr :lua vim.lsp.buf.references()<CR>
+    " imap <leader>fn <C-R>=expand("%")<CR>
+    " nmap fr :lua vim.lsp.buf.references()<CR>
 
     "navigate the changeList
     nnoremap e g;
     nnoremap E g,
+
+
+
+    "vimconf trying
+      " nnoremap gf gF
+    nnoremap gf :edit <cfile><cr>
