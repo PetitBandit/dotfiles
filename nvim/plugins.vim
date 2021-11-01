@@ -8,8 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
-source ~/dotfiles/nvim/plugins/hop.vim
     Plug 'SirVer/ultisnips',
+    Plug 'jessarcher/vim-heritage',
     Plug 'phaazon/hop.nvim'
     Plug 'code-biscuits/nvim-biscuits',
     Plug 'gruvbox-community/gruvbox',
@@ -60,11 +60,7 @@ let g:vimwiki_markdown_link_ext = 1
 
 "retired plugins
 "
-    " Plug 'phaazon/hop.nvim'                                 " text navigation
-    " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-    " Plug 'rafcamlet/nvim-luapad'
     " Plug 'vimwiki/vimwiki'                                  " wiki
     " Plug 'alok/notational-fzf-vim'
     " Plug 'junegunn/limelight.vim'
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
-    " Plug 'ggandor/lightspeed.nvim'
