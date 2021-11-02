@@ -1,11 +1,20 @@
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
 
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
+function TreesitterSetup()
+lua << EOF
+require("nvim-treesitter.configs").setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   ignore_install = { "javascript" }, -- List of parsers to ignore installing
   highlight = {
     enable = true,              -- false will disable the whole extension
     disable = { "c", "rust" },  -- list of language that will be disabled
   },
-}
+  }
 EOF
+endfunction
+
+augroup TreesitterSetup
+    autocmd!
+    autocmd User PlugLoaded call TreesitterSetup()
+augroup END
+

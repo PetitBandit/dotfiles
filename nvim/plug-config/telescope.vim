@@ -4,7 +4,7 @@
     Plug 'nvim-lua/popup.nvim'
 
 function TelescopeSetup()
-  lua << EOF
+lua << EOF
   local actions = require('telescope.actions')
   require('telescope').setup{
       defaults = {
@@ -16,7 +16,6 @@ function TelescopeSetup()
           layout_config = {
               prompt_position = "top",
               width = 0.9,
-
               horizontal = {
                   width_padding = 0.04,
                   height_padding = 0.1,
@@ -27,7 +26,6 @@ function TelescopeSetup()
                   height_padding = 0.04,
                   preview_height = 0.5
               },
-
           },
           mappings = {
               i = {
@@ -43,30 +41,22 @@ function TelescopeSetup()
               },
               }
           },
-
       extensions = {
     }
-
   }
-
   local M = {}
-
   M.search_dotfiles = function()
       require("telescope.builtin").find_files({
           prompt_title = "< VimRC >",
           cwd = "~/dotfiles/nvim/",
       })
   end
-
   M.search_color = function()
       require("telescope.builtin").colorscheme({
           prompt_title = "< colors >",
           enable_preview = 1,
       })
   end
-
-
-
   M.search_docfile= function()
       require("telescope.builtin").help_tags({
           prompt_title = "< Documentation >",
@@ -75,7 +65,6 @@ function TelescopeSetup()
           }
       })
   end
-
   M.search_profiles = function()
       require("telescope.builtin").find_files({
           prompt_title = "< PRO >",
@@ -90,19 +79,15 @@ function TelescopeSetup()
           file_ignore_patterns = {"index.ts", "index.stories.js"},
       })
   end
-
-
-
   require('telescope').load_extension('fzf')
   return M
 EOF
 endfuction
 
-augroup telescope
+augroup TelescopeSetup
   autocmd!
   autocmd User PlugLoaded call TelescopeSetup()
 augroup END
-" Using lua functions
 
 " nnoremap <leader>sg <cmd>lua require('telescope.builtin').git_branches()<cr>
 " nnoremap <leader>se <cmd>lua require('telescope.builtin').file_browser()<cr>
@@ -118,12 +103,4 @@ nnoremap <leader>yop <cmd>lua require('telescope.telescope').search_color()<cr>
 " nnoremap <leader>t <cmd>lua require('plugins.telescope').search_gitfiles()<cr>
 "Ctrl + /
 nnoremap <C-_> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
-
-
-
-"0:00:40s install neovim
-"1:32:39 devicons telescope 
-"1:42:XX customize specific picker
-
-
 

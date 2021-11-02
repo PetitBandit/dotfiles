@@ -1,3 +1,6 @@
+Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
+Plug 'junegunn/fzf.vim'                                 " FZF
+Plug 'airblade/vim-rooter'                              " FZF
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',

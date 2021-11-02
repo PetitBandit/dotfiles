@@ -1,3 +1,4 @@
+ Plug 'kshenoy/vim-signature'                            " marks
  let g:SignatureMap = {
         \ 'Leader'             :  "m",
         \ 'PlaceNextMark'      :  "m,",

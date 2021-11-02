@@ -1,3 +1,4 @@
+Plug 'svermeulen/vim-subversive'                        " Substitution
 " s for substitute
 nmap q <plug>(SubversiveSubstitute)
 nmap qq <plug>(SubversiveSubstituteLine)

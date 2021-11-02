@@ -1,2 +1,13 @@
+    Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
 
-lua require'colorizer'.setup()
+function ColorizerSetup()
+lua << EOF
+require("colorizer").setup {}
+EOF
+endfunction
+
+
+augroup ColorizerSetup
+    autocmd!
+    autocmd User PlugLoaded call ColorizerSetup()
+augroup END
