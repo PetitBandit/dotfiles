@@ -81,7 +81,9 @@
       nnoremap <leader>cd :cd %:p:h<CR>
 
       nnoremap + :<C-u>+m.<left><left>
-      nnoremap - :<C-u>-m.<left><left>
+      nnoremap _ :<C-u>-m.<left><left>
+      nnoremap = :bn<cr>
+      nnoremap - :bp<cr>
 
       "testing
 "This I got from another thread, in normal mode press + and than a relative line number(for lines below the cursor, i.e. if you want the 20th line below just type 20 after the +) and press enter to copy that relative line and paste it where ever your cursor is(and of course press - for lines above)
