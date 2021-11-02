@@ -40,24 +40,6 @@
 
 " Bookmark and go file{{{
 " }}}
-
-
-"S for search and Substitute
-
-
-      " Fugitive remap {{{
-      nnoremap <leader>gj :diffget //3<CR>
-      "ok
-      nnoremap <leader>gf :diffget //2<CR>
-      nnoremap <leader>gs :G<CR>
-      nnoremap <leader>gb :GBranches<CR>
-      nnoremap <leader>gB :Git blame<CR>
-      nnoremap <leader>gc :Git commit<CR>
-      nnoremap <leader>gP :Git push<CR>
-      nnoremap <leader>gp :Git pull<CR>
-"}}}
-
-
       " navigation {{{
       map H ^
       map L $
