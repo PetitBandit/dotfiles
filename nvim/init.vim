@@ -1,7 +1,7 @@
 " # init.vim
 scriptencoding utf-8
 " source $HOME/.config/nvim/plugins.vim
-
+let dir = '$HOME/dotfiles/nvim/plug-config/'
 call plug#begin('~/.config/nvim/autoload/plugged')
   source $HOME/dotfiles/nvim/plug-config/start-screen.vim
   source $HOME/dotfiles/nvim/plug-config/themes.vim
