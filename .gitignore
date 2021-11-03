@@ -1,3 +1,5 @@
 
 nvim/undo/**
 nvim/autoload/**
+
+nvim/sessions/__LAST__

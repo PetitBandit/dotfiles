@@ -1,74 +1,26 @@
-" Use alt + hjkl  {{{
-" alt + j = move downwards the line and alt + k move upwards
+"--------------------------------------------------------------------------
+" Use Alt + hjkl
+"-------------------------------------------------------------------------- 
       nnoremap <A-=>   :vertical resize +30<CR>
       nnoremap <A-->   :vertical resize -30<CR>
-      nnoremap <A-j>   ddp    
-      nnoremap <A-k>   ddkkp
+      nnoremap <A-j>   ddp    " move line downwards 
+      nnoremap <A-k>   ddkkp  " move line upwards
       nnoremap <A-h> :cprev<cr>zz
       nnoremap <A-l> :cnext<cr>zz
-" }}}
 
-" ESC {{{
+" ESC 
       inoremap jk <Esc>
-"}}}
-
-" Jumps remap {{{
-      nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
-      nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
-" }}}
 
 
-" Breaking the habits - only hjkl {{{
-      " nnoremap <left> <Nop>
-      " nnoremap <right> <Nop>
-      " nnoremap <up> <nop>
-      " nnoremap <down> <nop>
-" }}}
 
+"--------------------------------------------------------------------------
+" Behind the scenes
+"--------------------------------------------------------------------------
 
-" Better tabbing {{{
-      vnoremap < <gv
-      vnoremap > >gv
-" }}}
-
-
-" Marks {{{
-      nnoremap M m
-      nnoremap m '
-"}}}
-
-
-" Bookmark and go file{{{
-" }}}
-
-
-"S for search and Substitute
-
-
-      " Fugitive remap {{{
-      nnoremap <leader>gj :diffget //3<CR>
-      "ok
-      nnoremap <leader>gf :diffget //2<CR>
-      nnoremap <leader>gs :G<CR>
-      nnoremap <leader>gb :GBranches<CR>
-      nnoremap <leader>gB :Git blame<CR>
-      nnoremap <leader>gc :Git commit<CR>
-      nnoremap <leader>gP :Git push<CR>
-      nnoremap <leader>gp :Git pull<CR>
-"}}}
-
-
-      " navigation {{{
-      map H ^
-      map L $
-      " }}}
-
-      nnoremap Q q
-      nnoremap Y yg_
-
-      " keeping centered while browsing
-      nnoremap n nzz
-      nnoremap N Nzz
+      "moves to the current directory
+      nnoremap <leader>cd :cd %:p:h<CR> 
+      vnoremap < <gv " Better tabbing 
+      vnoremap > >gv " Better tabbing 
 
       " undo break point 
       inoremap , ,<c-g>u
@@ -76,31 +28,76 @@
       inoremap ! !<c-g>u
       inoremap ? ?<c-g>u
 
+      "" Jumps remap 
+      "       nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
+      "       nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
+
+"--------------------------------------------------------------------------
+" File Manipulation
+"--------------------------------------------------------------------------
+
       nnoremap <silent> <C-S> :w<cr>
       nnoremap <silent> <C-q> :bd<CR>
-      nnoremap <leader>cd :cd %:p:h<CR>
 
+      nnoremap gf :edit <cfile><cr>
+
+      " Fugitive remap 
+      nnoremap <leader>gj :diffget //3<CR>
+      nnoremap <leader>gf :diffget //2<CR>
+      nnoremap <leader>gs :G<CR>
+      nnoremap <leader>gb :GBranches<CR>
+      nnoremap <leader>gB :Git blame<CR>
+      nnoremap <leader>gc :Git commit<CR>
+      nnoremap <leader>gP :Git push<CR>
+      nnoremap <leader>gp :Git pull<CR>
+
+"--------------------------------------------------------------------------
+" Navigation
+"--------------------------------------------------------------------------
+      map H ^
+      map L $
+      nnoremap = :bn<cr>
+      nnoremap - :bp<cr> 
+
+      nnoremap Q q
+      nnoremap Y yg_
+
+      "navigate the changeList
+      nnoremap e g;
+      nnoremap E g,
+
+      " keeping centered while browsing
+      nnoremap n nzz
+      nnoremap N Nzz
+
+      " Marks 
+      nnoremap M m
+      nnoremap m '
+
+"--------------------------------------------------------------------------
+" Cut, Manipulate text
+"--------------------------------------------------------------------------
+
+      "copy paragraph under cursor and paste it under  
+      nnoremap <leader>cp yap<S-}>p
+
+
+      " + or _ will cut a line and paste it here
       nnoremap + :<C-u>+m.<left><left>
       nnoremap _ :<C-u>-m.<left><left>
-      nnoremap = :bn<cr>
-      nnoremap - :bp<cr>
 
-      "testing
-"This I got from another thread, in normal mode press + and than a relative line number(for lines below the cursor, i.e. if you want the 20th line below just type 20 after the +) and press enter to copy that relative line and paste it where ever your cursor is(and of course press - for lines above)
 
-" - Go on top of a word you want to change
-" - Press cn or cN
-" - Type the new word you want to replace it with
-" - Smash that dot '.' multiple times to change all the other occurrences of the word
-" It's quicker than searching or replacing. It's pure magic.
- nnoremap cn *``cgn
+      " - Smash that dot '.' multiple times to change all the other occurrences of the word
+      nnoremap cn *``cgn
 
- nnoremap <leader>yoh :HardTimeToggle <cr>
 
- " jss specific {{{
+"--------------------------------------------------------------------------
+" JSX Mappings
+"--------------------------------------------------------------------------
 
     " <div> --> <div className="">
      nmap <leader>cc f>i className="li
+
     " <div> --> <div className={classes.
     nmap <leader>cC f>i className={classes.
 
@@ -126,25 +123,11 @@
 
     "changes makestyle --> makestyle(theme ...
     nnoremap <leader>jtc ?useStyles = makewwwC(theme => ({
-    " }}}
-
-    "copy paragraph under cursor and paste it under  
-    nnoremap <leader>cp yap<S-}>p
     
     nmap <leader>' ysiw'
     nmap <leader>` ysiw`
 
-
     "add the filename 
     " imap <leader>fn <C-R>=expand("%")<CR>
-    " nmap fr :lua vim.lsp.buf.references()<CR>
-
-    "navigate the changeList
-    nnoremap e g;
-    nnoremap E g,
 
 
-
-    "vimconf trying
-      " nnoremap gf gF
-    nnoremap gf :edit <cfile><cr>
