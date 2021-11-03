@@ -16,8 +16,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhartington/oceanic-next'
     Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
     Plug 'vim-airline/vim-airline'
+    Plug 'alok/notational-fzf-vim'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
+    Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'junegunn/fzf.vim'                                 " FZF
     Plug 'airblade/vim-rooter'                              " FZF
     Plug 'tpope/vim-commentary'
@@ -60,7 +62,5 @@ let g:vimwiki_markdown_link_ext = 1
 
 "retired plugins
 "
-    " Plug 'vimwiki/vimwiki'                                  " wiki
-    " Plug 'alok/notational-fzf-vim'
     " Plug 'junegunn/limelight.vim'
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
