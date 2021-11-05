@@ -4,9 +4,11 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/auto.vim
 
+
 " source $HOME/.config/nvim/plug-config/nvimtree.vim
 source $HOME/.config/nvim/plug-config/ultisnip.vim
 source $HOME/.config/nvim/plug-config/hop.vim
+source $HOME/.config/nvim/plug-config/barbar.vim
 source $HOME/.config/nvim/plug-config/toggleterm.vim
 source $HOME/.config/nvim/plug-config/signature.vim
 source $HOME/.config/nvim/lua/lspconfig.rc.vim
@@ -33,7 +35,7 @@ source $HOME/.config/nvim/functions/isolatebrackets.vim
 source $HOME/.config/nvim/functions/openandsearch.vim
 source $HOME/.config/nvim/functions/indentfile.vim
 
-source $HOME/.config/nvim/themes/airline.vim
+" source $HOME/.config/nvim/themes/airline.vim
 
 
 source $HOME/.config/nvim/keys/mappings.vim

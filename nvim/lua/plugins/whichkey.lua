@@ -166,6 +166,14 @@ name ='test',
     p = { "[`", "[` go to previous mark"}, 
   },
 
+  l = {
+    name = "lists - sort", -- optional group name
+    s = {  "sort alpha"}, 
+    S = {  "sort backward"}, 
+    d = {  "sort & del dupli"}, 
+    D = {  "sort backward & del dupli"}, 
+  },
+
   n = {":let @/ = ''<cr>", "remove Highlight"},
 
   o = {

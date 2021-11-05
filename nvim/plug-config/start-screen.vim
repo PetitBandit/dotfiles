@@ -21,10 +21,10 @@ endfunction
 
 
 let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Files']            },
           \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
           \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
           \ { 'type': 'sessions',  'header': ['   Sessions']       },
-          \ { 'type': 'files',     'header': ['   Files']            },
           \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]

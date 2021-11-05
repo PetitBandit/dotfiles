@@ -28,9 +28,9 @@
       inoremap ! !<c-g>u
       inoremap ? ?<c-g>u
 
-      "" Jumps remap 
-      "       nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
-      "       nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
+      " Jumps remap 
+      nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
+      nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
 
 "--------------------------------------------------------------------------
 " File Manipulation
@@ -39,7 +39,6 @@
       nnoremap <silent> <C-S> :w<cr>
       nnoremap <silent> <C-q> :bd<CR>
 
-      nnoremap gf :edit <cfile><cr>
 
       " Fugitive remap 
       nnoremap <leader>gj :diffget //3<CR>
@@ -130,4 +129,16 @@
     "add the filename 
     " imap <leader>fn <C-R>=expand("%")<CR>
 
+xnoremap <leader>ls :'<,'> sort <cr>
+xnoremap <leader>ld :'<,'> sort u<cr>
+xnoremap <leader>lD :'<,'> %sort! u<cr>
+xnoremap <leader>lS :'<,'> %sort! <cr>
 
+
+
+" dfgdfg
+" sdfsdg
+" 2      4
+" 34     12
+" 34     5
+" 45     1

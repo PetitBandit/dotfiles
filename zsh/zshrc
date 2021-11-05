@@ -213,6 +213,7 @@ alias gcf='git checkout feat-pro && git pull origin feat-pro; yarn'
 alias pros='cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev'
 alias launchpro='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
 
+alias ydp='yarn pro:dev'
 function maiiaswitch() {
     if [ $# -ge 2 ]
  then

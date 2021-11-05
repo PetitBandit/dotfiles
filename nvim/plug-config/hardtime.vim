@@ -9,4 +9,5 @@ let g:list_of_normal_keys = ["h", "j", "k", "l"]
   let g:hardtime_ignore_buffer_patterns = [ "[coc-explorer]-1*"]
   " allow the use of <left>/<right> in insert mode    
   let g:list_of_insert_keys = [] 
+  let g:list_of_visual_keys = []
   let g:hardtime_showmsg = 1
