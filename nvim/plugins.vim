@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
     Plug 'SirVer/ultisnips',
+    Plug 'dstein64/vim-startuptime',
     Plug 'jessarcher/vim-heritage',
     Plug 'phaazon/hop.nvim'
     Plug 'code-biscuits/nvim-biscuits',
