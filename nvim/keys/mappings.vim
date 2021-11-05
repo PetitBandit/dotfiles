@@ -3,10 +3,12 @@
 "-------------------------------------------------------------------------- 
       nnoremap <A-=>   :vertical resize +30<CR>
       nnoremap <A-->   :vertical resize -30<CR>
-      nnoremap <A-j>   ddp    " move line downwards 
-      nnoremap <A-k>   ddkkp  " move line upwards
-      nnoremap <A-h> :cprev<cr>zz
-      nnoremap <A-l> :cnext<cr>zz
+      " move line downwards 
+      nnoremap <A-j>   ddp    
+      " move line upwards
+      nnoremap <A-k>   ddkkp  
+      " nnoremap <A-h> :cprev<cr>zz
+      " nnoremap <A-l> :cnext<cr>zz
 
 " ESC 
       inoremap jk <Esc>
