@@ -137,10 +137,5 @@ xnoremap <leader>lD :'<,'> %sort! u<cr>
 xnoremap <leader>lS :'<,'> %sort! <cr>
 
 
-
-" dfgdfg
-" sdfsdg
-" 2      4
-" 34     12
-" 34     5
-" 45     1
+" nnoremap [<space> Oj
+" nnoremap ]<space> ok

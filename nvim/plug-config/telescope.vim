@@ -1,4 +1,3 @@
-lua require("plugins")
 lua require("plugins.telescope")
 
 " Using lua functions

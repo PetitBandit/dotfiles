@@ -10,9 +10,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'romgrk/barbar.nvim'
   Plug 'nvim-lualine/lualine.nvim'
-  Plug 'dstein64/vim-startuptime'
   Plug 'SirVer/ultisnips',
-  Plug 'dstein64/vim-startuptime',
+  Plug 'tweekmonster/startuptime.vim',
   Plug 'jessarcher/vim-heritage',
   Plug 'phaazon/hop.nvim'
   Plug 'code-biscuits/nvim-biscuits',
