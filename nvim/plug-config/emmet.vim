@@ -3,13 +3,11 @@
 let g:user_emmet_mode = 'inv'
 
   vmap ,  <plug>(emmet-expand-abbr)
-  vmap u   <plug>(emmet-update-tag)
+  " vmap u   <plug>(emmet-update-tag)
   vmap e <plug>(emmet-balance-tag-inward)
   vmap r  <plug>(emmet-balance-tag-outword)
   " imap   <C-y>n   <plug>(emmet-move-next)
   " imap   <C-y>N   <plug>(emmet-move-prev)
-  vmap k <plug>(emmet-remove-tag)
-  
   " <div class="tomate">
 "   <ul>
 "     <li>01</li>

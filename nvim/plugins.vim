@@ -8,6 +8,9 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
+Plug 'romgrk/barbar.nvim'
+    Plug 'nvim-lualine/lualine.nvim'
+    Plug 'dstein64/vim-startuptime'
     Plug 'SirVer/ultisnips',
     Plug 'dstein64/vim-startuptime',
     Plug 'jessarcher/vim-heritage',
@@ -16,9 +19,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'gruvbox-community/gruvbox',
     Plug 'mhartington/oceanic-next'
     Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
-    Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
     Plug 'alok/notational-fzf-vim'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
     Plug 'vimwiki/vimwiki'                                  " wiki
     Plug 'junegunn/fzf.vim'                                 " FZF
@@ -64,4 +67,4 @@ let g:vimwiki_markdown_link_ext = 1
 "retired plugins
 "
     " Plug 'junegunn/limelight.vim'
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
