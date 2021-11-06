@@ -36,9 +36,6 @@ source $HOME/.config/nvim/functions/isolatebrackets.vim
 source $HOME/.config/nvim/functions/openandsearch.vim
 source $HOME/.config/nvim/functions/indentfile.vim
 
-" source $HOME/.config/nvim/themes/airline.vim
-
-
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/temporaryMappings.vim
 
