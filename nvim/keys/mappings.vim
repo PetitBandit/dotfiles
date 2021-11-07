@@ -39,7 +39,7 @@
 "--------------------------------------------------------------------------
 
       nnoremap <silent> <C-S> :w<cr>
-      nnoremap <silent> <C-q> :bd<CR>
+      " nnoremap <silent> <C-q> :bd<CR>
 
 
       " Fugitive remap 
@@ -57,8 +57,8 @@
 "--------------------------------------------------------------------------
       map H ^
       map L $
-      nnoremap = :bn<cr>
-      nnoremap - :bp<cr> 
+      " nnoremap = :bn<cr>
+      " nnoremap - :bp<cr> 
 
       nnoremap Q q
       nnoremap Y yg_
