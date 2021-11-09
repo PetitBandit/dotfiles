@@ -14,10 +14,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'SirVer/ultisnips',
   Plug 'tweekmonster/startuptime.vim',
-  " Plug 'justinmk/vim-sneak',
   Plug 'jessarcher/vim-heritage',
   Plug 'phaazon/hop.nvim'
-  Plug 'code-biscuits/nvim-biscuits',
+  " Plug 'code-biscuits/nvim-biscuits',
+  Plug 'code-biscuits/nvim-biscuits', {'branch': 'feature-html-only-decorate-elements'}
   Plug 'gruvbox-community/gruvbox',
   Plug 'mhartington/oceanic-next'
   Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
@@ -68,3 +68,5 @@ let g:vimwiki_markdown_link_ext = 1
 "
     " Plug 'junegunn/limelight.vim'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
+  " Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
+  " Plug 'justinmk/vim-sneak',

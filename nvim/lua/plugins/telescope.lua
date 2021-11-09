@@ -71,6 +71,16 @@ M.search_docfile= function()
     })
 end
 
+M.search_actions= function()
+    require("telescope.builtin").lsp_code_actions({
+        prompt_title = "< Actions >",
+        layout_config = {
+            prompt_position = 'bottom',
+            height = 0.2,
+        }
+    })
+end
+
 M.search_profiles = function()
     require("telescope.builtin").find_files({
         prompt_title = "< PRO >",

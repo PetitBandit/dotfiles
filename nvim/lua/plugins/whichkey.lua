@@ -182,10 +182,6 @@ name ='test',
     o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 
   },
 
-  p = {
-    name = "quickfix list", -- optional group name
-    p = { "yap<S-}>p", "copy paragraph under"}, 
-  },
 
   q = {
     name = "quickfix list", -- optional group name
