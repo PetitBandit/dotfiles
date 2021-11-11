@@ -61,8 +61,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'quangnguyen30192/cmp-nvim-ultisnips'
     call plug#end()
 
-let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/Cid', 'syntax':'markdown', 'ext':'.md'}]
-let g:vimwiki_markdown_link_ext = 1
 
 "retired plugins
 "

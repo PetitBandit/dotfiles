@@ -44,6 +44,9 @@ require('telescope').setup{
 
 }
 
+local themes = require "telescope.themes"
+local cursor = themes.get_cursor()
+
 local M = {}
 
 M.search_dotfiles = function()
@@ -72,7 +75,7 @@ M.search_docfile= function()
 end
 
 M.search_actions= function()
-    require("telescope.builtin").lsp_code_actions({
+    require("telescope.builtin").lsp_code_actions(cursor, {
         prompt_title = "< Actions >",
         layout_config = {
             prompt_position = 'bottom',

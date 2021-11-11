@@ -191,6 +191,10 @@ name ='test',
     k = { ":cprev<cr>", "previous Qlist"}, 
   },
 
+  w = {
+    name = "wiki", -- optional group name
+  },
+
   -- r = {
   --   name = "repeat", -- optional group name
   -- },
