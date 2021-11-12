@@ -13,7 +13,8 @@ nnoremap gq          <cmd>lua require('telescope.builtin').lsp_document_diagnost
 nnoremap <leader>e   <cmd>lua require('telescope.builtin').file_browser()<cr>
 nnoremap <leader>yop <cmd>lua require('plugins.telescope').search_color()<cr>
 nnoremap ga          <cmd>lua require('plugins.telescope').search_actions()<cr>
-nnoremap <C-_>       <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+" nnoremap <C-_>       <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+nnoremap \       <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 " nnoremap <leader>sr <cmd>lua require('plugins.telescope').search_dotfiles()<CR>
 " nnoremap <leader>sp <cmd>lua require('plugins.telescope').search_profiles()<cr>
 " nnoremap <leader>sd <cmd>lua require('plugins.telescope').search_docfile()<cr>
