@@ -40,7 +40,7 @@ let g:startify_bookmarks = [
             \ { 'K': '~/dotfiles/kitty/kitty.conf'},
             \ { 'z': '~/dotfiles/zsh/zshrc'},
             \ { 'c': '~/dotfiles/nvim/snips/scss.snippets' },
-            \ { 'j': '~/dotfiles/nvim/snips/jss.snippets' },
+            \ { 'J': '~/dotfiles/nvim/snips/jss.snippets' },
             \ ]
 
 

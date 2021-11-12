@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'romgrk/barbar.nvim'
+  Plug 'b4skyx/serenade'
   Plug 'rhysd/devdocs.vim'
   Plug 'kevinhwang91/rnvimr'
   Plug 'nvim-lualine/lualine.nvim'

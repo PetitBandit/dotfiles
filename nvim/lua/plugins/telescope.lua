@@ -87,7 +87,7 @@ end
 M.search_profiles = function()
     require("telescope.builtin").find_files({
         prompt_title = "< PRO >",
-        path_display = { "tail" },
+        path_display = { "smart" },
         cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/",
         file_ignore_patterns = {"index.ts", "index.stories.js"},
     })
