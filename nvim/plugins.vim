@@ -9,9 +9,9 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'romgrk/barbar.nvim'
+  Plug 'junegunn/limelight.vim'
   Plug 'b4skyx/serenade'
   Plug 'rhysd/devdocs.vim'
-  Plug 'kevinhwang91/rnvimr'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'SirVer/ultisnips',
   Plug 'tweekmonster/startuptime.vim',
@@ -65,7 +65,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 "retired plugins
 "
-    " Plug 'junegunn/limelight.vim'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
   " Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
   " Plug 'justinmk/vim-sneak',

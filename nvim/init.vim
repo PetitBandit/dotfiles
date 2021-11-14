@@ -7,7 +7,6 @@ source $HOME/.config/nvim/general/auto.vim
 
 
 source $HOME/.config/nvim/plug-config/wiki.vim
-source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/devdocs.vim
 source $HOME/.config/nvim/plug-config/ultisnip.vim
 source $HOME/.config/nvim/plug-config/hop.vim
