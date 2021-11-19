@@ -41,6 +41,8 @@
       nnoremap <silent> <C-S> :w<cr>
       " nnoremap <silent> <C-q> :bd<CR>
 
+      "Indent file and keep cursor position
+      nnoremap <leader>p mwgg=G`wzz
 
       " Fugitive remap 
       nnoremap <leader>gj :diffget //3<CR>
@@ -63,9 +65,9 @@
       nnoremap Q q
       nnoremap Y yg_
 
-      "navigate the changeList
-      nnoremap e g;
-      nnoremap E g,
+      ""navigate the changeList
+      "nnoremap e g;
+      "nnoremap E g,
 
       " keeping centered while browsing
       nnoremap n nzz
@@ -97,7 +99,7 @@
 "--------------------------------------------------------------------------
 
     " <div> --> <div className="">
-     nmap <leader>cc f>i className="li
+    nmap <leader>cc f>i className="li
 
     " <div> --> <div className={classes.
     nmap <leader>cC f>i className={classes.
@@ -105,16 +107,16 @@
     " classes.tomate --> 'tomate'
     nmap <leader>cs  /classesdiwxysiw'ds{
     "  'tomate' --> classes.tomate
-     nmap <leader>cS /classwwyiwda"i{classes.pbds"
+    nmap <leader>cS /classwwyiwda"i{classes.pbds"
 
     " class --> '& .class'
-     nmap <leader>ce ysiw'li& .
+    nmap <leader>ce ysiw'li& .
 
     " <div> --> <div className={clsx()}>
     nmap <leader>co f>i className={clsx(
 
      " className='tomate' --> className={clsx('tomate')}
-     nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
+    nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
 
      " className={test} --> className={clsx(test, )}
     nmap <leader>cL f{wi f}i bysiW(iclsxf)i, 
@@ -136,6 +138,3 @@ xnoremap <leader>ld :'<,'> sort u<cr>
 xnoremap <leader>lD :'<,'> %sort! u<cr>
 xnoremap <leader>lS :'<,'> %sort! <cr>
 
-
-" nnoremap [<space> Oj
-" nnoremap ]<space> ok

@@ -17,7 +17,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tweekmonster/startuptime.vim',
   Plug 'jessarcher/vim-heritage',
   Plug 'phaazon/hop.nvim'
-  " Plug 'code-biscuits/nvim-biscuits',
   Plug 'code-biscuits/nvim-biscuits', {'branch': 'feature-html-only-decorate-elements'}
   Plug 'gruvbox-community/gruvbox',
   Plug 'mhartington/oceanic-next'
