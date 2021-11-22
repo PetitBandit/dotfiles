@@ -33,7 +33,6 @@ cmp.setup {
             if vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
               return press("<C-R>=UltiSnips#ExpandSnippet()<CR>")
             end
-            -- cmp.select_next_item()
             cmp.mapping.confirm({ select = true })
           elseif has_any_words_before() then
             press("<Space>")

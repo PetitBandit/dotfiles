@@ -6,3 +6,4 @@
       nmap ¬ <A-l>
       nmap Ø <A-O>
       nmap ø <A-o>
+      nmap π <A-p>

@@ -79,8 +79,8 @@ local wk = require("which-key")
 
 
 wk.register({
-  ['-'] = {":bprev<cr>", "bprev"},
-  ['='] = {":bnext<cr>", "bnext"},
+  ['-'] = {":BufferMovePrevious<cr>", "bprev"},
+  ['='] = {":BufferMoveNext<cr>", "bnext"},
   ['0'] = {"<C-^>", "last tab"},
   [','] = {"<esc>A,<esc>", "add ,"},
   ['1'] = {":BufferGoto 1<CR>", "which_key_ignore"},
