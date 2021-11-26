@@ -1,4 +1,4 @@
-    colorscheme OceanicNext
+    " colorscheme OceanicNext
 " Mac remap 
       nmap ˙ <A-h>
       nmap ∆ <A-j>

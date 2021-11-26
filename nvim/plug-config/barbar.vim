@@ -24,7 +24,7 @@ let bufferline.closable = v:false
 let bufferline.clickable = v:false
 
 " Excludes buffers from the tabline
-let bufferline.exclude_ft = ['javascript']
+" let bufferline.exclude_ft = ['javascript']
 let bufferline.exclude_name = ['package.json']
 
 " Enable/disable icons
