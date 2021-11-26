@@ -88,7 +88,7 @@ wk.register({
   ['3'] = {":BufferGoto 3<CR>", "which_key_ignore"},
   ['4'] = {":BufferGoto 4<CR>", "which_key_ignore"},
   ['9'] = {":BufferLast<CR>", "which_key_ignore"},
-  ['<tab>'] = {"<C-^>", "previous tab"},
+  ['<tab>'] = { "ToggleBiscuit"},
   ['b'] = {":BufferPick<CR>", "buf pick"},
   -- ['E'] = "which_key_ignore",
   ['<c-s>'] = "save file",
@@ -116,6 +116,8 @@ wk.register({
 
   c = {
     name = "class", -- optional group name
+
+    a = { "<cmd>lua require('plugins.telescope').search_actions()<cr>", "code Actions"}, -- just a label. don't create any mapping
     c = { "div ➜ div className=''" }, -- just a label. don't create any mapping
     C = { "div ➜ div className={classes." }, 
     o = { "div ➜ div className={clsx(" }, 

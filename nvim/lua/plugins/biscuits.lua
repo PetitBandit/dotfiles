@@ -1,7 +1,7 @@
 require('nvim-biscuits').setup({
   default_config = {
     -- cursor_line_only = true, 
-    toggle_keybind = "<leader>yb",
+    toggle_keybind = "<leader><tab>",
     max_length = 50,
     min_distance = 5,
     prefix_string = " 📎 "
