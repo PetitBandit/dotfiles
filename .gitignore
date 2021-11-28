@@ -3,3 +3,4 @@ nvim/undo/**
 nvim/autoload/**
 
 nvim/sessions/__LAST__
+nvim/.DS_Store
