@@ -5,7 +5,6 @@ require('telescope').setup{
         sorting_strategy = "ascending",
         -- shorten_path = true,
         color_devicons = true,
-        file_sorter = require('telescope.sorters').get_fzy_sorter,
         layout_config = {
             prompt_position = "top",
             width = 0.9,
@@ -38,12 +37,19 @@ require('telescope').setup{
         },
 
     extensions = {
-
+fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    }
 
   }
 
 }
 
+require('telescope').load_extension('fzf')
 local themes = require "telescope.themes"
 local cursor = themes.get_cursor()
 

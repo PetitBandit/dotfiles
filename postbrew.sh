@@ -23,7 +23,7 @@ stow -vt ~/.config karabiner
 
 #     launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server
 
-chmod +x ~/dotfiles/yabai/yabairc
+#chmod +x ~/dotfiles/yabai/yabairc
 
 
 git config --global user.email "raph.heb@gmail.com"

@@ -1,4 +1,4 @@
-#!/bin/bash
+
 set -e
 
 # install brew
@@ -56,7 +56,7 @@ brew install --cask firefox-developer-edition
 #--------------------------------------
 # https://github.com/koekeishiya/yabai
 # MacOS window manager
-brew install koekeishiya/formulae/yabai
+#brew install koekeishiya/formulae/yabai
 #--------------------------------------
 # https://github.com/stedolan/jq
 # Lightweight and flexible command-line JSON processor 
@@ -64,7 +64,7 @@ brew install jq
 #--------------------------------------
 # https://github.com/koekeishiya/skhd
 # Simple hotkey daemon for macOS
-brew install koekeishiya/formulae/skhd
+#brew install koekeishiya/formulae/skhd
 #--------------------------------------
 
 
@@ -75,3 +75,5 @@ brew install koekeishiya/formulae/skhd
 ##zsh
 echo "source  $HOME/dotfiles/zsh/zshrc"> $HOME/.zshrc
 
+npm install -g typescript typescript-language-server
+npm i -g vscode-langservers-extracted
