@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
+  Plug 'numToStr/Comment.nvim'
   Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/limelight.vim'
   Plug 'b4skyx/serenade'
@@ -67,3 +68,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Completion
   " Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
   " Plug 'justinmk/vim-sneak',
+  lua require('Comment').setup()
