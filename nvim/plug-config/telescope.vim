@@ -23,9 +23,6 @@ nnoremap \       <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find
 
 
 
-"0:00:40s install neovim
-"1:32:39 devicons telescope 
-"1:42:XX customize specific picker
 
 
-
+nnoremap <leader>sT <cmd>lua require('plugins.telescope').search_poeditor()<cr>

@@ -92,23 +92,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>paths</key>
-				<array>
-					<string>/Applications/Firefox Developer Edition.app</string>
-				</array>
-				<key>toggle</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.launchfiles</string>
-			<key>uid</key>
-			<string>0ED819F1-8B1E-4A56-B6DE-76D2033CF2BF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -136,6 +119,23 @@
 			<string>7F06D968-A68C-481E-83C0-7B45F509D2D1</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Firefox Developer Edition.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>0ED819F1-8B1E-4A56-B6DE-76D2033CF2BF</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -269,9 +269,9 @@ A hotkey needs to contain a modifier (Cmd, Ctrl or Alt) and a keyboard character
 		<key>056CB320-B8C0-446F-9EEB-2FC7987F8811</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>430</integer>
 			<key>ypos</key>
-			<integer>445</integer>
+			<integer>465</integer>
 		</dict>
 		<key>0ED819F1-8B1E-4A56-B6DE-76D2033CF2BF</key>
 		<dict>
@@ -283,9 +283,9 @@ A hotkey needs to contain a modifier (Cmd, Ctrl or Alt) and a keyboard character
 		<key>18188C8F-3A90-41C4-B3E3-60E6A687AAB9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>205</integer>
 			<key>ypos</key>
-			<integer>505</integer>
+			<integer>590</integer>
 		</dict>
 		<key>2BBA2143-AE1C-4C65-A342-2EED64DA689E</key>
 		<dict>
@@ -299,7 +299,7 @@ A hotkey needs to contain a modifier (Cmd, Ctrl or Alt) and a keyboard character
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>365</integer>
+			<integer>360</integer>
 		</dict>
 		<key>7F06D968-A68C-481E-83C0-7B45F509D2D1</key>
 		<dict>
@@ -312,9 +312,9 @@ A hotkey needs to contain a modifier (Cmd, Ctrl or Alt) and a keyboard character
 
 3. Connect your hotkey to the Action you want to use by hovering over the first object and dragging from the connector that appears to the right.</string>
 			<key>xpos</key>
-			<integer>50</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>10</integer>
 		</dict>
 		<key>D06D3C5F-4081-47FD-BA59-59EDAC4441C7</key>
 		<dict>

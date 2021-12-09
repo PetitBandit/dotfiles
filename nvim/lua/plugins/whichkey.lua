@@ -142,6 +142,7 @@ wk.register({
   g = {
     name = "go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
+    T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
     b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
   },
 

@@ -226,9 +226,9 @@ function maiiaswitch() {
 function maiia() {
     if [ $# -ge 2 ]
  then
-  cd $MAIIA_PATH ; git checkout feat-pro && git pull origin feat-pro && yarn ; git checkout -b "$1/MAIIAPRO-$2"
+  cd $MAIIA_PATH ; git checkout develop && git pull origin feat-pro && yarn ; git checkout -b "$1/MAIIAPRO-$2"
  else
-  cd $MAIIA_PATH ; git checkout feat-pro && git pull origin feat-pro && yarn ; git checkout -b "feat/MAIIAPRO-$1"
+  cd $MAIIA_PATH ; git checkout develop && git pull origin feat-pro && yarn ; git checkout -b "feat/MAIIAPRO-$1"
  fi
 }
 
@@ -349,6 +349,11 @@ export NVM_DIR="$HOME/.nvm"
 
 eval $(ssh-agent);
 ssh-add;
+
+    # if [[ "$(uname -s)" == "Darwin" ]]
+    # else #Linux
+    # fi 
+
 # unameOut="$(uname -s)"
 # case "${unameOut}" in
 #     Linux*)     machine=Linux;;

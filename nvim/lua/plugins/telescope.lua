@@ -106,6 +106,15 @@ M.search_gitfiles = function()
     })
 end
 
+M.search_poeditor = function()
+    require("telescope.builtin").live_grep({
+        prompt_title = "< POEDITOR >",
+        cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/public/locales/fr/",
+    })
+end
+
+
+
 
 
 require('telescope').load_extension('fzf')
