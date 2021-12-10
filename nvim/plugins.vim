@@ -58,7 +58,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'onsails/lspkind-nvim'
   Plug 'tpope/vim-fugitive'
   Plug 'kyazdani42/nvim-tree.lua'
-  Plug 'ThePrimeagen/harpoon'
+  " Plug 'ThePrimeagen/harpoon'
   Plug 'quangnguyen30192/cmp-nvim-ultisnips'
     call plug#end()
 

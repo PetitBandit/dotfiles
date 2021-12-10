@@ -1,4 +1,10 @@
 "--------------------------------------------------------------------------
+" Free easy mappings available
+"-------------------------------------------------------------------------- 
+"Ctrl + h
+"Ctrl + l
+
+"--------------------------------------------------------------------------
 " Use Alt + hjkl
 "-------------------------------------------------------------------------- 
       nnoremap <A-=>   :vertical resize +30<CR>
@@ -44,15 +50,15 @@
       "Indent file and keep cursor position
       nnoremap <leader>p mwgg=G`wzz
 
-      " Fugitive remap 
-      nnoremap <leader>gj :diffget //3<CR>
-      nnoremap <leader>gf :diffget //2<CR>
-      nnoremap <leader>gs :G<CR>
-      nnoremap <leader>gb :GBranches<CR>
-      nnoremap <leader>gB :Git blame<CR>
-      nnoremap <leader>gc :Git commit<CR>
-      nnoremap <leader>gP :Git push<CR>
-      nnoremap <leader>gp :Git pull<CR>
+      " " Fugitive remap 
+      " nnoremap <leader>gj :diffget //3<CR>
+      " nnoremap <leader>gf :diffget //2<CR>
+      " nnoremap <leader>gs :G<CR>
+      " nnoremap <leader>gb :GBranches<CR>
+      " nnoremap <leader>gB :Git blame<CR>
+      " nnoremap <leader>gc :Git commit<CR>
+      " nnoremap <leader>gP :Git push<CR>
+      " nnoremap <leader>gp :Git pull<CR>
 
 "--------------------------------------------------------------------------
 " Navigation
@@ -66,8 +72,8 @@
       nnoremap Y yg_
 
       ""navigate the changeList
-      "nnoremap e g;
-      "nnoremap E g,
+      nnoremap <C-j> g,
+      nnoremap <C-k> g;
 
       " keeping centered while browsing
       nnoremap n nzz

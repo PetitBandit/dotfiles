@@ -276,9 +276,9 @@ A hotkey needs to contain a modifier (Cmd, Ctrl or Alt) and a keyboard character
 		<key>0ED819F1-8B1E-4A56-B6DE-76D2033CF2BF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<integer>500</integer>
 			<key>ypos</key>
-			<integer>35</integer>
+			<integer>20</integer>
 		</dict>
 		<key>18188C8F-3A90-41C4-B3E3-60E6A687AAB9</key>
 		<dict>
