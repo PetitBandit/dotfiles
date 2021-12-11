@@ -3,12 +3,15 @@
 "-------------------------------------------------------------------------- 
 "Ctrl + h
 "Ctrl + l
+"<bs> backspace
 
 "--------------------------------------------------------------------------
 " Use Alt + hjkl
 "-------------------------------------------------------------------------- 
       nnoremap <A-=>   :vertical resize +30<CR>
       nnoremap <A-->   :vertical resize -30<CR>
+      " nnoremap <A-0>   <C-w><C-|>
+
       " move line downwards 
       nnoremap <A-j>   ddp    
       " move line upwards
@@ -74,6 +77,7 @@
       ""navigate the changeList
       nnoremap <C-j> g,
       nnoremap <C-k> g;
+      nnoremap <bs> g;
 
       " keeping centered while browsing
       nnoremap n nzz
@@ -83,9 +87,17 @@
       nnoremap M m
       nnoremap m '
 
+
+"--------------------------------------------------------------------------
+" LSP
+"--------------------------------------------------------------------------
+
+      nnoremap = <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
 "--------------------------------------------------------------------------
 " Cut, Manipulate text
 "--------------------------------------------------------------------------
+
 
       "copy paragraph under cursor and paste it under  
       nnoremap <leader>cp yap<S-}>p

@@ -93,7 +93,6 @@ wk.register({
   -- ['E'] = "which_key_ignore",
   ['<c-s>'] = "save file",
   ['<c-q>'] = "quit buffer",
-  ['<c-/>'] = "search line in current file",
 
 
   ['['] = {
@@ -116,38 +115,36 @@ wk.register({
 
   c = {
     name = "class", -- optional group name
-
-    a = { "<cmd>lua require('plugins.telescope').search_actions()<cr>", "code Actions"}, -- just a label. don't create any mapping
-    c = { "div ➜ div className=''" }, -- just a label. don't create any mapping
+    a = { "<cmd>lua require('plugins.telescope').search_actions()<cr>", "code Actions"}, 
+    c = { "div ➜ div className=''" }, 
     C = { "div ➜ div className={classes." }, 
-    o = { "div ➜ div className={clsx(" }, 
-    l = { "className='to' ➜ className={clsx('to'" }, 
-    L = { "className={test} ➜ className={clsx(test," }, 
-    s = { "classes.tomate ➜ 'tomate'" }, 
-    S = { "'tomate' ➜ classes.tomate" },
     e = {"class ➜ '& .class'" }, 
+    l = { "className='X' ➜ className={clsx('X'" }, 
+    L = { "className={X} ➜ className={clsx(X," }, 
+    o = { "div ➜ div className={clsx(" }, 
+    s = { "classes.X ➜ 'X'" }, 
+    S = { "'X' ➜ classes.X" },
   },
 
   f = {
     name = "file", -- optional group name
-    b = { ":Buffers<cr>", "buffers"}, 
-    f = { ":GFiles<cr>", "Find File" }, -- create a binding with label
-    h = { ":History<cr>", "recent files" }, 
+    b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer"}, 
+    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
+    c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"}, 
+    h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
+    p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
+    r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
     t = { ":Rg<cr>", "Find Text"}, 
+    f = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
     w = { ":NV!<cr>", "Find Wiki"}, 
-    l = { ":Lines<cr>", "lines in buffers"}, 
-    m = { ":Marks<cr>", "Marks"}, 
+    T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
   },
 
   g = {
     name = "go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
-    T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
     b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
   },
-
-
-
 
   i = {
     name = "import", -- optional group name
@@ -156,9 +153,6 @@ wk.register({
 
   j = {
     name = "jss", -- optional group name
-    a = {
-name ='test',
-    },
     c = { "add the import of clsx"}, 
     ['tc'] = { "makestyle ➜ makestyle + theme" }, -- just a label. don't create any mapping
   },
@@ -204,21 +198,24 @@ name ='test',
 
   s = {
     name = "s+", -- optional group name
-    f = { ":so % <cr>", "source file"}, 
-    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
-    c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "docfiles"}, 
-    s = { ":SSave<cr>", "saves Session"}, 
-    h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
-    p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
-    r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
-    t = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "text"}, 
+    f = { ":so % <cr>", "source file"},
+    -- b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer"}, 
+    -- d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
+    -- c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"}, 
+    -- h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
+    -- p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
+    -- r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
+    -- t = { ":Rg<cr>", "Find Text"}, 
+    -- w = { ":NV!<cr>", "Find Wiki"}, 
+    -- T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
   },
 
   M = {"<cmd>lua require('telescope.builtin').marks()<cr>", "marks"},
   S = {'yiw:%s/"//g<left><left>', "replace word under cursor"},
   T = {":Telescope<cr>", "Telescope"},
   v = {":vsplit<cr><C-w>l", "vsplit"},
-  t = {"<leader>t <cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
+  t = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
+  e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
 
   y = {
     name = "config+", -- optional group name
