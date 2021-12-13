@@ -83,16 +83,17 @@ wk.register({
   ['='] = {":BufferNext<CR>", "bnext"},
   ['0'] = {"<C-^>", "last tab"},
   [','] = {"<esc>A,<esc>", "add ,"},
+  [';'] = {"<esc>A;<esc>", "add ;"},
   ['1'] = {":BufferGoto 1<CR>", "which_key_ignore"},
   ['2'] = {":BufferGoto 2<CR>", "which_key_ignore"},
   ['3'] = {":BufferGoto 3<CR>", "which_key_ignore"},
   ['4'] = {":BufferGoto 4<CR>", "which_key_ignore"},
   ['9'] = {":BufferLast<CR>", "which_key_ignore"},
   ['<tab>'] = { "ToggleBiscuit"},
-  ['b'] = {":BufferPick<CR>", "buf pick"},
+  ['b'] = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer "},
   -- ['E'] = "which_key_ignore",
-  ['<c-s>'] = "save file",
-  ['<c-q>'] = "quit buffer",
+  -- ['<c-s>'] = "save file",
+  -- ['<c-q>'] = "quit buffer",
 
 
   ['['] = {
@@ -113,9 +114,9 @@ wk.register({
   ['B'] = { "which_key_ignore" },
   },
 
+  a = { "<cmd>lua require('plugins.telescope').search_actions()<cr>", "code Actions"}, 
   c = {
     name = "class", -- optional group name
-    a = { "<cmd>lua require('plugins.telescope').search_actions()<cr>", "code Actions"}, 
     c = { "div ➜ div className=''" }, 
     C = { "div ➜ div className={classes." }, 
     e = {"class ➜ '& .class'" }, 
@@ -125,6 +126,8 @@ wk.register({
     s = { "classes.X ➜ 'X'" }, 
     S = { "'X' ➜ classes.X" },
   },
+
+  e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
 
   f = {
     name = "file", -- optional group name
@@ -153,8 +156,15 @@ wk.register({
 
   j = {
     name = "jss", -- optional group name
-    c = { "add the import of clsx"}, 
-    ['tc'] = { "makestyle ➜ makestyle + theme" }, -- just a label. don't create any mapping
+    c = { "makestyle ➜ makestyle + theme"}, 
+  },
+
+  k = {"Devdocs"},
+
+  l = {
+    name = "LSP", -- optional group name
+    r = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", "References"}, 
+    d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"}, 
   },
 
   m = {
@@ -164,13 +174,7 @@ wk.register({
     p = { "[`", "[` go to previous mark"}, 
   },
 
-  l = {
-    name = "lists - sort", -- optional group name
-    s = {  "sort alpha"}, 
-    S = {  "sort backward"}, 
-    d = {  "sort & del dupli"}, 
-    D = {  "sort backward & del dupli"}, 
-  },
+  M = {"<cmd>lua require('telescope.builtin').marks()<cr>", "marks"},
 
   n = {":let @/ = ''<cr>", "remove Highlight"},
 
@@ -199,23 +203,11 @@ wk.register({
   s = {
     name = "s+", -- optional group name
     f = { ":so % <cr>", "source file"},
-    -- b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer"}, 
-    -- d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
-    -- c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"}, 
-    -- h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
-    -- p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
-    -- r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
-    -- t = { ":Rg<cr>", "Find Text"}, 
-    -- w = { ":NV!<cr>", "Find Wiki"}, 
-    -- T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
   },
 
-  M = {"<cmd>lua require('telescope.builtin').marks()<cr>", "marks"},
   S = {'yiw:%s/"//g<left><left>', "replace word under cursor"},
   T = {":Telescope<cr>", "Telescope"},
   v = {":vsplit<cr><C-w>l", "vsplit"},
-  t = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
-  e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
 
   y = {
     name = "config+", -- optional group name

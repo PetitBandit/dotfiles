@@ -25,4 +25,4 @@ nnoremap \       <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find
 
 
 
-nnoremap <leader>sT <cmd>lua require('plugins.telescope').search_poeditor()<cr>
+nnoremap <leader>fT <cmd>lua require('plugins.telescope').search_poeditor()<cr>
