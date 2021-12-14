@@ -209,26 +209,26 @@ alias meteo='curl http://wttr.in'
 
 # Maiia specific aliases {{{
 MAIIA_PATH="${HOME}/work/doca/maiia-frontend/"
-alias gcf='git checkout feat-pro && git pull origin feat-pro; yarn'
-alias pros='cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev'
+BASE_BRANCH="develop"
+alias gcf='git checkout $BASE_BRANCH && git pull origin $BASE_BRANCH; yarn'
+alias ydp='cd $MAIIA_PATH; yarn && yarn build:common && yarn pro:dev'
 alias launchpro='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
 
-alias ydp='yarn pro:dev'
 function maiiaswitch() {
     if [ $# -ge 2 ]
  then
-  cd $MAIIA_PATH ; git fetch --all ; git checkout "$1/MAIIAPRO-$2" && git pull && yarn 
+  cd $MAIIA_PATH && git fetch --all && git checkout "$1/MAIIAPRO-$2" && git pull && yarn || echo "FAIL, try again"
  else
-  cd $MAIIA_PATH ; git fetch --all ; git checkout "feat/MAIIAPRO-$1" && git pull ; yarn 
+  cd $MAIIA_PATH && git fetch --all && git checkout "feat/MAIIAPRO-$1" && git pull && yarn || echo "FAIL, try again"
  fi
 }
 
 function maiia() {
     if [ $# -ge 2 ]
  then
-  cd $MAIIA_PATH ; git checkout develop && git pull origin feat-pro && yarn ; git checkout -b "$1/MAIIAPRO-$2"
+  cd $MAIIA_PATH ; git checkout $BASE_BRANCH && git pull origin $BASE_BRANCH && yarn && git checkout -b "$1/MAIIAPRO-$2" || echo "FAIL"
  else
-  cd $MAIIA_PATH ; git checkout develop && git pull origin feat-pro && yarn ; git checkout -b "feat/MAIIAPRO-$1"
+  cd $MAIIA_PATH ; git checkout $BASE_BRANCH && git pull origin $BASE_BRANCH && yarn && git checkout -b "feat/MAIIAPRO-$1" || echo "FAIL"
  fi
 }
 
