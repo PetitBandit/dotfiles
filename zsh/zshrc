@@ -211,7 +211,7 @@ alias meteo='curl http://wttr.in'
 MAIIA_PATH="${HOME}/work/doca/maiia-frontend/"
 BASE_BRANCH="develop"
 alias gcf='git checkout $BASE_BRANCH && git pull origin $BASE_BRANCH; yarn'
-alias ydp='cd $MAIIA_PATH; yarn && yarn build:common && yarn pro:dev'
+alias ypd='cd $MAIIA_PATH; yarn && yarn build:common && yarn pro:dev'
 alias launchpro='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
 
 function maiiaswitch() {
