@@ -51,6 +51,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-lua/plenary.nvim' "Telescope
   Plug 'nvim-lua/popup.nvim'
   Plug 'akinsho/toggleterm.nvim' "toggleterm
+  Plug 'tommcdo/vim-lion'
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-buffer'
