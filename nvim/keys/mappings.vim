@@ -1,9 +1,12 @@
 "--------------------------------------------------------------------------
 " Free easy mappings available
 "-------------------------------------------------------------------------- 
+"Ctrl + b
+"Ctrl + e
+"Ctrl + f
 "Ctrl + h
 "Ctrl + l
-"<bs> backspace
+"Ctrl + y
 "<leader>r
 "<leader>s
 
@@ -55,15 +58,15 @@
       "Indent file and keep cursor position
       nnoremap <leader>p mwgg=G`wzz
 
-      " " Fugitive remap 
-      " nnoremap <leader>gj :diffget //3<CR>
-      " nnoremap <leader>gf :diffget //2<CR>
-      " nnoremap <leader>gs :G<CR>
-      " nnoremap <leader>gb :GBranches<CR>
-      " nnoremap <leader>gB :Git blame<CR>
-      " nnoremap <leader>gc :Git commit<CR>
-      " nnoremap <leader>gP :Git push<CR>
-      " nnoremap <leader>gp :Git pull<CR>
+      " Fugitive remap
+      nnoremap <leader>gj :diffget //3<CR>
+      nnoremap <leader>gf :diffget //2<CR>
+      nnoremap <leader>gs :G<CR>
+      nnoremap <leader>gb :GBranches<CR>
+      nnoremap <leader>gB :Git blame<CR>
+      nnoremap <leader>gc :Git commit<CR>
+      nnoremap <leader>gP :Git push<CR>
+      nnoremap <leader>gp :Git pull<CR>
 
 "--------------------------------------------------------------------------
 " Navigation
@@ -147,8 +150,9 @@
     "changes makestyle --> makestyle(theme ...
     nnoremap <leader>jtc ?useStyles = makewwwC(theme => ({
     
-    nmap <leader>' ysiw'
-    nmap <leader>` ysiw`
+    nmap <leader>' F:2lyst,'
+    nmap <leader>` F:2lyst,`
+    
 
     "add the filename 
     " imap <leader>fn <C-R>=expand("%")<CR>
