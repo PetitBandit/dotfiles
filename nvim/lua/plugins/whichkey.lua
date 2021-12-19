@@ -51,7 +51,6 @@ local wk = require("which-key")
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
   },
 
-
   layout = {
     height = { min = 4, max = 25 }, -- min and max height of the columns
     width = { min = 20, max = 50 }, -- min and max width of the columns
@@ -89,7 +88,8 @@ wk.register({
   ['4'] = {":BufferGoto 4<CR>", "which_key_ignore"},
   ['9'] = {":BufferLast<CR>", "which_key_ignore"},
   ['<tab>'] = { "ToggleBiscuit"},
-  ['b'] = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer "},
+  ['`'] = {"F:2lyst,`", "`"},
+  ["'"] = {"F:2lyst,'", "'"},
   -- ['E'] = "which_key_ignore",
   -- ['<c-s>'] = "save file",
   -- ['<c-q>'] = "quit buffer",
@@ -114,8 +114,38 @@ wk.register({
   },
 
   a = { "<cmd>lua require('plugins.telescope').search_actions()<cr>", "code Actions"}, 
+  b = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer "},
   c = {
-    name = "class", -- optional group name
+    name = "Copy", -- optional group name
+    d = { ":cd %:p:h<CR>", "moves to the current directory"}, 
+    p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"}, 
+  },
+
+  e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
+
+  f = {
+    name = "File", -- optional group name
+    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
+    h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
+    p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
+    r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
+    f = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
+    w = { ":NV!<cr>", "Find Wiki"}, 
+  },
+
+  g = {
+    name = "GIT & Go", -- optional group name
+    t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
+    b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
+  },
+  -- h = {},
+  -- i = {
+  --   name = "import", -- optional group name
+  -- },
+
+  j = {
+    name = "jss", -- optional group name
+    m = { "makestyle ➜ makestyle + theme"}, 
     c = { "div ➜ div className=''" }, 
     C = { "div ➜ div className={classes." }, 
     e = {"class ➜ '& .class'" }, 
@@ -124,38 +154,7 @@ wk.register({
     o = { "div ➜ div className={clsx(" }, 
     s = { "classes.X ➜ 'X'" }, 
     S = { "'X' ➜ classes.X" },
-  },
-
-  e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
-
-  f = {
-    name = "file", -- optional group name
-    b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer"}, 
-    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
-    c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"}, 
-    h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
-    p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
-    r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
-    t = { ":Rg<cr>", "Find Text"}, 
-    f = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
-    w = { ":NV!<cr>", "Find Wiki"}, 
-    T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
-  },
-
-  g = {
-    name = "go", -- optional group name
-    t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
-    b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
-  },
-
-  i = {
-    name = "import", -- optional group name
-    c = { "add the import of clsx"}, 
-  },
-
-  j = {
-    name = "jss", -- optional group name
-    c = { "makestyle ➜ makestyle + theme"}, 
+    t = { "makestyle ➜ makestyle(theme)" },
   },
 
   k = {"Devdocs"},
@@ -183,6 +182,7 @@ wk.register({
   },
 
 
+  -- p = {},
   q = {
     name = "quickfix list", -- optional group name
     o = { ":copen<cr>", "open QList"}, 
@@ -191,9 +191,6 @@ wk.register({
     k = { ":cprev<cr>", "previous Qlist"}, 
   },
 
-  w = {
-    name = "wiki", -- optional group name
-  },
 
   -- r = {
   --   name = "repeat", -- optional group name
@@ -202,23 +199,41 @@ wk.register({
   s = {
     name = "s+", -- optional group name
     f = { ":so % <cr>", "source file"},
+    s = {'yiw:%s/"//g<left><left>', "replace word under cursor"},
   },
 
-  S = {'yiw:%s/"//g<left><left>', "replace word under cursor"},
+  t = {
+    name = "Text", -- optional group name
+    f = { ":Rg<cr>", "Fzf Text"}, 
+    t = { ":Telescope live_grep<cr>", "Find Text"}, 
+    w = { ":Telescope grep_string<cr>", "Find word under cursor"}, 
+    T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
+    p = { "paste txt & search" }
+  },
+
   T = {":Telescope<cr>", "Telescope"},
+  -- u = {},
   v = {":vsplit<cr><C-w>l", "vsplit"},
+
+  w = {
+    name = "wiki", -- optional group name
+  },
 
   y = {
     name = "config+", -- optional group name
-    ['ob'] = { "background" }, -- just a label. don't create any mapping
-    ['oh'] = { "hard times" }, 
-    ['oc'] = { "cursorline" },
-    ['ow'] = { "wrap" }, 
+    c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"}, 
+    o = { 
+      name = "options", 
+         b = { "background" }, -- just a label. don't create any mapping
+         h = { "hard times" }, 
+         r = { "relative number" },
+         w = { "wrap" }, 
+    },
     p = {
       name = "plugins",
-    i = { ":PlugInstall<cr>", "Install plugins"}, 
-    c = { ":PlugClean<cr>", "clean plugins"}, 
-    u = { ":PlugUpdate<cr>", "update plugins"}, 
+         i = { ":PlugInstall<cr>", "Install plugins"}, 
+         c = { ":PlugClean<cr>", "clean plugins"}, 
+         u = { ":PlugUpdate<cr>", "update plugins"}, 
     }
   },
 }, { prefix = "<leader>" })

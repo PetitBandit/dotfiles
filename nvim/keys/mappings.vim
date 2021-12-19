@@ -6,9 +6,9 @@
 "Ctrl + f
 "Ctrl + h
 "Ctrl + l
+"Ctrl + p
+"Ctrl + t
 "Ctrl + y
-"<leader>r
-"<leader>s
 
 "--------------------------------------------------------------------------
 " Use Alt + hjkl
@@ -33,8 +33,6 @@
 " Behind the scenes
 "--------------------------------------------------------------------------
 
-      "moves to the current directory
-      nnoremap <leader>cd :cd %:p:h<CR> 
       vnoremap < <gv " Better tabbing 
       vnoremap > >gv " Better tabbing 
 
@@ -92,6 +90,10 @@
       nnoremap M m
       nnoremap m '
 
+  nnoremap <Up>   <C-W>k
+  nnoremap <Down> <C-W>j
+  nnoremap <Left> <C-W>h
+  nnoremap <Right> <C-W>l
 
 "--------------------------------------------------------------------------
 " LSP
@@ -103,9 +105,6 @@
 " Cut, Manipulate text
 "--------------------------------------------------------------------------
 
-
-      "copy paragraph under cursor and paste it under  
-      nnoremap <leader>cp yap<S-}>p
 
 
       " + or _ will cut a line and paste it here
@@ -122,33 +121,31 @@
 "--------------------------------------------------------------------------
 
     " <div> --> <div className="">
-    nmap <leader>cc f>i className="li
+    nmap <leader>jc f>i className="li
 
     " <div> --> <div className={classes.
-    nmap <leader>cC f>i className={classes.
+    nmap <leader>jC f>i className={classes.
 
     " classes.tomate --> 'tomate'
-    nmap <leader>cs  /classesdiwxysiw'ds{
+    nmap <leader>js  /classesdiwxysiw'ds{
     "  'tomate' --> classes.tomate
-    nmap <leader>cS /classwwyiwda"i{classes.pbds"
+    nmap <leader>jS /classwwyiwda"i{classes.pbds"
 
     " class --> '& .class'
-    nmap <leader>ce ysiw'li& .
+    nmap <leader>je ysiw'li& .
 
     " <div> --> <div className={clsx()}>
-    nmap <leader>co f>i className={clsx(
+    nmap <leader>jo f>i className={clsx(
 
      " className='tomate' --> className={clsx('tomate')}
-    nmap <leader>cl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
+    nmap <leader>jl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
 
      " className={test} --> className={clsx(test, )}
-    nmap <leader>cL f{wi f}i bysiW(iclsxf)i, 
+    nmap <leader>jL f{wi f}i bysiW(iclsxf)i, 
 
-    " add import clsx on top of the file and then teleports back to the line we were before
-    nnoremap <leader>ic mjggoimport clsx from 'clsx';'j
 
     "changes makestyle --> makestyle(theme ...
-    nnoremap <leader>jtc ?useStyles = makewwwC(theme => ({
+    nnoremap <leader>jt ?useStyles = makewwwC(theme => ({
     
     nmap <leader>' F:2lyst,'
     nmap <leader>` F:2lyst,`
