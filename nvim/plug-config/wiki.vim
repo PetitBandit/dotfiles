@@ -1,4 +1,5 @@
 let g:vimwiki_markdown_link_ext = 1
+let g:vimwiki_listsyms = '✗○◐●✓'
 
 
 nmap - <Plug>VimwikiMakeDiaryNote

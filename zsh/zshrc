@@ -201,7 +201,7 @@ alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs'
 
 if [[ "$(uname -s)" == "Darwin" ]]
 then
-    TERMINUS_PATH="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/terminus"
+    TERMINUS_PATH="${HOME}/Library/Mobile Documents/com~apple~CloudDocs/terminus/"
   else #Linux
     TERMINUS_PATH="TEST"
 fi
