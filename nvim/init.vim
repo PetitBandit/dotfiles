@@ -24,6 +24,7 @@ source $HOME/.config/nvim/plug-config/notational.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
 source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/nvimtree.vim
 source $HOME/.config/nvim/plug-config/autotag.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim

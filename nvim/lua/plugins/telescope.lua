@@ -113,6 +113,17 @@ M.search_poeditor = function()
     })
 end
 
+M.search_terminus = function()
+    require("telescope.builtin").live_grep({
+        prompt_title = "< Terminus >",
+        cwd = "/Users/cid/Library/Mobile Documents/com~apple~CloudDocs/terminus",
+    })
+end
+
+
+
+
+
 
 
 

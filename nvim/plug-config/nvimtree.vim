@@ -4,7 +4,7 @@ let g:lua_tree_bindings = {
 \ 'close_node': 'h',
 \ 'edit': 'l',
 \ }
-let g:nvim_tree_gitignore = 1 "0 by default
+" let g:nvim_tree_gitignore = 1 "0 by default
 let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
@@ -70,9 +70,6 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 
-nnoremap <leader>e :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
 " NvimTreeOpen, NvimTreeClose, NvimTreeFocus, NvimTreeFindFileToggle, and NvimTreeResize are also available if you need them
 
 set termguicolors " this variable must be enabled for colors to be applied properly
@@ -86,8 +83,12 @@ lua << EOF
 local g = vim.g
 local tree_cb = require "nvim-tree.config".nvim_tree_callback
 local list = {
+{ key = "?",     cb = tree_cb("toggle_help") },
   { key = {"l"}, cb = tree_cb("edit") },
   { key = {"h"}, cb = tree_cb("close_node") },
+  { key = "y",   cb = tree_cb("copy") },
+  { key = "c", cb = tree_cb("copy_name") },
+  { key = "s", cb = '' },
 }
 -- following options are the default
 require'nvim-tree'.setup {

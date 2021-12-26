@@ -18,14 +18,14 @@
       " nnoremap <A-0>   <C-w><C-|>
 
       " move line downwards 
-      nnoremap <A-j>   ddp    
+      nnoremap <A-j>   <Esc>:m .+1<CR>
       " move line upwards
-      nnoremap <A-k>   ddkkp  
+      nnoremap <A-k>   <Esc>:m .-2<CR>
       " nnoremap <A-h> :cprev<cr>zz
       " nnoremap <A-l> :cnext<cr>zz
 
 " ESC 
-      inoremap jk <Esc>
+inoremap jk <Esc>
 
 
 

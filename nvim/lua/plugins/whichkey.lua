@@ -121,16 +121,18 @@ wk.register({
     p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"}, 
   },
 
-  e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
+  -- e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
+  e = {":NvimTreeToggle<CR>", "File Browser"},
 
   f = {
     name = "File", -- optional group name
     d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
     h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
     p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
+    w = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search pro maiia"}, 
     r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
     f = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
-    w = { ":NV!<cr>", "Find Wiki"}, 
+    -- w = { ":NV!<cr>", "Find Wiki"}, 
   },
 
   g = {
@@ -217,6 +219,8 @@ wk.register({
 
   w = {
     name = "wiki", -- optional group name
+    f = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"}, 
+    w = { "<Plug>VimwikiTabIndex", "Terminus Index"}, 
   },
 
   y = {
