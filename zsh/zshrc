@@ -206,7 +206,7 @@ then
     TERMINUS_PATH="TEST"
 fi
 
-alias terminus='cd $TERMINUS_PATH && git pull origin main && git add . && git commit -m"update knowledge" && git push origin main && cd -' 
+alias tt='cd $TERMINUS_PATH && git pull origin main && git add . && git commit -m"update knowledge" && git push origin main && cd -' 
 alias config='cd $HOME/dotfiles && nvim $(fzf)'
 alias la='ls -aG'                   # Shorcut
 alias ls='ls -G'                   # Shorcut
