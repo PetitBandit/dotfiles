@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'numToStr/Comment.nvim'
+  Plug 'machakann/vim-sandwich'
   Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/limelight.vim'
   Plug 'b4skyx/serenade'
@@ -28,7 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf.vim'                                 " FZF
   Plug 'airblade/vim-rooter'                              " FZF
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
+  " Plug 'tpope/vim-surround'
   Plug 'wellle/targets.vim'                               " allows to jump inside ' ) } ]
   Plug 'mhinz/vim-startify'
   Plug 'unblevable/quick-scope'                           " F and f highlight
