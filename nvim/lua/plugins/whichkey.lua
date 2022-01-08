@@ -207,6 +207,7 @@ wk.register({
   t = {
     name = "Text", -- optional group name
     f = { ":Rg<cr>", "Fzf Text"}, 
+    o = { ":TodoQuickFix<cr>", "Find Todo"}, 
     t = { ":Telescope live_grep<cr>", "Find Text"}, 
     w = { ":Telescope grep_string<cr>", "Find word under cursor"}, 
     T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
@@ -215,7 +216,7 @@ wk.register({
 
   T = {":Telescope<cr>", "Telescope"},
   -- u = {},
-  v = {":vsplit<cr><C-w>l", "vsplit"},
+  v = {":vsplit<cr><C-w><C-w>", "vsplit"},
 
   w = {
     name = "wiki", -- optional group name

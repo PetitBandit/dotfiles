@@ -60,6 +60,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+  Plug 'folke/todo-comments.nvim'
     call plug#end()
 
 

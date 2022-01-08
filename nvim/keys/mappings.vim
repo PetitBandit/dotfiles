@@ -62,9 +62,9 @@ inoremap jk <Esc>
       nnoremap <leader>gs :G<CR>
       nnoremap <leader>gb :GBranches<CR>
       nnoremap <leader>gB :Git blame<CR>
-      nnoremap <leader>gc :Git commit<CR>
-      nnoremap <leader>gP :Git push<CR>
-      nnoremap <leader>gp :Git pull<CR>
+      " nnoremap <leader>gc :Git commit<CR>
+      " nnoremap <leader>gP :Git push<CR>
+      " nnoremap <leader>gp :Git pull<CR>
 
 "--------------------------------------------------------------------------
 " Navigation
@@ -81,6 +81,10 @@ inoremap jk <Esc>
       nnoremap <C-j> g,
       nnoremap <C-k> g;
       nnoremap <bs> g;
+
+      ""navigate the QuickFixList
+      nnoremap <C-l> :cnext<cr>
+      nnoremap <C-h> :cp<cr>
 
       " keeping centered while browsing
       nnoremap n nzz
