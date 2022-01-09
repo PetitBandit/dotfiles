@@ -207,7 +207,16 @@ wk.register({
   t = {
     name = "Text", -- optional group name
     f = { ":Rg<cr>", "Fzf Text"}, 
-    o = { ":TodoQuickFix<cr>", "Find Todo"}, 
+    o = { 
+      o = { ":TodoQuickFix<cr>", "FIND TODO"}, 
+      d = { "OTODO::Commentary<cr>A", "create Todo"}, 
+      f = { "OFIX::Commentary<cr>A", "create Fixme"}, 
+      b = { "OBUG::Commentary<cr>A", "create Bug"}, 
+      n = { "ONOTE::Commentary<cr>A", "create Note"}, 
+      p = { "OPERF::Commentary<cr>A", "create Perf"}, 
+      h = { "OHACK::Commentary<cr>A", "create Hack"}, 
+      w = { "OWARNING::Commentary<cr>A", "create Warning"}, 
+    },
     t = { ":Telescope live_grep<cr>", "Find Text"}, 
     w = { ":Telescope grep_string<cr>", "Find word under cursor"}, 
     T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
