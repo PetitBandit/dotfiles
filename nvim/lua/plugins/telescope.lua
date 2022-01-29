@@ -80,7 +80,7 @@ M.search_docfile= function()
     })
 end
 
-M.search_actions= function()
+M.code_actions= function()
     require("telescope.builtin").lsp_code_actions(cursor, {
         prompt_title = "< Actions >",
         layout_config = {
@@ -93,7 +93,7 @@ end
 M.search_profiles = function()
     require("telescope.builtin").find_files({
         prompt_title = "< PRO >",
-        path_display = { "smart" },
+        path_display = { shorten = 3 },
         cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/",
         file_ignore_patterns = {"index.ts", "index.stories.js"},
     })
@@ -102,6 +102,7 @@ end
 M.search_gitfiles = function()
     require("telescope.builtin").git_files({
         prompt_title = "< GIT >",
+        path_display = { shorten = 3 },
         file_ignore_patterns = {"index.ts", "index.stories.js"},
     })
 end
