@@ -88,8 +88,8 @@ wk.register({
   ['4'] = {":BufferGoto 4<CR>", "which_key_ignore"},
   ['9'] = {":BufferLast<CR>", "which_key_ignore"},
   ['<tab>'] = { "ToggleBiscuit"},
-  ['`'] = {"F:2lyst,`", "`"},
-  ["'"] = {"F:2lyst,'", "'"},
+  ['`'] = {"ysiW`", "`"},
+  ["'"] = {"ysiW'", "'"},
   -- ['E'] = "which_key_ignore",
   -- ['<c-s>'] = "save file",
   -- ['<c-q>'] = "quit buffer",
@@ -217,10 +217,10 @@ wk.register({
       h = { "OHACK::Commentary<cr>A", "create Hack"}, 
       w = { "OWARNING::Commentary<cr>A", "create Warning"}, 
     },
+    p = { "paste txt & search" }, 
     t = { ":Telescope live_grep<cr>", "Find Text"}, 
     w = { ":Telescope grep_string<cr>", "Find word under cursor"}, 
     T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
-    p = { "paste txt & search" }
   },
 
   T = {":Telescope<cr>", "Telescope"},

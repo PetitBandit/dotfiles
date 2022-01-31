@@ -71,8 +71,6 @@ inoremap jk <Esc>
 "--------------------------------------------------------------------------
       map H ^
       map L $
-      " nnoremap = :bn<cr>
-      " nnoremap - :bp<cr> 
 
       nnoremap Q q
       nnoremap Y yg_
@@ -94,10 +92,13 @@ inoremap jk <Esc>
       nnoremap M m
       nnoremap m '
 
-  nnoremap <Up>   <C-W>k
-  nnoremap <Down> <C-W>j
-  nnoremap <Left> <C-W>h
-  nnoremap <Right> <C-W>l
+      "Searching for word under cursor 
+      nnoremap <expr> <leader>tp ':Telescope live_grep<cr>' . expand('<C-R>"')
+
+      nnoremap <Up>   <C-W>k
+      nnoremap <Down> <C-W>j
+      nnoremap <Left> <C-W>h
+      nnoremap <Right> <C-W>l
 
 "--------------------------------------------------------------------------
 " LSP
@@ -118,6 +119,7 @@ inoremap jk <Esc>
 
       " - Smash that dot '.' multiple times to change all the other occurrences of the word
       nnoremap cn *``cgn
+      nnoremap c. /\V<C-r>"<CR>cgn<C-a><Esc>
 
 
 "--------------------------------------------------------------------------
@@ -150,9 +152,6 @@ inoremap jk <Esc>
 
     "changes makestyle --> makestyle(theme ...
     nnoremap <leader>jt ?useStyles = makewwwC(theme => ({
-    
-    nmap <leader>' F:2lyst,'
-    nmap <leader>` F:2lyst,`
     
 
     "add the filename 
