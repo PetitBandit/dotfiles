@@ -54,7 +54,7 @@ inoremap jk <Esc>
       " nnoremap <silent> <C-q> :bd<CR>
 
       "Indent file and keep cursor position
-      nnoremap <leader>p mwgg=G`wzz
+      " nnoremap <leader>p mwgg=G`wzz
 
       " Fugitive remap
       nnoremap <leader>gj :diffget //3<CR>
