@@ -203,7 +203,7 @@ if [[ "$(uname -s)" == "Darwin" ]]
 then
     TERMINUS_PATH="${HOME}/Library/Mobile Documents/com~apple~CloudDocs/terminus/"
   else #Linux
-    TERMINUS_PATH="TEST"
+    TERMINUS_PATH="${HOME}/Sync/Documents/obsidian/terminus/"
 fi
 
 alias tt='cd $TERMINUS_PATH && git pull origin main && git add . && git commit -m"update knowledge" && git push origin main && cd -' 
