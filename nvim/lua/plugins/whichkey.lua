@@ -121,6 +121,11 @@ wk.register({
     p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"}, 
   },
 
+  d = {
+    name = "delete", -- optional group name
+    m = { "marks in buffer"}, 
+    D = { "ggVGd", "delete content buffer"}, 
+  },
   -- e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
   e = {":NvimTreeToggle<CR>", "File Browser"},
 

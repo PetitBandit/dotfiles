@@ -29,10 +29,11 @@ require'marks'.setup {
   },
 mappings = { 
     set_next = "<leader>m",
-    next = "S",
+    prev = "S",
     -- preview = "<C-e>",
     set_bookmark0 = "m0",
-    prev = "<C-e>"
+    next = "<C-e>",
+    delete_buf = "<leader>dm"
   }
 }
 EOF
