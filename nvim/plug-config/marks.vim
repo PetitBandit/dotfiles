@@ -27,6 +27,12 @@ require'marks'.setup {
     sign = "⚑",
     virt_text = "hello world"
   },
-  mappings = {}
+mappings = { 
+    set_next = "<leader>m",
+    next = "S",
+    -- preview = "<C-e>",
+    set_bookmark0 = "m0",
+    prev = "<C-e>"
+  }
 }
 EOF

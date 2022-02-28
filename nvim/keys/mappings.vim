@@ -2,7 +2,6 @@
 " Free easy mappings available
 "-------------------------------------------------------------------------- 
 "Ctrl + b
-"Ctrl + e
 "Ctrl + f
 "Ctrl + h
 "Ctrl + l
@@ -80,9 +79,12 @@ inoremap jk <Esc>
       nnoremap <C-k> g;
       nnoremap <bs> g;
 
+"Ctrl + e
+
+
       ""navigate the QuickFixList
-      nnoremap <C-l> :cnext<cr>
-      nnoremap <C-h> :cp<cr>
+      " nnoremap <C-l> :cnext<cr>
+      " nnoremap <C-h> :cp<cr>
 
       " keeping centered while browsing
       nnoremap n nzz

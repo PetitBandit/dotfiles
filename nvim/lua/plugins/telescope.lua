@@ -117,7 +117,7 @@ end
 M.search_terminus = function()
     require("telescope.builtin").live_grep({
         prompt_title = "< Terminus >",
-        cwd = "/Users/cid/Library/Mobile Documents/com~apple~CloudDocs/terminus",
+        cwd = "~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/",
     })
 end
 

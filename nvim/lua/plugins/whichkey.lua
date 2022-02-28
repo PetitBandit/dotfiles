@@ -167,12 +167,7 @@ wk.register({
     d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"}, 
   },
 
-  m = {
-    name = "marks", -- optional group name
-    m = { "m,", "m, place next mark"}, 
-    n = { "]`", "]` go to next mark"}, 
-    p = { "[`", "[` go to previous mark"}, 
-  },
+  m = { "add mark"},
 
   M = {"<cmd>lua require('telescope.builtin').marks()<cr>", "marks"},
 
@@ -231,6 +226,7 @@ wk.register({
     name = "wiki", -- optional group name
     f = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"}, 
     w = { "<Plug>VimwikiTabIndex", "Terminus Index"}, 
+    d = { "<Plug>VimwikiMakeDiaryNote", "Diary today"}, 
   },
 
   y = {
