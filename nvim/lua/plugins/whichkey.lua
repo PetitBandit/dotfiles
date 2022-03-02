@@ -121,6 +121,11 @@ wk.register({
     p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"}, 
   },
 
+  d = {
+    name = "delete", -- optional group name
+    m = { "marks in buffer"}, 
+    D = { "ggVGd", "delete content buffer"}, 
+  },
   -- e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
   e = {":NvimTreeToggle<CR>", "File Browser"},
 
@@ -167,12 +172,7 @@ wk.register({
     d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"}, 
   },
 
-  m = {
-    name = "marks", -- optional group name
-    m = { "m,", "m, place next mark"}, 
-    n = { "]`", "]` go to next mark"}, 
-    p = { "[`", "[` go to previous mark"}, 
-  },
+  m = { "add mark"},
 
   M = {"<cmd>lua require('telescope.builtin').marks()<cr>", "marks"},
 
@@ -231,6 +231,7 @@ wk.register({
     name = "wiki", -- optional group name
     f = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"}, 
     w = { "<Plug>VimwikiTabIndex", "Terminus Index"}, 
+    d = { "<Plug>VimwikiMakeDiaryNote", "Diary today"}, 
   },
 
   y = {
