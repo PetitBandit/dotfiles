@@ -5,7 +5,6 @@ lua require("plugins.telescope")
 nnoremap <leader>tp <cmd>lua require('telescope.builtin').live_grep()<cr><C-R>"
 nnoremap gr          <cmd>lua require('telescope.builtin').lsp_references()<cr>
 nnoremap gq          <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
-" nnoremap <leader>e   <cmd>lua require('telescope.builtin').file_browser()<cr>
 nnoremap \       <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 
 

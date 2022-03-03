@@ -22,7 +22,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'gruvbox-community/gruvbox',
   Plug 'mhartington/oceanic-next'
   Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
-  Plug 'alok/notational-fzf-vim'
   Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
   Plug 'vimwiki/vimwiki'                                  " wiki
   Plug 'junegunn/fzf.vim'                                 " FZF
