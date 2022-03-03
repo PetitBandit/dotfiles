@@ -94,8 +94,6 @@ inoremap jk <Esc>
       nnoremap M m
       nnoremap m '
 
-      "Searching for word under cursor 
-      nnoremap <expr> <leader>tp ':Telescope live_grep<cr>' . expand('<C-R>"')
 
       nnoremap <Up>   <C-W>k
       nnoremap <Down> <C-W>j
