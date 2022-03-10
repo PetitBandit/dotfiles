@@ -1,5 +1,5 @@
 "--------------------------------------------------------------------------
-" Free easy mappings available
+" # Free easy mappings available
 "-------------------------------------------------------------------------- 
 "Ctrl + b
 "Ctrl + f
@@ -10,7 +10,7 @@
 "Ctrl + y
 
 "--------------------------------------------------------------------------
-" Use Alt + hjkl
+" # Use Alt + hjkl
 "-------------------------------------------------------------------------- 
       nnoremap <A-=>   :vertical resize +30<CR>
       nnoremap <A-->   :vertical resize -30<CR>
@@ -29,7 +29,7 @@ inoremap jk <Esc>
 
 
 "--------------------------------------------------------------------------
-" Behind the scenes
+" # Behind the scenes
 "--------------------------------------------------------------------------
 
       vnoremap < <gv " Better tabbing 
@@ -46,7 +46,7 @@ inoremap jk <Esc>
       nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
 
 "--------------------------------------------------------------------------
-" File Manipulation
+" # File Manipulation
 "--------------------------------------------------------------------------
 
       nnoremap <silent> <C-S> :w<cr>
@@ -66,7 +66,7 @@ inoremap jk <Esc>
       " nnoremap <leader>gp :Git pull<CR>
 
 "--------------------------------------------------------------------------
-" Navigation
+" # Navigation
 "--------------------------------------------------------------------------
       map H ^
       map L $
@@ -101,13 +101,13 @@ inoremap jk <Esc>
       nnoremap <Right> <C-W>l
 
 "--------------------------------------------------------------------------
-" LSP
+" # LSP
 "--------------------------------------------------------------------------
 
       nnoremap = <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 "--------------------------------------------------------------------------
-" Cut, Manipulate text
+" # Cut, Manipulate text
 "--------------------------------------------------------------------------
 
 
@@ -123,7 +123,7 @@ inoremap jk <Esc>
 
 
 "--------------------------------------------------------------------------
-" JSX Mappings
+" # JSX Mappings
 "--------------------------------------------------------------------------
 
     " <div> --> <div className="">
@@ -149,7 +149,6 @@ inoremap jk <Esc>
      " className={test} --> className={clsx(test, )}
     nmap <leader>jL f{wi f}i bysiW(iclsxf)i, 
 
-
     "changes makestyle --> makestyle(theme ...
     nnoremap <leader>jt ?useStyles = makewwwC(theme => ({
     
@@ -159,8 +158,12 @@ inoremap jk <Esc>
     "add the filename 
     " imap <leader>fn <C-R>=expand("%")<CR>
 
-xnoremap <leader>ls :'<,'> sort <cr>
-xnoremap <leader>ld :'<,'> sort u<cr>
-xnoremap <leader>lD :'<,'> %sort! u<cr>
-xnoremap <leader>lS :'<,'> %sort! <cr>
+"--------------------------------------------------------------------------
+" # sort visual
+"--------------------------------------------------------------------------
+
+    xnoremap <leader>ls :'<,'> sort <cr>
+    xnoremap <leader>ld :'<,'> sort u<cr>
+    xnoremap <leader>lD :'<,'> %sort! u<cr>
+    xnoremap <leader>lS :'<,'> %sort! <cr>
 
