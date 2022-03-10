@@ -162,6 +162,11 @@ wk.register({
     s = { "classes.X ➜ 'X'" }, 
     S = { "'X' ➜ classes.X" },
     t = { "makestyle ➜ makestyle(theme)" },
+    i = { 
+      name = "imports", -- optional group name
+      m = { "makestyle" },
+      c = {"clsx"}
+        }, 
   },
 
   k = {"Devdocs"},
