@@ -153,6 +153,8 @@ inoremap jk <Esc>
     "changes makestyle --> makestyle(theme ...
     nnoremap <leader>jt ?useStyles = makewwwC(theme => ({
     
+    "add nothing --> makestyle 
+    nnoremap <leader>jim mpgg15j?import<cr>oimport { makeStyles } from '@material-ui/core/styles';oconst useStyles = makeStyles(theme => ({REMOVE: { backgroundColor: 'tomato', }}));/constoconst classes = useStyles();mu/div<cr>wa className={classes.REMOVE}mx
 
     "add the filename 
     " imap <leader>fn <C-R>=expand("%")<CR>
