@@ -133,9 +133,9 @@ inoremap jk <Esc>
     nmap <leader>jC f>i className={classes.
 
     " classes.tomate --> 'tomate'
-    nmap <leader>js  /classesdiwxysiw'ds{
+    nmap <leader>jS /classesdiwxysiw'ds{
     "  'tomate' --> classes.tomate
-    nmap <leader>jS /classwwyiwda"i{classes.pbds"
+    nmap <leader>js /classwwyiwda"i{classes.pbds"
 
     " class --> '& .class'
     nmap <leader>je ysiw'li& .
@@ -155,7 +155,7 @@ inoremap jk <Esc>
     "import clsx 
    nnoremap <leader>jic mw?import<cr>oimport clsx from "clsx";`w
     "add nothing --> makestyle 
-    nnoremap <leader>jim mpgg15j?import<cr>oimport { makeStyles } from '@material-ui/core/styles';oconst useStyles = makeStyles(theme => ({REMOVE: { backgroundColor: 'tomato', }}));/constoconst classes = useStyles();mu/div<cr>wa className={classes.REMOVE}mx
+    nnoremap <leader>jim mpgg15j?import<cr>oimport { makeStyles } from '@material-ui/core/styles';oconst useStyles = makeStyles(theme => ({REMOVE: { backgroundColor: 'tomato', }}));/constoconst classes = useStyles();mu/div<cr>wi className={classes.REMOVE} mx
 
     "add the filename 
     " imap <leader>fn <C-R>=expand("%")<CR>

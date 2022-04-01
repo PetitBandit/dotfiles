@@ -159,8 +159,8 @@ wk.register({
     l = { "className='X' ➜ className={clsx('X'" }, 
     L = { "className={X} ➜ className={clsx(X," }, 
     o = { "div ➜ div className={clsx(" }, 
-    s = { "classes.X ➜ 'X'" }, 
-    S = { "'X' ➜ classes.X" },
+    S = { "classes.X ➜ 'X'" }, 
+    s = { "'X' ➜ classes.X" },
     t = { "makestyle ➜ makestyle(theme)" },
     i = { 
       name = "imports", -- optional group name
