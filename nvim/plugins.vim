@@ -19,8 +19,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'jessarcher/vim-heritage',
   Plug 'phaazon/hop.nvim'
   Plug 'code-biscuits/nvim-biscuits', {'branch': 'feature-html-only-decorate-elements'}
-  Plug 'gruvbox-community/gruvbox',
-  Plug 'mhartington/oceanic-next'
+  Plug 'gruvbox-community/gruvbox',                       "theme
+  Plug 'mhartington/oceanic-next'                         "theme
+  Plug 'sainnhe/everforest'                               "theme
   Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
   Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
   Plug 'vimwiki/vimwiki'                                  " wiki
