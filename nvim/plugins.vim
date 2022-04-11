@@ -45,7 +45,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'svermeulen/vim-yoink'
   Plug 'windwp/nvim-ts-autotag'
-  Plug 'takac/vim-hardtime'                               "prevents from relying on jj too much
+  " Plug 'takac/vim-hardtime'                               "prevents from relying on jj too much
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'nvim-lua/plenary.nvim' "Telescope

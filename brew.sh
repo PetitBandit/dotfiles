@@ -52,6 +52,7 @@ brew install --cask cleanshot
 brew install --cask vscodium
 brew tap homebrew/cask-versions
 brew install --cask firefox-developer-edition
+brew install git-delta
 
 #--------------------------------------
 # https://github.com/koekeishiya/yabai

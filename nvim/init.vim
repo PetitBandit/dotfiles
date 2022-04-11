@@ -29,9 +29,9 @@ source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
 source $HOME/.config/nvim/plug-config/yoink.vim
-source $HOME/.config/nvim/plug-config/hardtime.vim
 source $HOME/.config/nvim/plug-config/todo-comment.vim
 source $HOME/.config/nvim/plug-config/lion.vim
+" source $HOME/.config/nvim/plug-config/hardtime.vim
 " source $HOME/.config/nvim/plug-config/harpoon.vim TODO: remove this
 lua require('plugins')
 
