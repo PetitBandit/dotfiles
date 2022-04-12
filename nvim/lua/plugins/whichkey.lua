@@ -144,6 +144,7 @@ wk.register({
     name = "GIT & Go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
     b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
+    r = {  "Lsp Ref"}, -- telescope.vim
   },
   -- h = {},
   -- i = {
