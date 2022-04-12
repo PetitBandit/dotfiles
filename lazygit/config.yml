@@ -1,10 +1,10 @@
 
 gui: 
-theme: 
-  selectedLineBgColor: 
-    - underline
-  selectedRangeBgColor: 
-    - underline
+  theme: 
+    selectedLineBgColor: 
+      - underline
+    selectedRangeBgColor: 
+      - underline
 
 
 git: 

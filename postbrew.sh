@@ -2,7 +2,7 @@
 set -e
 
 cd $HOME/dotfiles
-Repo=("kitty skhd yabai nvim zsh ")
+Repo=("kitty lazygit skhd yabai nvim zsh ")
 for repo in $Repo
 do
   mkdir $HOME/.config/$repo
@@ -12,8 +12,6 @@ done
 rm -Rf ~/.config/karabiner
 stow -vt ~/.config karabiner 
 
-mkdir ~/Library/Application\ Support/lazygit 
-stow -vt ~/Library/Application\ Support/lazygit lazygit
 
 # Making symbolic link example
 # The following command allows you to put karabiner.json on ~/Dropbox/private.
