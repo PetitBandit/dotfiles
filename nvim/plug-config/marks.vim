@@ -29,7 +29,7 @@ require'marks'.setup {
   },
 mappings = { 
     set_next = "<leader>m",
-    prev = "S",
+    -- prev = "S",
     -- preview = "<C-e>",
     set_bookmark0 = "m0",
     next = "<C-e>",

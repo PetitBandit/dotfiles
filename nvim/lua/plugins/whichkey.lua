@@ -88,30 +88,11 @@ wk.register({
   ['4'] = {":BufferGoto 4<CR>", "which_key_ignore"},
   ['9'] = {":BufferLast<CR>", "which_key_ignore"},
   ['<tab>'] = { "ToggleBiscuit"},
+  ['<C-f>'] = { "grep in Buffers"},
   ['`'] = {"<Plug>Ysurroundiw`", "`"},
   ["'"] = {"<Plug>YsurroundiW'", "`"},
   -- ['E'] = "which_key_ignore",
-  -- ['<c-s>'] = "save file",
-  -- ['<c-q>'] = "quit buffer",
 
-
-  ['['] = {
-  name = "up/previous", -- optional group name
-  ['<spc>'] = { "add empty ligne up" }, -- just a label. don't create any mapping
-  ['e'] = { "move lign up" }, 
-  ['q'] = { "next QList" }, 
-  ['b'] = { "next buffer" },
-  ['B'] = { "First buffer" },
-  },
-  
-  [']'] = {
-  name = "below/next", -- optional group name
-  ['<spc>'] = { "add empty ligne below" }, -- just a label. don't create any mapping
-  ['e'] = { "move lign below" }, 
-  ['q'] = { "previous QList" }, 
-  ['b'] = { "previous buffer" }, 
-  ['B'] = { "which_key_ignore" },
-  },
 
   a = { "<cmd>lua require('plugins.telescope').code_actions()<cr>", "code Actions"}, 
   b = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer "},
