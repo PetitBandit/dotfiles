@@ -12,8 +12,8 @@
 "--------------------------------------------------------------------------
 " # Use Alt + hjkl
 "-------------------------------------------------------------------------- 
-      nnoremap <A-=>   :vertical resize +30<CR>
-      nnoremap <A-->   :vertical resize -30<CR>
+      nnoremap <A-=>   :vertical resize +20<CR>
+      nnoremap <A-->   :vertical resize -20<CR>
       " nnoremap <A-0>   <C-w><C-|>
 
       " move line downwards 
