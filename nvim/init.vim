@@ -14,6 +14,7 @@ source $HOME/.config/nvim/plug-config/barbar.vim
 source $HOME/.config/nvim/plug-config/toggleterm.vim
 source $HOME/.config/nvim/plug-config/marks.vim
 source $HOME/.config/nvim/lua/lspconfig.rc.vim
+source $HOME/.config/nvim/plug-config/lualine.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/colorizer.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim

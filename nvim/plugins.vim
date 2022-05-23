@@ -39,7 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'RRethy/nvim-base16'                     
   Plug 'folke/which-key.nvim'
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
-  Plug 'chentau/marks.nvim'                            " marks
+  Plug 'chentoast/marks.nvim'                            " marks
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-repeat'
