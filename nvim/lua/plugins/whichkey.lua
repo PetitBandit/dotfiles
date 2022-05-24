@@ -181,9 +181,10 @@ wk.register({
   },
 
 
-  -- r = {
-  --   name = "repeat", -- optional group name
-  -- },
+  r = {
+    name = "Replace", -- optional group name
+    f = { "filename" }
+  },
 
   s = {
     name = "s+", -- optional group name

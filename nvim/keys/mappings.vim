@@ -157,8 +157,6 @@ inoremap jk <Esc>
     "add nothing --> makestyle 
     nnoremap <leader>jim mpgg15j?import<cr>oimport { makeStyles } from '@material-ui/core/styles';oconst useStyles = makeStyles(theme => ({REMOVE: { backgroundColor: 'tomato', }}));/constoconst classes = useStyles();mu/div<cr>wi className={classes.REMOVE} mx
 
-    "add the filename 
-    " imap <leader>fn <C-R>=expand("%")<CR>
 
 "--------------------------------------------------------------------------
 " # sort visual
