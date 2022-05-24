@@ -54,6 +54,7 @@ inoremap jk <Esc>
 
       "Indent file and keep cursor position
       " nnoremap <leader>p mwgg=G`wzz
+      nnoremap <C-f> :Lines<cr>
 
       " Fugitive remap
       nnoremap <leader>gj :diffget //3<CR>
@@ -120,6 +121,12 @@ inoremap jk <Esc>
       " - Smash that dot '.' multiple times to change all the other occurrences of the word
       nnoremap cn *``cgn
       nnoremap c. /\V<C-r>"<CR>cgn<C-a><Esc>
+
+map <leader>rf ciw<C-R>=expand("%:t:r")<CR>
+
+    "add the filename 
+    imap \fn <C-R>=expand("%:t:r")<CR>
+    
 
 
 "--------------------------------------------------------------------------

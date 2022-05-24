@@ -9,6 +9,3 @@ require'nvim-treesitter.configs'.setup {
 }
 
 EOF
-lua << END
-require'lualine'.setup()
-END
