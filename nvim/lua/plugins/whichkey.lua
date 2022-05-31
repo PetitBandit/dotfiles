@@ -155,7 +155,9 @@ wk.register({
 
   l = {
     name = "LSP", -- optional group name
-    r = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", "References"}, 
+    a = { "actions" }, 
+    r = { "rename" }, 
+    n = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", "References"}, 
     d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"}, 
   },
 

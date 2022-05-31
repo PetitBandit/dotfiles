@@ -84,8 +84,8 @@ inoremap jk <Esc>
 
 
       ""navigate the QuickFixList
-      " nnoremap <C-l> :cnext<cr>
-      " nnoremap <C-h> :cp<cr>
+      nnoremap <C-l> :cnext<cr>
+      nnoremap <C-h> :cp<cr>
 
       " keeping centered while browsing
       nnoremap n nzz
