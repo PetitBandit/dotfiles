@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'numToStr/Comment.nvim'
+  Plug 'romainl/vim-qf'
   Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/limelight.vim'
   Plug 'b4skyx/serenade'

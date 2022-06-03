@@ -176,8 +176,7 @@ wk.register({
   -- p = {},
   q = {
     name = "quickfix list", -- optional group name
-    o = { ":copen<cr>", "open QList"}, 
-    q = { ":cclose<cr>", "close QList"}, 
+    q = { "<Plug>(qf_qf_toggle)|", "close QList"}, 
     j = { ":cnext<cr>", "next Qlist"}, 
     k = { ":cprev<cr>", "previous Qlist"}, 
   },
