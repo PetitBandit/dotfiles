@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'numToStr/Comment.nvim'
+  Plug 'nvim-telescope/telescope-ui-select.nvim'
   Plug 'romainl/vim-qf'
   Plug 'romgrk/barbar.nvim'
   Plug 'junegunn/limelight.vim'
@@ -66,6 +67,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 "retired plugins
 "
-  " Plug 'justinmk/vim-sneak',
-  " Plug 'takac/vim-hardtime'                               "prevents from relying on jj too much
   lua require('Comment').setup()

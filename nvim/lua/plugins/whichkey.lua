@@ -94,7 +94,7 @@ wk.register({
   -- ['E'] = "which_key_ignore",
 
 
-  a = { "<cmd>lua require('plugins.telescope').code_actions()<cr>", "code Actions"}, 
+  -- a = { "<cmd>lua require('plugins.telescope').code_actions()<cr>", "code Actions"}, 
   b = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer "},
   c = {
     name = "Copy", -- optional group name

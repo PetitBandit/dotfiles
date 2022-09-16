@@ -102,7 +102,7 @@ inoremap jk <Esc>
 " # LSP
 "--------------------------------------------------------------------------
 
-      nnoremap = <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+      nnoremap = <cmd>lua vim.diagnostic.goto_next()<CR>
 
 "--------------------------------------------------------------------------
 " # Cut, Manipulate text
