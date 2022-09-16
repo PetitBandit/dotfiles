@@ -55,12 +55,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tommcdo/vim-lion'
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-cmp'
+  " Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
   Plug 'onsails/lspkind-nvim'
   Plug 'tpope/vim-fugitive'
   Plug 'kyazdani42/nvim-tree.lua'
-  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
   Plug 'folke/todo-comments.nvim'
     call plug#end()
 

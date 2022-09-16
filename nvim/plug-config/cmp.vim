@@ -20,6 +20,7 @@ lua <<EOF
     sources = {
       { name = 'nvim_lsp' },
       { name = 'ultisnips' },
+      -- { name = 'path' }, 
       { name = 'buffer' },
     }
   })

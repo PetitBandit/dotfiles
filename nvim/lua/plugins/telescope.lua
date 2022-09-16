@@ -6,12 +6,14 @@ require('telescope').setup{
         -- shorten_path = true,
         color_devicons = true,
         layout_config = {
-            prompt_position = "top",
+          prompt_position = "top",
             -- width = 0.9,
+             width = 0.99, 
+             height = 0.99, 
 
             horizontal = {
                 width_padding = 0.04,
-                height_padding = 0.1,
+                height_padding = 0.2,
                 preview_width = 0.5
             },
             vertical = {
@@ -104,7 +106,8 @@ end
 M.search_profiles = function()
     require("telescope.builtin").find_files({
         prompt_title = "< PRO >",
-        path_display = { shorten = 3 },
+        -- path_display = { shorten = 3 },
+        wrap_results = true, 
         cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/",
         file_ignore_patterns = {"index.ts", "index.stories.js"},
     })
