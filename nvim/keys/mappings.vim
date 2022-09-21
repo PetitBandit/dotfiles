@@ -102,7 +102,8 @@ inoremap jk <Esc>
 " # LSP
 "--------------------------------------------------------------------------
 
-      nnoremap = <cmd>lua vim.diagnostic.goto_next()<CR>
+    
+" cf telescope.vim
 
 "--------------------------------------------------------------------------
 " # Cut, Manipulate text
@@ -119,7 +120,7 @@ inoremap jk <Esc>
       nnoremap cn *``cgn
       nnoremap c. /\V<C-r>"<CR>cgn<C-a><Esc>
 
-map <leader>rf ciw<C-R>=expand("%:t:r")<CR>
+      map <leader>rf ciw<C-R>=expand("%:t:r")<CR>
 
     "add the filename 
     imap \fn <C-R>=expand("%:t:r")<CR>
