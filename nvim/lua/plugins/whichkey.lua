@@ -94,7 +94,7 @@ wk.register({
   -- ['E'] = "which_key_ignore",
 
 
-  -- a = { "<cmd>lua require('plugins.telescope').code_actions()<cr>", "code Actions"}, 
+  a = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "code actions "},
   b = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer "},
   c = {
     name = "Copy", -- optional group name
@@ -124,7 +124,7 @@ wk.register({
   g = {
     name = "GIT & Go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
-    b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
+    B = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
     r = {  "Lsp Ref"}, -- telescope.vim
   },
   -- h = {},
@@ -156,7 +156,7 @@ wk.register({
   l = {
     name = "LSP", -- optional group name
     a = { "actions" }, 
-    r = { "rename" }, 
+    r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"}, 
     n = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", "References"}, 
     d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"}, 
   },
@@ -176,7 +176,7 @@ wk.register({
   -- p = {},
   q = {
     name = "quickfix list", -- optional group name
-    q = { "<Plug>(qf_qf_toggle)|", "close QList"}, 
+    q = { "<Plug>(qf_qf_toggle)|", "toggle QList"}, 
     j = { ":cnext<cr>", "next Qlist"}, 
     k = { ":cprev<cr>", "previous Qlist"}, 
   },
@@ -188,7 +188,7 @@ wk.register({
   },
 
   s = {
-    name = "s+", -- optional group name
+    name = "Substitute or source", -- optional group name
     f = { ":so % <cr>", "source file"},
     s = {'yiw:%s/"//g<left><left>', "replace word under cursor"},
   },

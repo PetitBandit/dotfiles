@@ -8,6 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
+  Plug 'f-person/git-blame.nvim'
+  Plug 'EtiamNullam/gradual-undo.nvim'
   Plug 'numToStr/Comment.nvim'
   Plug 'nvim-telescope/telescope-ui-select.nvim'
   Plug 'romainl/vim-qf'
@@ -69,3 +71,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "retired plugins
 "
   lua require('Comment').setup()
+  lua require('gradual-undo').setup()
