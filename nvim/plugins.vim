@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
+  Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'f-person/git-blame.nvim'
   Plug 'EtiamNullam/gradual-undo.nvim'
   Plug 'numToStr/Comment.nvim'
@@ -65,6 +66,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'folke/todo-comments.nvim'
+  Plug 'sindrets/diffview.nvim'
     call plug#end()
 
 

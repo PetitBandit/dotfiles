@@ -115,6 +115,7 @@ wk.register({
     d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
     h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
     p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
+    i = { "<cmd>lua require('plugins.telescope').search_proIcons()<CR>", "search pro icons maiia"}, 
     w = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"}, 
     r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
     f = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
@@ -125,6 +126,7 @@ wk.register({
     name = "GIT & Go", -- optional group name
     t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
     B = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
+    c = { ":Git blame<CR>", "full doc blame"}, 
     r = {  "Lsp Ref"}, -- telescope.vim
   },
   -- h = {},

@@ -128,6 +128,15 @@ M.search_profiles = function()
     })
 end
 
+M.search_proIcons = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< icons >",
+        -- path_display = { shorten = 3 },
+        wrap_results = true, 
+        cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/components/icons",
+    })
+end
+
 M.search_gitfiles = function()
     require("telescope.builtin").git_files({
         prompt_title = "< GIT >",
