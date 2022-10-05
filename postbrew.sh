@@ -2,15 +2,12 @@
 set -e
 
 cd $HOME/dotfiles
-Repo=("kitty lazygit skhd yabai nvim zsh ")
+Repo=("kitty lazygit skhd nvim zsh ")
 for repo in $Repo
 do
   mkdir $HOME/.config/$repo
   stow -vt ~/.config/$repo $repo
 done
-
-rm -Rf ~/.config/karabiner
-stow -vt ~/.config karabiner 
 
 
 # Making symbolic link example
