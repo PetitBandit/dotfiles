@@ -5,7 +5,6 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/auto.vim
 
-
 source $HOME/.config/nvim/plug-config/wiki.vim
 source $HOME/.config/nvim/plug-config/devdocs.vim
 source $HOME/.config/nvim/plug-config/ultisnip.vim
@@ -50,5 +49,4 @@ if has('mac')
 elseif has('unix')
     source $HOME/.config/nvim/general/linux.vim
 endif
-
 

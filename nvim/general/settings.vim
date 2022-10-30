@@ -65,6 +65,7 @@
   set signcolumn=yes
   set scrolloff=8
   colorscheme gruvbox
+  " colorscheme gruvbox-baby
 " }}}
   " Searching {{{
   noremap / /\v

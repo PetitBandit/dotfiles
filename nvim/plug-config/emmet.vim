@@ -1,7 +1,20 @@
-" let g:user_emmet_leader_key='<C-e>'
+let g:user_emmet_leader_key='<C-space>'
+" let g:user_emmet_install_global = 0
+autocmd FileType html,css,jsx,tsx,typescriptreact EmmetInstall
+
+
+let g:user_emmet_settings={
+\  'tsx' : {
+\    'extends': 'typescriptreact',
+\    'default_attributes': {
+\      'label': [{'htmlFor': ''}],
+\      'class': {'className': ''},
+\    }
+\  },
+\}
+
 
 let g:user_emmet_mode = 'inv'
-
   vmap ,  <plug>(emmet-expand-abbr)
   " vmap u   <plug>(emmet-update-tag)
   vmap e <plug>(emmet-balance-tag-inward)

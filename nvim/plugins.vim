@@ -8,8 +8,11 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
+  Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
   Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'f-person/git-blame.nvim'
+  Plug 'williamboman/mason.nvim'
   Plug 'EtiamNullam/gradual-undo.nvim'
   Plug 'numToStr/Comment.nvim'
   Plug 'nvim-telescope/telescope-ui-select.nvim'
@@ -39,7 +42,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'unblevable/quick-scope'                           " F and f highlight
   Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
   Plug 'svermeulen/vim-subversive'                        " Substitution
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
   Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
   Plug 'RRethy/nvim-base16'                     
   Plug 'folke/which-key.nvim'
@@ -74,3 +76,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "
   lua require('Comment').setup()
   lua require('gradual-undo').setup()
+  lua require("mason").setup()

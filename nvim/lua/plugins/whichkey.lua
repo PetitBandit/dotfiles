@@ -90,7 +90,7 @@ wk.register({
   ['<tab>'] = { "ToggleBiscuit"},
   ['<C-f>'] = { "grep in Buffers"},
   ['`'] = {"<Plug>Ysurroundiw`", "`"},
-  ["'"] = {"<Plug>YsurroundiW'", "`"},
+  ["'"] = {"<Plug>Ysurroundiw'", "`"},
   -- ['E'] = "which_key_ignore",
 
 

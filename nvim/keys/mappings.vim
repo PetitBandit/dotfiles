@@ -69,6 +69,7 @@ inoremap jk <Esc>
       nnoremap <C-j> g,
       nnoremap <C-k> g;
       nnoremap <bs> g;
+      nnoremap <S-BS> g,
 
 "Ctrl + e
 
@@ -84,6 +85,7 @@ inoremap jk <Esc>
       " Marks 
       nnoremap M m
       nnoremap m '
+
 
 
       nnoremap <Up>   <C-W>k

@@ -20,6 +20,9 @@ brew install highlight #install highlight for ranger preview
 brew install cask
 brew install nvm
 brew install stow
+brew install ffmpeg
+brew install youtube-dl
+brew install tldr
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 python3 -m pip install --user --upgrade pynvim

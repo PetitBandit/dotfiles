@@ -19,13 +19,25 @@ vim.api.nvim_buf_set_keymap(bufnr, ...) end
 end
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local lsp_flags = {
+  -- This is the default in Nvim 0.7+
+  debounce_text_changes = 150,
+}
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 -- TypeScript
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach
-} 
+
+
+-- nvim_lsp.tsserver.setup {
+--   on_attach = on_attach
+-- } 
+
+require('lspconfig')['tsserver'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+
 EOF
