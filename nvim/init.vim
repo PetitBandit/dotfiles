@@ -23,6 +23,7 @@ source $HOME/.config/nvim/plug-config/biscuits.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
 source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/blankline.vim
 source $HOME/.config/nvim/plug-config/nvimtree.vim
 source $HOME/.config/nvim/plug-config/autotag.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
