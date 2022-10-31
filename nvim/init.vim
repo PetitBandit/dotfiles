@@ -32,7 +32,7 @@ source $HOME/.config/nvim/plug-config/yoink.vim
 source $HOME/.config/nvim/plug-config/todo-comment.vim
 source $HOME/.config/nvim/plug-config/lion.vim
 source $HOME/.config/nvim/plug-config/gitblame.vim
-source $HOME/.config/nvim/plug-config/treesitter-context.vim
+" source $HOME/.config/nvim/plug-config/treesitter-context.vim
 " source $HOME/.config/nvim/plug-config/hardtime.vim
 " source $HOME/.config/nvim/plug-config/harpoon.vim TODO: remove this
 lua require('plugins')

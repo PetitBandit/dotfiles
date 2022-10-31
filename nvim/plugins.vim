@@ -10,7 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
      
   " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
   Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
-  Plug 'nvim-treesitter/nvim-treesitter-context'
+  Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
   Plug 'f-person/git-blame.nvim'
   Plug 'williamboman/mason.nvim'
   Plug 'EtiamNullam/gradual-undo.nvim'
@@ -45,7 +45,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
   Plug 'RRethy/nvim-base16'                     
   Plug 'folke/which-key.nvim'
-  Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
   Plug 'chentoast/marks.nvim'                            " marks
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-unimpaired'
