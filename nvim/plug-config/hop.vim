@@ -2,7 +2,7 @@ lua << EOF
 require'hop'.setup()
 EOF
 
-map <silent>s :HopWord<CR>
+" map <silent>s :HopWord<CR>
 " map <silent>S :HopChar2<CR>
 
 hi HopNextKey guifg=#3cdd78

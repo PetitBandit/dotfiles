@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
   Plug 'lukas-reineke/indent-blankline.nvim'              "show context
   Plug 'f-person/git-blame.nvim'
+  Plug 'ggandor/leap.nvim'
+  Plug 'ggandor/leap-spooky.nvim'
   Plug 'williamboman/mason.nvim'
   Plug 'EtiamNullam/gradual-undo.nvim'
   Plug 'numToStr/Comment.nvim'
