@@ -214,6 +214,7 @@ alias ls='ls -G'                   # Shorcut
 alias gg='lazygit'                   # Shorcut
 alias nn='nvim'                   # Shorcut
 alias gf='git fetch --all'
+alias gfd='git fetch origin develop'
 alias gp='git pull origin'                   # Shorcut
 alias meteo='curl http://wttr.in'
 
