@@ -4,11 +4,9 @@ scriptencoding utf-8
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/auto.vim
-
 source $HOME/.config/nvim/plug-config/wiki.vim
 source $HOME/.config/nvim/plug-config/devdocs.vim
 source $HOME/.config/nvim/plug-config/ultisnip.vim
-source $HOME/.config/nvim/plug-config/hop.vim
 source $HOME/.config/nvim/plug-config/barbar.vim
 source $HOME/.config/nvim/plug-config/toggleterm.vim
 source $HOME/.config/nvim/plug-config/marks.vim
@@ -36,6 +34,7 @@ source $HOME/.config/nvim/plug-config/gitblame.vim
 source $HOME/.config/nvim/plug-config/leap.vim
 source $HOME/.config/nvim/plug-config/leap-spooky.vim
 " source $HOME/.config/nvim/plug-config/treesitter-context.vim
+" source $HOME/.config/nvim/plug-config/hop.vim
 " source $HOME/.config/nvim/plug-config/hardtime.vim
 " source $HOME/.config/nvim/plug-config/harpoon.vim TODO: remove this
 lua require('plugins')

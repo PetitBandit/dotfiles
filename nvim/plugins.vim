@@ -9,6 +9,11 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
      
   " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
+  " Plug 'EtiamNullam/gradual-undo.nvim'
+  " Plug 'junegunn/limelight.vim'
+  " Plug 'tweekmonster/startuptime.vim',
+  " Plug 'phaazon/hop.nvim'
+  " Plug 'hrsh7th/cmp-path'
   Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
   Plug 'lukas-reineke/indent-blankline.nvim'              "show context
@@ -16,27 +21,23 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ggandor/leap.nvim'
   Plug 'ggandor/leap-spooky.nvim'
   Plug 'williamboman/mason.nvim'
-  Plug 'EtiamNullam/gradual-undo.nvim'
   Plug 'numToStr/Comment.nvim'
   Plug 'nvim-telescope/telescope-ui-select.nvim'
   Plug 'romainl/vim-qf'
   Plug 'romgrk/barbar.nvim'
-  Plug 'junegunn/limelight.vim'
   Plug 'b4skyx/serenade'
   Plug 'rhysd/devdocs.vim'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'SirVer/ultisnips',
-  Plug 'tweekmonster/startuptime.vim',
   Plug 'jessarcher/vim-heritage',
-  Plug 'phaazon/hop.nvim'
   Plug 'code-biscuits/nvim-biscuits', {'branch': 'feature-html-only-decorate-elements'}
   Plug 'gruvbox-community/gruvbox',                       "theme
   Plug 'mhartington/oceanic-next'                         "theme
   Plug 'sainnhe/everforest'                               "theme
   Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
   Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
-  Plug 'vimwiki/vimwiki'                                  " wiki
   Plug 'junegunn/fzf.vim'                                 " FZF
+  Plug 'vimwiki/vimwiki'                                  " wiki
   Plug 'airblade/vim-rooter'                              " FZF
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
@@ -62,7 +63,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tommcdo/vim-lion'
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-cmp'
-  " Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'quangnguyen30192/cmp-nvim-ultisnips'
@@ -77,5 +77,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "retired plugins
 "
   lua require('Comment').setup()
-  lua require('gradual-undo').setup()
+  " lua require('gradual-undo').setup()
   lua require("mason").setup()
