@@ -109,6 +109,7 @@ wk.register({
   },
   -- e = {"<cmd>lua require('telescope.builtin').file_browser()<cr>", "File Browser"},
   e = {":NvimTreeToggle<CR>", "File Browser"},
+  F = {":Telescope resume<CR>", "Telescope repeat"},
 
   f = {
     name = "File", -- optional group name

@@ -1,4 +1,4 @@
-let g:user_emmet_leader_key='<C-space>'
+let g:user_emmet_leader_key='<C-y>'
 " let g:user_emmet_install_global = 0
 autocmd FileType html,css,jsx,tsx,typescriptreact EmmetInstall
 
