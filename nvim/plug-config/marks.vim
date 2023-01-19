@@ -27,6 +27,7 @@ require'marks'.setup {
     sign = "⚑",
     virt_text = "hello world"
   },
+  excluded_filetypes = {"startify", "lazygit", "toggleterm"},
 mappings = { 
     set_next = "<leader>m",
     -- prev = "S",

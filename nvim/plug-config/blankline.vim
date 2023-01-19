@@ -6,3 +6,6 @@ lua <<EOF
     show_current_context_start = true,
 }
 EOF
+
+let g:indent_blankline_filetype_exclude = ["startify", "help", "vimwiki", "NvimTree", "TelescopePrompt"]
+let g:indent_blankline_buftype_exclude = ["terminal", "nofile", "quickfix", "prompt",] 

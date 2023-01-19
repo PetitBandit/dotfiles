@@ -14,9 +14,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'tweekmonster/startuptime.vim',
   " Plug 'phaazon/hop.nvim'
   " Plug 'hrsh7th/cmp-path'
+  Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
   Plug 'kkharji/sqlite.lua'
   Plug 'mrjones2014/legendary.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
+  " Plug 'nvim-treesitter/nvim-treesitter', 
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
   Plug 'lukas-reineke/indent-blankline.nvim'              "show context
   Plug 'f-person/git-blame.nvim'
