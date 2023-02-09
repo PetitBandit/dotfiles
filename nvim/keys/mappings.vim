@@ -2,9 +2,7 @@
 " # Free easy mappings available
 "-------------------------------------------------------------------------- 
 "Ctrl + b
-"Ctrl + f
 "Ctrl + p
-"Ctrl + y
 
 "--------------------------------------------------------------------------
 " # Use Alt + hjkl
@@ -28,6 +26,7 @@ inoremap jk <Esc>
 "--------------------------------------------------------------------------
 " # Behind the scenes
 "--------------------------------------------------------------------------
+
 
       vnoremap < <gv " Better tabbing 
       vnoremap > >gv " Better tabbing 
@@ -166,4 +165,6 @@ inoremap jk <Esc>
     xnoremap <leader>ld :'<,'> sort u<cr>
     xnoremap <leader>lD :'<,'> %sort! u<cr>
     xnoremap <leader>lS :'<,'> %sort! <cr>
+
+    nnoremap <D-1> :BufferGoto 1<CR>
 

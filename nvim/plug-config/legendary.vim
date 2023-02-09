@@ -1,10 +1,13 @@
 
+nnoremap <C-p> :Legendary<CR>
 lua << EOF
 require('legendary').setup({
   -- Initial keymaps to bind
   keymaps = {},
   -- Initial commands to bind
-  commands = {},
+  commands = { 
+      { ':CccConvert', ':echo "something"', description = 'convert colors' },
+    },
   -- Initial augroups/autocmds to bind
   autocmds = {},
   -- Initial functions to bind

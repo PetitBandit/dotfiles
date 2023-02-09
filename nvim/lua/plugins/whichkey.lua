@@ -87,7 +87,7 @@ wk.register({
   ['3'] = {":BufferGoto 3<CR>", "which_key_ignore"},
   ['4'] = {":BufferGoto 4<CR>", "which_key_ignore"},
   ['9'] = {":BufferLast<CR>", "which_key_ignore"},
-  ['<tab>'] = { "ToggleBiscuit"},
+  ['<tab>'] = {":CccConvert<CR>:CccConvert<CR>"},
   ['<C-f>'] = { "grep in Buffers"},
   ['`'] = {"<Plug>Ysurroundiw`", "`"},
   ["'"] = {"<Plug>Ysurroundiw'", "`"},
@@ -101,6 +101,8 @@ wk.register({
     d = { ":cd %:p:h<CR>", "moves to the current directory"}, 
     p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"}, 
   },
+
+  C = {":CccPick<CR>", "colorPicker"},
 
   d = {
     name = "delete", -- optional group name
@@ -176,7 +178,6 @@ wk.register({
   },
 
 
-  -- p = {},
   q = {
     name = "quickfix list", -- optional group name
     q = { "<Plug>(qf_qf_toggle)|", "toggle QList"}, 
@@ -228,6 +229,7 @@ wk.register({
   y = {
     name = "config+", -- optional group name
     c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"}, 
+    h = { ":CccHighlighterToggle<CR>", "highlight colors"}, 
     o = { 
       name = "options", 
          b = { "background" }, -- just a label. don't create any mapping

@@ -224,6 +224,8 @@ BASE_BRANCH="develop"
 alias gcf='git checkout $BASE_BRANCH && git pull origin $BASE_BRANCH; yarn'
 alias ypd='cd $MAIIA_PATH; yarn && yarn build:common && yarn pro:dev'
 alias launchpro='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
+alias launchstory='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:storybook;'
+alias button='cd $MAIIA_PATH && git checkout feat/MAIIAPRO-4523 && git pull origin develop'
 
 function maiiaswitch() {
     if [ $# -ge 2 ]

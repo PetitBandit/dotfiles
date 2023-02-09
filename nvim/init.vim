@@ -10,16 +10,16 @@ source $HOME/.config/nvim/plug-config/ultisnip.vim
 source $HOME/.config/nvim/plug-config/barbar.vim
 source $HOME/.config/nvim/plug-config/toggleterm.vim
 source $HOME/.config/nvim/plug-config/marks.vim
+source $HOME/.config/nvim/plug-config/ccc.vim
 source $HOME/.config/nvim/lua/lspconfig.rc.vim
 source $HOME/.config/nvim/plug-config/lualine.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
-source $HOME/.config/nvim/plug-config/colorizer.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
-source $HOME/.config/nvim/plug-config/biscuits.vim
+" source $HOME/.config/nvim/plug-config/biscuits.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
-source $HOME/.config/nvim/plug-config/autopair.vim
+" source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/blankline.vim
 source $HOME/.config/nvim/plug-config/nvimtree.vim

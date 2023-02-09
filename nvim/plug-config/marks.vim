@@ -27,13 +27,14 @@ require'marks'.setup {
     sign = "⚑",
     virt_text = "hello world"
   },
-  excluded_filetypes = {"startify", "lazygit", "toggleterm"},
+  excluded_filetypes = {"startify", "lazygit", "toggleterm", "color-picker", ""},
 mappings = { 
     set_next = "<leader>m",
     -- prev = "S",
     -- preview = "<C-e>",
     set_bookmark0 = "m0",
     next = "<C-e>",
+    prev = "-",
     delete_buf = "<leader>dm"
   }
 }
