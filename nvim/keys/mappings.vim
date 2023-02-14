@@ -2,21 +2,27 @@
 " # Free easy mappings available
 "-------------------------------------------------------------------------- 
 "Ctrl + b
+"Ctrl + e
 "Ctrl + p
+      " nnoremap <C-j> g,
+      " nnoremap <C-k> g;
+      " nnoremap <C-l> :cnext<cr>
+      " nnoremap <C-h> :cp<cr>
+      " nnoremap <A-0>   
+      " nnoremap <A-h> :cprev<cr>zz
+      " nnoremap <A-l> :cnext<cr>zz
+      ""navigate the QuickFixList
 
 "--------------------------------------------------------------------------
 " # Use Alt + hjkl
 "-------------------------------------------------------------------------- 
       nnoremap <A-=>   :vertical resize +20<CR>
       nnoremap <A-->   :vertical resize -20<CR>
-      " nnoremap <A-0>   <C-w><C-|>
 
       " move line downwards 
       nnoremap <A-j>   <Esc>:m .+1<CR>
       " move line upwards
       nnoremap <A-k>   <Esc>:m .-2<CR>
-      " nnoremap <A-h> :cprev<cr>zz
-      " nnoremap <A-l> :cnext<cr>zz
 
 " ESC 
 inoremap jk <Esc>
@@ -38,22 +44,18 @@ inoremap jk <Esc>
       inoremap ? ?<c-g>u
 
       " Jumps remap 
-      nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
-      nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
+      " nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
+      " nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
 
 "--------------------------------------------------------------------------
 " # File Manipulation
 "--------------------------------------------------------------------------
 
       nnoremap <silent> <C-S> :w<cr>
-      " nnoremap <silent> <C-q> :bd<CR>
 
       "Indent file and keep cursor position
-      " nnoremap <leader>p mwgg=G`wzz
       nnoremap <C-f> :Lines<cr>
 
-      " Fugitive remap
-      nnoremap <leader>gb :GitBlameToggle<CR>
 
 "--------------------------------------------------------------------------
 " # Navigation
@@ -65,17 +67,11 @@ inoremap jk <Esc>
       nnoremap Y yg_
 
       ""navigate the changeList
-      nnoremap <C-j> g,
-      nnoremap <C-k> g;
       nnoremap <bs> g;
       nnoremap <S-BS> g,
 
-"Ctrl + e
 
 
-      ""navigate the QuickFixList
-      nnoremap <C-l> :cnext<cr>
-      nnoremap <C-h> :cp<cr>
 
       " keeping centered while browsing
       nnoremap n nzz

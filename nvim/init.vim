@@ -17,9 +17,7 @@ source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
-" source $HOME/.config/nvim/plug-config/biscuits.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
-" source $HOME/.config/nvim/plug-config/autopair.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/blankline.vim
 source $HOME/.config/nvim/plug-config/nvimtree.vim
@@ -34,10 +32,10 @@ source $HOME/.config/nvim/plug-config/leap.vim
 source $HOME/.config/nvim/plug-config/leap-spooky.vim
 source $HOME/.config/nvim/plug-config/legendary.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
-" source $HOME/.config/nvim/plug-config/treesitter-context.vim
+" source $HOME/.config/nvim/plug-config/biscuits.vim
+" source $HOME/.config/nvim/plug-config/autopair.vim
 " source $HOME/.config/nvim/plug-config/hop.vim
-" source $HOME/.config/nvim/plug-config/hardtime.vim
-" source $HOME/.config/nvim/plug-config/harpoon.vim TODO: remove this
+source $HOME/.config/nvim/plug-config/harpoon.vim 
 lua require('plugins')
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim

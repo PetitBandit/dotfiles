@@ -13,6 +13,6 @@ require('leap-spooky').setup {
   },
   -- If this option is set to true, the yanked text will automatically be pasted
   -- at the cursor position if the unnamed register is in use.
-  paste_on_remote_yank = false,
+  paste_on_remote_yank = true,
 }
 EOF

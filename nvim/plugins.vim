@@ -14,6 +14,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'hrsh7th/cmp-path'
   " Plug 'nvim-treesitter/nvim-treesitter', 
   Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
+  Plug 'stevearc/dressing.nvim'
+  Plug 'ThePrimeagen/harpoon'
   Plug 'kkharji/sqlite.lua'
   Plug 'mrjones2014/legendary.nvim'
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
@@ -81,3 +83,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   lua require('Comment').setup()
   " lua require('gradual-undo').setup()
   lua require("mason").setup()
+  

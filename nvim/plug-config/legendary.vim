@@ -1,6 +1,117 @@
 
 nnoremap <C-p> :Legendary<CR>
-lua << EOF
+lua <<EOF
+  require('dressing').setup({
+    input = {
+      -- Set to false to disable the vim.ui.input implementation
+      enabled = true,
+
+      -- Default prompt string
+      default_prompt = "Input:",
+
+      -- Can be 'left', 'right', or 'center'
+      prompt_align = "center",
+
+      -- When true, <Esc> will close the modal
+      insert_only = true,
+
+      -- When true, input will start in insert mode.
+      start_in_insert = true,
+
+      -- These are passed to nvim_open_win
+      anchor = "SW",
+      border = "rounded",
+      -- 'editor' and 'win' will default to being centered
+      relative = "cursor",
+
+      -- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
+      prefer_width = 40,
+      width = nil,
+      -- min_width and max_width can be a list of mixed types.
+      -- min_width = {20, 0.2} means "the greater of 20 columns or 20% of total"
+      max_width = { 140, 0.9 },
+      min_width = { 20, 0.2 },
+
+      buf_options = {},
+      win_options = {
+        -- Window transparency (0-100)
+        winblend = 10,
+        -- Disable line wrapping
+        wrap = false,
+      },
+
+      -- Set to `false` to disable
+      mappings = {
+        n = {
+          ["<Esc>"] = "Close",
+          ["<CR>"] = "Confirm",
+        },
+        i = {
+          ["<C-c>"] = "Close",
+          ["<CR>"] = "Confirm",
+          ["<Up>"] = "HistoryPrev",
+          ["<Down>"] = "HistoryNext",
+        },
+      },
+
+      override = function(conf)
+        -- This is the config that will be passed to nvim_open_win.
+        -- Change values here to customize the layout
+        return conf
+      end,
+
+      -- see :help dressing_get_config
+      get_config = nil,
+    },
+   select = {
+     get_config = function(opts)
+       if opts.kind == 'legendary.nvim' then
+         return {
+             -- telescope = require("telescope.themes").get_cursor(),
+           telescope = {
+             -- sorter = require('telescope.sorters').fuzzy_with_index_bias({}),
+
+             -- layout_config = { 
+             --   height = 10, 
+             --   width = 0.8,
+             --   }, 
+
+
+              -- sorting_strategy = "descending", 
+              -- layout_strategy = "vertical", 
+              -- theme = "ivy"        
+              -- theme = "cursor"        
+              initial_mode = "insert",
+                  selection_strategy = "reset",
+                  sorting_strategy = "ascending",
+                  layout_strategy = "horizontal",
+                  layout_config = {
+                    horizontal = {
+                      prompt_position = "top",
+                      preview_width = 0.55,
+                    },
+                    vertical = {
+                      mirror = false,
+                    },
+                    width = 0.87,
+                    height = 0.50,
+                    preview_cutoff = 120,
+                  },
+                  path_display = { "truncate" },
+                      winblend = 0,
+                      border = {},
+                      borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+                      color_devicons = true,
+                      set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
+           }
+         }
+       else
+         return {}
+       end
+     end
+   }
+  })
+
 require('legendary').setup({
   -- Initial keymaps to bind
   keymaps = {},
