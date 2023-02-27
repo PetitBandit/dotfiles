@@ -86,7 +86,7 @@ wk.register({
   ['2'] = {":BufferGoto 2<CR>", "which_key_ignore"},
   ['3'] = {":BufferGoto 3<CR>", "which_key_ignore"},
   ['4'] = {":BufferGoto 4<CR>", "which_key_ignore"},
-  ['9'] = {":BufferLast<CR>", "which_key_ignore"},
+  ['9'] = {"<Cmd>BufferPick<CR>", "which_key_ignore"},
   ['<C-f>'] = { "grep in Buffers"},
   ['`'] = {"<Plug>Ysurroundiw`", "`"},
   ["'"] = {"<Plug>Ysurroundiw'", "`"},
@@ -191,7 +191,7 @@ wk.register({
     r = {  "Lsp Ref"}, -- telescope.vim
   },
   -- h = {},
-  j = {
+  J = {
     name = "jss", -- optional group name
     m = { "makestyle ➜ makestyle + theme"}, 
     c = { "div ➜ div className=''" }, 
@@ -221,7 +221,6 @@ wk.register({
   },
 
   -- z = {"Devdocs"},
-  -- x = {"Devdocs"},
   x = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Harpoon add file"}, 
 
   c = {

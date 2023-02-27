@@ -15,9 +15,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'nvim-treesitter/nvim-treesitter', 
   Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
   Plug 'stevearc/dressing.nvim'
+  Plug 'monaqa/dial.nvim'
   Plug 'ThePrimeagen/harpoon'
   Plug 'kkharji/sqlite.lua'
-  Plug 'mrjones2014/legendary.nvim'
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
   Plug 'lukas-reineke/indent-blankline.nvim'              "show context
   Plug 'f-person/git-blame.nvim'
@@ -52,6 +52,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
   Plug 'RRethy/nvim-base16'                     
   Plug 'folke/which-key.nvim'
+  Plug 'mrjones2014/legendary.nvim'
   Plug 'chentoast/marks.nvim'                            " marks
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-unimpaired'
@@ -81,6 +82,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "retired plugins
 "
   lua require('Comment').setup()
-  " lua require('gradual-undo').setup()
   lua require("mason").setup()
   

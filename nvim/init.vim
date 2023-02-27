@@ -1,5 +1,4 @@
 " # init.vim
-"
 scriptencoding utf-8
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
@@ -32,6 +31,7 @@ source $HOME/.config/nvim/plug-config/leap.vim
 source $HOME/.config/nvim/plug-config/leap-spooky.vim
 source $HOME/.config/nvim/plug-config/legendary.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
+source $HOME/.config/nvim/plug-config/dial.vim
 " source $HOME/.config/nvim/plug-config/biscuits.vim
 " source $HOME/.config/nvim/plug-config/autopair.vim
 " source $HOME/.config/nvim/plug-config/hop.vim
