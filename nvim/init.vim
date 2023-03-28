@@ -35,7 +35,7 @@ source $HOME/.config/nvim/plug-config/dial.vim
 " source $HOME/.config/nvim/plug-config/biscuits.vim
 " source $HOME/.config/nvim/plug-config/autopair.vim
 " source $HOME/.config/nvim/plug-config/hop.vim
-source $HOME/.config/nvim/plug-config/harpoon.vim 
+" source $HOME/.config/nvim/plug-config/harpoon.vim 
 lua require('plugins')
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
@@ -51,3 +51,12 @@ elseif has('unix')
     source $HOME/.config/nvim/general/linux.vim
 endif
 
+function! s:Fix_auto_diary_index()
+  VimwikiDiaryGenerateLinks 
+  write
+endfunction
+
+augroup vimwiki_fix_auto_diary_index
+  autocmd!
+  autocmd BufEnter diary.md call <SID>Fix_auto_diary_index()
+augroup END

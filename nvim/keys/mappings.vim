@@ -161,6 +161,10 @@ inoremap jk <Esc>
     xnoremap <leader>ld :'<,'> sort u<cr>
     xnoremap <leader>lD :'<,'> %sort! u<cr>
     xnoremap <leader>lS :'<,'> %sort! <cr>
-
-    nnoremap <D-1> :BufferGoto 1<CR>
+" Tue Mar 28 23:02:27 2023
+" :echo strftime("%c")		   Sun Apr 27 11:49:23 1997
+" :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25
+" :echo strftime("%y%m%d %T")	   970427 11:53:55
+" :echo strftime("%H:%M")	   11:55
+    nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI#<Esc>o
 

@@ -8,15 +8,9 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
      
-  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
-  " Plug 'tweekmonster/startuptime.vim',
-  " Plug 'phaazon/hop.nvim'
-  " Plug 'hrsh7th/cmp-path'
-  " Plug 'nvim-treesitter/nvim-treesitter', 
-  Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
   Plug 'stevearc/dressing.nvim'
   Plug 'monaqa/dial.nvim'
-  Plug 'ThePrimeagen/harpoon'
   Plug 'kkharji/sqlite.lua'
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
   Plug 'lukas-reineke/indent-blankline.nvim'              "show context
@@ -33,11 +27,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'SirVer/ultisnips',
   Plug 'jessarcher/vim-heritage',
-  " Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
   Plug 'gruvbox-community/gruvbox',                       "theme
   Plug 'mhartington/oceanic-next'                         "theme
   Plug 'sainnhe/everforest'                               "theme
-  " Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
   Plug 'junegunn/fzf', {'do': { -> fzf#install() } }      " FZF
   Plug 'junegunn/fzf.vim'                                 " FZF
   Plug 'vimwiki/vimwiki'                                  " wiki
@@ -49,7 +41,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'unblevable/quick-scope'                           " F and f highlight
   Plug 'kyazdani42/nvim-web-devicons',                    " telescope devicons
   Plug 'svermeulen/vim-subversive'                        " Substitution
-  " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
   Plug 'RRethy/nvim-base16'                     
   Plug 'folke/which-key.nvim'
   Plug 'mrjones2014/legendary.nvim'
@@ -76,6 +67,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'folke/todo-comments.nvim'
   Plug 'sindrets/diffview.nvim'
+  Plug 'junegunn/limelight.vim'
+  " Plug 'tweekmonster/startuptime.vim',
+  " Plug 'phaazon/hop.nvim'
+  " Plug 'hrsh7th/cmp-path'
+  " Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
+  " Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
+  " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
+  " Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
     call plug#end()
 
 
@@ -84,3 +83,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   lua require('Comment').setup()
   lua require("mason").setup()
   
+

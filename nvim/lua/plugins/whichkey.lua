@@ -149,9 +149,8 @@ wk.register({
     }
   },
   -- u = {},
-  -- i = {
-  --   name = "import", -- optional group name
-  -- },
+  
+  i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/#TODO<CR>k:Limelight<CR>:let @/ = ''<cr>o", "today"},
   o = {
     name = "Lines", -- optional group name
     o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 
@@ -191,6 +190,7 @@ wk.register({
     r = {  "Lsp Ref"}, -- telescope.vim
   },
   -- h = {},
+  -- j = {},
   J = {
     name = "jss", -- optional group name
     m = { "makestyle ➜ makestyle + theme"}, 
@@ -220,12 +220,12 @@ wk.register({
     d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"}, 
   },
 
-  -- z = {"Devdocs"},
-  x = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Harpoon add file"}, 
+  -- z = {},
+  -- x = {},
 
   c = {
     name = "Copy", -- optional group name
-    c= {":CccConvert<CR>:CccConvert<CR>"},
+    c= {":CccConvert<CR>:CccConvert<CR>", "hex to hsl"},
     C = {":CccPick<CR>", "colorPicker"},
     d = { ":cd %:p:h<CR>", "moves to the current directory"}, 
     p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"}, 
