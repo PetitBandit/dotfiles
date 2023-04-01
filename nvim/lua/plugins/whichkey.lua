@@ -150,7 +150,7 @@ wk.register({
   },
   -- u = {},
   
-  i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/#TODO<CR>k:Limelight<CR>:let @/ = ''<cr>o", "today"},
+  i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},
   o = {
     name = "Lines", -- optional group name
     o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 

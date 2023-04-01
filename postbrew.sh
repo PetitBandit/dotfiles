@@ -32,4 +32,6 @@ git config --global user.name "Raphael HEBERT"
 ssh-keygen
 ssh-add
 
-nvm install 14
+nvm install 18
+nvm alias default v18.15.0
+npm install --global yarn

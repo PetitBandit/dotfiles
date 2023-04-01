@@ -8,3 +8,13 @@ if has('mac')
 elseif has('unix')
   let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/terminus', 'syntax':'markdown', 'ext':'.md'}]
 endif
+
+function! s:Fix_auto_diary_index()
+  VimwikiDiaryGenerateLinks 
+  write
+endfunction
+
+augroup vimwiki_fix_auto_diary_index
+  autocmd!
+  autocmd BufEnter diary.md call <SID>Fix_auto_diary_index()
+augroup END

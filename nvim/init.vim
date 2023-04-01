@@ -41,6 +41,7 @@ lua require('plugins')
 source $HOME/.config/nvim/functions/isolatebrackets.vim
 source $HOME/.config/nvim/functions/openandsearch.vim
 source $HOME/.config/nvim/functions/indentfile.vim
+source $HOME/.config/nvim/functions/bookmark.vim
 
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/temporaryMappings.vim
@@ -51,12 +52,3 @@ elseif has('unix')
     source $HOME/.config/nvim/general/linux.vim
 endif
 
-function! s:Fix_auto_diary_index()
-  VimwikiDiaryGenerateLinks 
-  write
-endfunction
-
-augroup vimwiki_fix_auto_diary_index
-  autocmd!
-  autocmd BufEnter diary.md call <SID>Fix_auto_diary_index()
-augroup END
