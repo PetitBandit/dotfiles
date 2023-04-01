@@ -23,6 +23,7 @@ brew install stow
 brew install ffmpeg
 brew install youtube-dl
 brew install tldr
+brew install gum
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 python3 -m pip install --user --upgrade pynvim
