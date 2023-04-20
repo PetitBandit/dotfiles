@@ -2,32 +2,32 @@
 lua << EOF 
 -- Set barbar's options
 require'barbar'.setup {
-  -- Enable/disable animations
+
   animation = false,
 
-  -- Enable/disable auto-hiding the tab bar when there is a single buffer
+  -- -- Enable/disable auto-hiding the tab bar when there is a single buffer
   auto_hide = false,
-
-  -- Enable/disable current/total tabpages indicator (top right corner)
+ 
+  -- -- Enable/disable current/total tabpages indicator (top right corner)
   tabpages = true,
-
-  -- Enables/disable clickable tabs
-  --  - left-click: go to buffer
-  --  - middle-click: delete buffer
+  
+  -- -- Enables/disable clickable tabs
+  -- --  - left-click: go to buffer
+  -- --  - middle-click: delete buffer
   clickable = false,
-
-  -- Excludes buffers from the tabline
-  -- exclude_ft = {'javascript'},
-  exclude_name = {'package.json'},
-
-  -- A buffer to this direction will be focused (if it exists) when closing the current buffer.
-  -- Valid options are 'left' (the default) and 'right'
+  --
+  -- -- Excludes buffers from the tabline
+  -- -- exclude_ft = {'javascript'},
+  -- exclude_name = {'package.json'},
+  --
+  -- -- A buffer to this direction will be focused (if it exists) when closing the current buffer.
+  -- -- Valid options are 'left' (the default) and 'right'
   focus_on_close = 'left',
-
-  -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
-  hide = {extensions = true, inactive = true},
-
-  -- Disable highlighting alternate buffers
+  --
+  -- -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
+  hide = {extensions = true},
+  --
+  -- -- Disable highlighting alternate buffers
   highlight_alternate = true,
 
   -- Disable highlighting file icons in inactive buffers
@@ -38,7 +38,7 @@ require'barbar'.setup {
 
   icons = {
     -- Configure the base icons on the bufferline.
-    buffer_index = false,
+    buffer_index = true,
     buffer_number = false,
     -- Enables / disables diagnostic symbols
     diagnostics = {
@@ -65,7 +65,7 @@ require'barbar'.setup {
 
     -- Configure the icons on the bufferline based on the visibility of a buffer.
     -- Supports all the base icon options, plus `modified` and `pinned`.
-    alternate = {filetype = {enabled = false}},
+    alternate = {filetype = {enabled = true}},
     current = {buffer_index = true},
     -- inactive = {button = '×'},
     visible = {modified = {buffer_number = false}},

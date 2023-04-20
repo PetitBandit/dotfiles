@@ -166,5 +166,5 @@ inoremap jk <Esc>
 " :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25
 " :echo strftime("%y%m%d %T")	   970427 11:53:55
 " :echo strftime("%H:%M")	   11:55
-    nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI#<Esc>o
+    nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI### <Esc>o
 
