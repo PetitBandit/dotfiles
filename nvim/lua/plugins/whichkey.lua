@@ -155,7 +155,7 @@ wk.register({
     name = "Lines", -- optional group name
     o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 
   },
-  p = {"<cmd>lua vim.lsp.buf.format({ async = false })<CR", "format"},
+  p = {"<cmd>lua vim.lsp.buf.format({ async = false })<CR>", "format"},
   a = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "code actions "},
   s = {
     name = "Substitute or source", -- optional group name
@@ -210,9 +210,9 @@ wk.register({
         }, 
   },
 
-  k = {"Devdocs"},
+  K = {"Devdocs"},
 
-  l = {
+  L = {
     name = "LSP", -- optional group name
     a = { "actions" }, 
     r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"}, 

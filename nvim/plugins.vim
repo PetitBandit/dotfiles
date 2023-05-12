@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
   Plug 'stevearc/dressing.nvim'
+  Plug 'folke/trouble.nvim'
   Plug 'monaqa/dial.nvim'
   Plug 'kkharji/sqlite.lua'
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
@@ -82,5 +83,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "
   lua require('Comment').setup()
   lua require("mason").setup()
-  
+
+"   lua << EOF
+"   require("trouble").setup {
+"     -- your configuration comes here
+"     -- or leave it empty to use the default settings
+"     -- refer to the configuration section below
+"   }
+" EOF
 
