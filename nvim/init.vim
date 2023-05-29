@@ -32,6 +32,8 @@ source $HOME/.config/nvim/plug-config/leap-spooky.vim
 source $HOME/.config/nvim/plug-config/legendary.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
 source $HOME/.config/nvim/plug-config/dial.vim
+source $HOME/.config/nvim/plug-config/null.vim
+source $HOME/.config/nvim/plug-config/trouble.vim
 " source $HOME/.config/nvim/plug-config/biscuits.vim
 " source $HOME/.config/nvim/plug-config/autopair.vim
 " source $HOME/.config/nvim/plug-config/hop.vim
@@ -51,4 +53,5 @@ if has('mac')
 elseif has('unix')
     source $HOME/.config/nvim/general/linux.vim
 endif
-
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'MunifTanjim/prettier.nvim'

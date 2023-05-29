@@ -106,7 +106,19 @@ wk.register({
     d = { "<Plug>VimwikiMakeDiaryNote", "Wiki Diary TODAY"}, 
     i = {  "Wiki diary index"}, 
   },
-  e = {":NvimTreeToggle<CR>", "File Browser"},
+  E = {":NvimTreeToggle<CR>", "File Browser"},
+  e = {
+    name = "error", -- optional group name
+    e = { ":TodoTelescope <cr>", "find all trouble"}, 
+    b = { ":TodoTelescope keywords=BUG<cr>", "Find BUG"}, 
+    f = { ":TodoTelescope keywords=FIX<cr>", "Find FIX"}, 
+    h = { ":TodoTelescope keywords=HACK<cr>", "Find HACK"}, 
+    n = { ":TodoTelescope keywords=NOTE<cr>", "Find NOTE"}, 
+    p = { ":TodoTelescope keywords=PERF<cr>", "Find PERF"}, 
+    t = { ":TodoTelescope keywords=TODO<cr>", "Find TODO"}, 
+    w = { ":TodoTelescope keywords=WARN<cr>", "Find WARN"}, 
+  },
+
   r = {
     name = "Replace", -- optional group name
     f = { "filename" }
@@ -155,7 +167,7 @@ wk.register({
     name = "Lines", -- optional group name
     o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 
   },
-  p = {"<cmd>lua vim.lsp.buf.format({ async = false })<CR>", "format"},
+  p = {":Prettier<cr>", "format"},
   a = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "code actions "},
   s = {
     name = "Substitute or source", -- optional group name

@@ -10,6 +10,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
      
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update 
   Plug 'stevearc/dressing.nvim'
+  Plug 'jose-elias-alvarez/null-ls.nvim'
+  Plug 'MunifTanjim/prettier.nvim'
   Plug 'folke/trouble.nvim'
   Plug 'monaqa/dial.nvim'
   Plug 'kkharji/sqlite.lua'
@@ -69,10 +71,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/todo-comments.nvim'
   Plug 'sindrets/diffview.nvim'
   Plug 'junegunn/limelight.vim'
-  " Plug 'tweekmonster/startuptime.vim',
-  " Plug 'phaazon/hop.nvim'
   " Plug 'hrsh7th/cmp-path'
-  " Plug 'nvim-treesitter/nvim-treesitter', {'commit': '9bfaf62e42bdcd042df1230e9188487e62a112c0'}
   " Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
   " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
   " Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
@@ -84,11 +83,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   lua require('Comment').setup()
   lua require("mason").setup()
 
-"   lua << EOF
-"   require("trouble").setup {
-"     -- your configuration comes here
-"     -- or leave it empty to use the default settings
-"     -- refer to the configuration section below
-"   }
-" EOF
+
 

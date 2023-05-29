@@ -20,7 +20,7 @@ lua << EOF
 local g = vim.g
 local tree_cb = require "nvim-tree.config".nvim_tree_callback
 local list = {
-{ key = "?",     cb = tree_cb("toggle_help") },
+  { key = "?",     cb = tree_cb("toggle_help") },
   { key = {"l"}, cb = tree_cb("edit") },
   { key = {"h"}, cb = tree_cb("close_node") },
   { key = "y",   cb = tree_cb("copy") },
@@ -110,13 +110,15 @@ require'nvim-tree'.setup {
     side = 'left',
     -- if true the tree will resize itself after opening a file
     -- auto_resize = false,
+
     mappings = {
       -- custom only false will merge the list with the default mappings
       -- if true, it will only use your list to set the mappings
       custom_only = false,
-      -- list of mappings to set on the tree manually
       list = list
+      -- list of mappings to set on the tree manually
     }
+
   },
 filters = { 
   dotfiles = false,

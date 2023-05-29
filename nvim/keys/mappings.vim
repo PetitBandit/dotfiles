@@ -168,3 +168,4 @@ inoremap jk <Esc>
 " :echo strftime("%H:%M")	   11:55
     nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI### <Esc>mto
 
+    nnoremap <C--> :LegendaryScratchToggle<CR>
