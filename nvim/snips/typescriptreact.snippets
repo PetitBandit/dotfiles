@@ -35,7 +35,7 @@ endsnippet
 
 snippet seltest "add selector" b
 '&$1':{
-${2:backgroundColor: 'tomato', //WARN: petit bandit <-- remove this }
+${2:backgroundColor: 'tomato', //FIX: petit bandit <-- remove this }
 },
 endsnippet
 
@@ -421,12 +421,12 @@ color: theme.palette.${1:color}.${2:variant},
 endsnippet
 
 snippet childrendot "childrendot"
-border: '1px dotted red', //WARN: petit bandit <-- remove this
-'& > *': {border: '1px dotted blue'},//WARN: petit bandit <-- remove this
+border: '1px dotted red', //FIX: petit bandit <-- remove this
+'& > *': {border: '1px dotted blue'},//FIX: petit bandit <-- remove this
 endsnippet
 
 snippet borderdot "borderdot" 
-border: '1px dotted blue',//WARN: petit bandit <-- remove this
+border: '1px dotted blue',//FIX: petit bandit <-- remove this
 endsnippet
 # END BORDER }}}
 
@@ -457,11 +457,11 @@ theme.palette.common.${1|white,body,inputPlaceholder,black|}
 endsnippet
 
 snippet bgct "tomato for the win"
-backgroundColor: 'tomato', //WARN: petit bandit <-- remove this
+backgroundColor: 'tomato', //FIX: petit bandit <-- remove this
 endsnippet
 
 snippet bgcl "lavender for the win"
-backgroundColor: 'lavender', //WARN: petit bandit <-- remove this
+backgroundColor: 'lavender', //FIX: petit bandit <-- remove this
 endsnippet
 
 snippet bgc "background color"
