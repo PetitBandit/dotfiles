@@ -67,10 +67,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'quangnguyen30192/cmp-nvim-ultisnips'
   Plug 'onsails/lspkind-nvim'
   Plug 'tpope/vim-fugitive'
-  Plug 'kyazdani42/nvim-tree.lua'
   Plug 'folke/todo-comments.nvim'
   Plug 'sindrets/diffview.nvim'
   Plug 'junegunn/limelight.vim'
+  " Plug 'kyazdani42/nvim-tree.lua'
   " Plug 'hrsh7th/cmp-path'
   " Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
   " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 

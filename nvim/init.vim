@@ -19,7 +19,6 @@ source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/subversive.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/blankline.vim
-source $HOME/.config/nvim/plug-config/nvimtree.vim
 source $HOME/.config/nvim/plug-config/autotag.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
@@ -35,9 +34,8 @@ source $HOME/.config/nvim/plug-config/dial.vim
 source $HOME/.config/nvim/plug-config/null.vim
 source $HOME/.config/nvim/plug-config/trouble.vim
 " source $HOME/.config/nvim/plug-config/biscuits.vim
+" source $HOME/.config/nvim/plug-config/nvimtree.vim
 " source $HOME/.config/nvim/plug-config/autopair.vim
-" source $HOME/.config/nvim/plug-config/hop.vim
-" source $HOME/.config/nvim/plug-config/harpoon.vim 
 lua require('plugins')
 
 source $HOME/.config/nvim/functions/isolatebrackets.vim
@@ -53,5 +51,3 @@ if has('mac')
 elseif has('unix')
     source $HOME/.config/nvim/general/linux.vim
 endif
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'MunifTanjim/prettier.nvim'

@@ -20,7 +20,7 @@ lua <<EOF
       start_in_insert = true,
 
       -- These are passed to nvim_open_win
-      anchor = "SW",
+      -- anchor = "SW",
       border = "rounded",
       -- 'editor' and 'win' will default to being centered
       relative = "cursor",
@@ -200,6 +200,7 @@ require('legendary').setup({
     -- Automatically add which-key tables to legendary
     -- see ./doc/WHICH_KEY.md for more details
     auto_register = true,
+    use_groups = false,
     -- you can put which-key.nvim tables here,
     -- or alternatively have them auto-register,
     -- see ./doc/WHICH_KEY.md
