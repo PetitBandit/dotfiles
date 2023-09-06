@@ -33,7 +33,7 @@ source $HOME/.config/nvim/plug-config/whichkeylua.vim
 source $HOME/.config/nvim/plug-config/dial.vim
 source $HOME/.config/nvim/plug-config/null.vim
 source $HOME/.config/nvim/plug-config/trouble.vim
-" source $HOME/.config/nvim/plug-config/biscuits.vim
+source $HOME/.config/nvim/plug-config/biscuits.vim
 " source $HOME/.config/nvim/plug-config/nvimtree.vim
 " source $HOME/.config/nvim/plug-config/autopair.vim
 lua require('plugins')

@@ -3,7 +3,6 @@
 "-------------------------------------------------------------------------- 
 "Ctrl + b
 "Ctrl + e
-"Ctrl + p
       " nnoremap <C-j> g,
       " nnoremap <C-k> g;
       " nnoremap <C-l> :cnext<cr>
@@ -150,7 +149,6 @@ inoremap jk <Esc>
     "import clsx 
    nnoremap <leader>jic mw?import<cr>oimport clsx from "clsx";`w
     "add nothing --> makestyle 
-    nnoremap <leader>jim mpgg15j?import<cr>oimport { makeStyles } from '@material-ui/core/styles';oconst useStyles = makeStyles(theme => ({REMOVE: { backgroundColor: 'tomato', }}));/constoconst classes = useStyles();mu/div<cr>wi className={classes.REMOVE} mx
 
 
 "--------------------------------------------------------------------------

@@ -70,10 +70,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/todo-comments.nvim'
   Plug 'sindrets/diffview.nvim'
   Plug 'junegunn/limelight.vim'
+  Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
+  " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
   " Plug 'kyazdani42/nvim-tree.lua'
   " Plug 'hrsh7th/cmp-path'
-  " Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
-  " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors 
   " Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
     call plug#end()
 
@@ -82,6 +82,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "
   lua require('Comment').setup()
   lua require("mason").setup()
-
 
 

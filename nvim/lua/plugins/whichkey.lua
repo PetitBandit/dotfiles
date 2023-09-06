@@ -202,8 +202,7 @@ wk.register({
     r = {  "Lsp Ref"}, -- telescope.vim
   },
   -- h = {},
-  -- j = {},
-  J = {
+  j= {
     name = "jss", -- optional group name
     m = { "makestyle ➜ makestyle + theme"}, 
     c = { "div ➜ div className=''" }, 
