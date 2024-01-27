@@ -56,8 +56,9 @@ let g:startify_relative_path = 1
 " ▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █
 " █▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █
 "     █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█
+" The ASCII art read " الْعِلْمُ قَبْلَ الْقَوْلِ وَالْعَمَلِ" means "It is essential to know a thing first before saying or acting upon it."
 
-let g:startify_custom_header = [ 
+let g:startify_custom_header = [
       \'                  ▄ ▄ ',
       \'              ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄',
       \'              █ ▄ █▄█ ▄▄▄ █ █▄█ █ █' ,
@@ -67,11 +68,11 @@ let g:startify_custom_header = [
       \'         █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █',
       \'       █▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █',
       \'           █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█',
-      \'                                                      ',  
+      \'                                                      ',
       \]
 
-" let g:startify_custom_header = [ 
-"       \'                                                      ',  
+" let g:startify_custom_header = [
+"       \'                                                      ',
 "       \'    ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗',
 "       \'    ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║',
 "       \'    ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║',

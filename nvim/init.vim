@@ -26,14 +26,15 @@ source $HOME/.config/nvim/plug-config/yoink.vim
 source $HOME/.config/nvim/plug-config/todo-comment.vim
 source $HOME/.config/nvim/plug-config/lion.vim
 source $HOME/.config/nvim/plug-config/gitblame.vim
-source $HOME/.config/nvim/plug-config/leap.vim
-source $HOME/.config/nvim/plug-config/leap-spooky.vim
+" source $HOME/.config/nvim/plug-config/leap.vim
+" source $HOME/.config/nvim/plug-config/leap-spooky.vim
 source $HOME/.config/nvim/plug-config/legendary.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
 source $HOME/.config/nvim/plug-config/dial.vim
-source $HOME/.config/nvim/plug-config/null.vim
 source $HOME/.config/nvim/plug-config/trouble.vim
+source $HOME/.config/nvim/plug-config/flash.vim
 source $HOME/.config/nvim/plug-config/biscuits.vim
+" source $HOME/.config/nvim/plug-config/null.vim
 " source $HOME/.config/nvim/plug-config/nvimtree.vim
 " source $HOME/.config/nvim/plug-config/autopair.vim
 lua require('plugins')

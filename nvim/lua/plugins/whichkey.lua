@@ -72,7 +72,7 @@ local wk = require("which-key")
     v = { "j", "k" },
   },
 
-} 
+}
 
 
 
@@ -95,79 +95,84 @@ wk.register({
 
   q = {
     name = "quickfix list", -- optional group name
-    q = { "<Plug>(qf_qf_toggle)|", "toggle QList"}, 
-    j = { ":cnext<cr>", "next Qlist"}, 
-    k = { ":cprev<cr>", "previous Qlist"}, 
+    q = { "<Plug>(qf_qf_toggle)|", "toggle QList"},
+    j = { ":cnext<cr>", "next Qlist"},
+    k = { ":cprev<cr>", "previous Qlist"},
   },
   w = {
     name = "wiki", -- optional group name
-    f = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"}, 
-    w = { "<Plug>VimwikiTabIndex", "Wiki Terminus Index"}, 
-    d = { "<Plug>VimwikiMakeDiaryNote", "Wiki Diary TODAY"}, 
-    i = {  "Wiki diary index"}, 
+    f = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"},
+    w = { "<Plug>VimwikiTabIndex", "Wiki Terminus Index"},
+    d = { "<Plug>VimwikiMakeDiaryNote", "Wiki Diary TODAY"},
+    i = {  "Wiki diary index"},
   },
-  E = {":NvimTreeToggle<CR>", "File Browser"},
+  -- E = {":NvimTreeToggle<CR>", "File Browser"},
+  E = {function() require("flash").treesitter() end, "File Browser"},
+  F = {function() require("flash").treesitter_search() end, "File Browser"},
+
   e = {
     name = "error", -- optional group name
-    e = { ":TodoTelescope <cr>", "find all trouble"}, 
-    b = { ":TodoTelescope keywords=BUG<cr>", "Find BUG"}, 
-    f = { ":TodoTelescope keywords=FIX<cr>", "Find FIX"}, 
-    h = { ":TodoTelescope keywords=HACK<cr>", "Find HACK"}, 
-    n = { ":TodoTelescope keywords=NOTE<cr>", "Find NOTE"}, 
-    p = { ":TodoTelescope keywords=PERF<cr>", "Find PERF"}, 
-    t = { ":TodoTelescope keywords=TODO<cr>", "Find TODO"}, 
-    w = { ":TodoTelescope keywords=WARN<cr>", "Find WARN"}, 
+    e = { ":TodoTelescope <cr>", "find all trouble"},
+    b = { ":TodoTelescope keywords=BUG<cr>", "Find BUG"},
+    f = { ":TodoTelescope keywords=FIX<cr>", "Find FIX"},
+    h = { ":TodoTelescope keywords=HACK<cr>", "Find HACK"},
+    n = { ":TodoTelescope keywords=NOTE<cr>", "Find NOTE"},
+    p = { ":TodoTelescope keywords=PERF<cr>", "Find PERF"},
+    t = { ":TodoTelescope keywords=TODO<cr>", "Find TODO"},
+    w = { ":TodoTelescope keywords=WARN<cr>", "Find WARN"},
   },
 
   r = {
     name = "Replace", -- optional group name
     f = { "filename" }
   },
+
   t = {
     name = "Text", -- optional group name
-    f = { ":Rg<cr>", "Fzf Text"}, 
-    o = { 
-      o = { ":TodoQuickFix<cr>", "FIND TODO"}, 
-      d = { "OTODO::Commentary<cr>A", "create Todo"}, 
-      f = { "OFIX::Commentary<cr>A", "create Fixme"}, 
-      b = { "OBUG::Commentary<cr>A", "create Bug"}, 
-      n = { "ONOTE::Commentary<cr>A", "create Note"}, 
-      p = { "OPERF::Commentary<cr>A", "create Perf"}, 
-      h = { "OHACK::Commentary<cr>A", "create Hack"}, 
-      w = { "OWARNING::Commentary<cr>A", "create Warning"}, 
+    f = { ":Rg<cr>", "Fzf Text"},
+    o = {
+      -- o = { ":TodoQuickFix<cr>", "FIND TODO"},
+      -- d = { "OTODO::Commentary<cr>A", "create Todo"},
+      -- f = { "OFIX::Commentary<cr>A", "create Fixme"},
+      -- b = { "OBUG::Commentary<cr>A", "create Bug"},
+      -- n = { "ONOTE::Commentary<cr>A", "create Note"},
+      -- p = { "OPERF::Commentary<cr>A", "create Perf"},
+      -- h = { "OHACK::Commentary<cr>A", "create Hack"},
+      -- w = { "OWARNING::Commentary<cr>A", "create Warning"},
     },
-    t = { ":Telescope live_grep<cr>", "Find Text"}, 
-    T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"}, 
-    w = { ":Telescope grep_string<cr>", "Find word under cursor"}, 
+    t = { ":Telescope live_grep<cr>", "Find Text"},
+    T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor"},
+    w = { ":Telescope grep_string<cr>", "Find word under cursor"},
   },
+
   T = {":Telescope<cr>", "Telescope"},
 
   y = {
     name = "config+", -- optional group name
-    c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"}, 
-    h = { ":CccHighlighterToggle<CR>", "highlight colors"}, 
-    o = { 
-      name = "options", 
+    c = { "<cmd>lua require('plugins.telescope').search_color()<cr>", "colorscheme"},
+    h = { ":CccHighlighterToggle<CR>", "highlight colors"},
+    o = {
+      name = "options",
          b = { "background" }, -- just a label. don't create any mapping
-         h = { "hard times" }, 
-         r = { "relative number" },
-         w = { "wrap" }, 
+         h = { "hard times" },
+         r = { "relative number lines toggle" },
+         w = { "wrap" },
     },
     p = {
       name = "plugins",
-         i = { ":PlugInstall<cr>", "Install plugins"}, 
-         c = { ":PlugClean<cr>", "clean plugins"}, 
-         u = { ":PlugUpdate<cr>", "update plugins"}, 
+         i = { ":PlugInstall<cr>", "Install plugins"},
+         c = { ":PlugClean<cr>", "clean plugins"},
+         u = { ":PlugUpdate<cr>", "update plugins"},
     }
   },
   -- u = {},
-  
+
   i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},
   o = {
     name = "Lines", -- optional group name
-    o = { ":call IsolateBracket()<cr>", "add a lign before {"}, 
+    o = { ":call IsolateBracket()<cr>", "add a lign before {"},
   },
-  p = {":Prettier<cr>", "format"},
+  p = {},
   a = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "code actions "},
   s = {
     name = "Substitute or source", -- optional group name
@@ -177,58 +182,58 @@ wk.register({
 
   d = {
     name = "delete", -- optional group name
-    m = { "marks in buffer"}, 
-    D = { "ggVGd", "delete content buffer"}, 
+    m = { "marks in buffer"},
+    D = { "ggVGd", "delete content buffer"},
   },
 
   f = {
     name = "File", -- optional group name
-    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"}, 
-    h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, 
-    p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"}, 
-    i = { "<cmd>lua require('plugins.telescope').search_proIcons()<CR>", "search pro icons maiia"}, 
-    w = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"}, 
-    r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"}, 
+    d = { "<cmd>lua require('plugins.telescope').search_docfile()<cr>", "docfiles"},
+    h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"},
+    p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "search pro maiia"},
+    i = { "<cmd>lua require('plugins.telescope').search_proIcons()<CR>", "search pro icons maiia"},
+    w = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"},
+    r = { "<cmd>lua require('plugins.telescope').search_dotfiles()<CR>", "dotfiles"},
     f = {"<cmd>lua require('plugins.telescope').search_gitfiles()<cr>", "searchfiles"},
-    -- w = { ":NV!<cr>", "Find Wiki"}, 
+    -- w = { ":NV!<cr>", "Find Wiki"},
   },
-  F = {":Telescope resume<CR>", "Telescope repeat"},
+  -- F = {":Telescope resume<CR>", "Telescope repeat"},
   g = {
     name = "GIT & Go", -- optional group name
-    t = { ":call OpenAndSearch()<CR> ", "Theme"}, 
-    b = { ":GitBlameToggle<CR>", "doc blame"}, 
-    B = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"}, 
-    c = { ":Git blame<CR>", "full doc blame"}, 
+    t = { ":call OpenAndSearch()<CR> ", "Theme"},
+    b = { ":GitBlameToggle<CR>", "doc blame"},
+    B = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches"},
+    c = { ":Git blame<CR>", "full doc blame"},
     r = {  "Lsp Ref"}, -- telescope.vim
   },
   -- h = {},
   j= {
     name = "jss", -- optional group name
-    m = { "makestyle ➜ makestyle + theme"}, 
-    c = { "div ➜ div className=''" }, 
-    C = { "div ➜ div className={classes." }, 
-    e = {"class ➜ '& .class'" }, 
-    l = { "className='X' ➜ className={clsx('X'" }, 
-    L = { "className={X} ➜ className={clsx(X," }, 
-    o = { "div ➜ div className={clsx(" }, 
-    S = { "classes.X ➜ 'X'" }, 
+    m = { "makestyle ➜ makestyle + theme"},
+    c = { "div ➜ div className=''" },
+    C = { "div ➜ div className={classes." },
+    e = {"class ➜ '& .class'" },
+    l = { "className='X' ➜ className={clsx('X'" },
+    L = { "className={X} ➜ className={clsx(X," },
+    o = { "div ➜ div className={clsx(" },
+    S = { "classes.X ➜ 'X'" },
     s = { "'X' ➜ classes.X" },
     t = { "makestyle ➜ makestyle(theme)" },
-    i = { 
+    i = {
       name = "imports", -- optional group name
       m = { "makestyle" },
       c = {"clsx"}
-        }, 
+        },
   },
 
   K = {"Devdocs"},
 
   L = {
     name = "LSP", -- optional group name
-    a = { "actions" }, 
-    r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"}, 
-    n = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", "References"}, 
-    d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"}, 
+    a = { "actions" },
+    r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"},
+    n = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", "References"},
+    d = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostic Doc"},
   },
 
   -- z = {},
@@ -238,8 +243,8 @@ wk.register({
     name = "Copy", -- optional group name
     c= {":CccConvert<CR>:CccConvert<CR>", "hex to hsl"},
     C = {":CccPick<CR>", "colorPicker"},
-    d = { ":cd %:p:h<CR>", "moves to the current directory"}, 
-    p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"}, 
+    d = { ":cd %:p:h<CR>", "moves to the current directory"},
+    p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"},
   },
 
   v = {":vsplit<cr><C-w><C-w>", "vsplit"},
@@ -252,9 +257,3 @@ wk.register({
   M = {"<cmd>lua require('telescope.builtin').marks()<cr>", "marks"},
 
 }, { prefix = "<leader>" })
-
-
-
-
-
-

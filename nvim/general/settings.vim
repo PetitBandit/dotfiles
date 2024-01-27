@@ -89,6 +89,27 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 set synmaxcol=120
 let g:vimsyn_embed = 'lPr'
 
+function FileClean()
+    let save_cursor = getpos('.')
+    " Remove any empty line at the end of the file, except one.
+    silent! %s#\($\n\s*\)\+\%$##
+    " Remove any trailing whitespace
+    silent! %s#\s\+$##
+    call setpos('.', save_cursor)
+endfunction
+
+autocmd BufWritePre * call FileClean()
+
+" In the case of git diff, context line being empty should have 1 trailing
+" whitespace.
+function FileCleanDiff()
+    let save_cursor = getpos('.')
+    silent: %s/^$/ /e
+    call setpos('.', save_cursor)
+endfunction
+
+autocmd BufWritePre *.diff call FileCleanDiff()
+
 " ## Program enhancements {{{
 set nomodeline
 set pyxversion=3

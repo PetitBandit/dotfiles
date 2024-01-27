@@ -1,10 +1,16 @@
 
 lua <<EOF
- require("indent_blankline").setup {
+
+ require("ibl").setup {
     -- for example, context is off by default, use this to turn it on
-    show_current_context = true,
-    show_current_context_start = true,
+    exclude = {
+        filetypes = { "help", "startify",  "Trouble", "lazy", "neo-tree" },
+        buftypes = { "terminal" },
+      },
 }
+
+
+
 EOF
 
 let g:indent_blankline_filetype_exclude = ["startify", "help", "vimwiki", "NvimTree", "TelescopePrompt"]

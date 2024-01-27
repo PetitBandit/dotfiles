@@ -1,29 +1,29 @@
 "--------------------------------------------------------------------------
 " # Free easy mappings available
-"-------------------------------------------------------------------------- 
+"--------------------------------------------------------------------------
 "Ctrl + b
 "Ctrl + e
       " nnoremap <C-j> g,
       " nnoremap <C-k> g;
       " nnoremap <C-l> :cnext<cr>
       " nnoremap <C-h> :cp<cr>
-      " nnoremap <A-0>   
+      " nnoremap <A-0>
       " nnoremap <A-h> :cprev<cr>zz
       " nnoremap <A-l> :cnext<cr>zz
       ""navigate the QuickFixList
 
 "--------------------------------------------------------------------------
 " # Use Alt + hjkl
-"-------------------------------------------------------------------------- 
+"--------------------------------------------------------------------------
       nnoremap <A-=>   :vertical resize +20<CR>
       nnoremap <A-->   :vertical resize -20<CR>
 
-      " move line downwards 
+      " move line downwards
       nnoremap <A-j>   <Esc>:m .+1<CR>
       " move line upwards
       nnoremap <A-k>   <Esc>:m .-2<CR>
 
-" ESC 
+" ESC
 inoremap jk <Esc>
 
 
@@ -33,16 +33,16 @@ inoremap jk <Esc>
 "--------------------------------------------------------------------------
 
 
-      vnoremap < <gv " Better tabbing 
-      vnoremap > >gv " Better tabbing 
+      vnoremap < <gv " Better tabbing
+      vnoremap > >gv " Better tabbing
 
-      " undo break point 
+      " undo break point
       inoremap , ,<c-g>u
       inoremap . .<c-g>u
       inoremap ! !<c-g>u
       inoremap ? ?<c-g>u
 
-      " Jumps remap 
+      " Jumps remap
       " nnoremap <expr> k (v:count > 1 ? "m`" . v:count : '') . 'k'
       " nnoremap <expr> j (v:count > 1 ? "m`" . v:count : '') . 'j'
 
@@ -76,7 +76,7 @@ inoremap jk <Esc>
       nnoremap n nzz
       nnoremap N Nzz
 
-      " Marks 
+      " Marks
       nnoremap M m
       nnoremap m '
 
@@ -91,7 +91,7 @@ inoremap jk <Esc>
 " # LSP
 "--------------------------------------------------------------------------
 
-    
+
 " cf telescope.vim
 
 "--------------------------------------------------------------------------
@@ -111,9 +111,9 @@ inoremap jk <Esc>
 
       map <leader>rf ciw<C-R>=expand("%:t:r")<CR>
 
-    "add the filename 
+    "add the filename
     imap \fn <C-R>=expand("%:t:r")<CR>
-    
+
 
 
 "--------------------------------------------------------------------------
@@ -146,14 +146,16 @@ inoremap jk <Esc>
     "changes makestyle --> makestyle(theme ...
     nnoremap <leader>jt ?useStyles = makewwwC(theme => ({
 
-    "import clsx 
+    "import clsx
    nnoremap <leader>jic mw?import<cr>oimport clsx from "clsx";`w
-    "add nothing --> makestyle 
+    "add nothing --> makestyle
 
 
 "--------------------------------------------------------------------------
 " # sort visual
 "--------------------------------------------------------------------------
+    xnoremap <leader>o mwoOgvoo'w
+    xnoremap <leader>` li`gvoi`
 
     xnoremap <leader>ls :'<,'> sort <cr>
     xnoremap <leader>ld :'<,'> sort u<cr>
