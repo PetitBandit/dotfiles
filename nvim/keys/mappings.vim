@@ -32,6 +32,9 @@ inoremap jk <Esc>
 " # Behind the scenes
 "--------------------------------------------------------------------------
 
+" move in visual mode up and down the visual selection
+      vnoremap J :m '>+1<CR>gv=gv
+      vnoremap K :m '<-2<CR>gv=gv
 
       vnoremap < <gv " Better tabbing
       vnoremap > >gv " Better tabbing
@@ -109,7 +112,9 @@ inoremap jk <Esc>
       nnoremap cn *``cgn
       nnoremap c. /\V<C-r>"<CR>cgn<C-a><Esc>
 
+      " replace word under cursor with the filename without the extension
       map <leader>rf ciw<C-R>=expand("%:t:r")<CR>
+
 
     "add the filename
     imap \fn <C-R>=expand("%:t:r")<CR>
@@ -151,6 +156,7 @@ inoremap jk <Esc>
     "add nothing --> makestyle
 
 
+
 "--------------------------------------------------------------------------
 " # sort visual
 "--------------------------------------------------------------------------
@@ -168,4 +174,5 @@ inoremap jk <Esc>
 " :echo strftime("%H:%M")	   11:55
     nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI### <Esc>mto
 
-    nnoremap <C--> :LegendaryScratchToggle<CR>
+    nnoremap <C--> <Plug>VimwikiMakeDiaryNote
+    " i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},

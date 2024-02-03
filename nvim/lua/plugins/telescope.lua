@@ -8,8 +8,8 @@ require('telescope').setup{
         layout_config = {
           prompt_position = "top",
             -- width = 0.9,
-             width = 0.99, 
-             height = 0.99, 
+             width = 0.99,
+             height = 0.99,
 
             horizontal = {
                 width_padding = 0.04,
@@ -60,7 +60,7 @@ require('telescope').setup{
             override_file_sorter = true,     -- override the file sorter
             case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                             -- the default case_mode is "smart_case"
-          }, 
+          },
       ["ui-select"] = {
             require("telescope.themes").get_cursor {
               -- even more opts
@@ -122,7 +122,7 @@ M.search_profiles = function()
     require("telescope.builtin").find_files({
         prompt_title = "< PRO >",
         -- path_display = { shorten = 3 },
-        wrap_results = true, 
+        wrap_results = true,
         cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/",
         file_ignore_patterns = {"index.ts", "index.stories.js"},
     })
@@ -132,7 +132,7 @@ M.search_proIcons = function()
     require("telescope.builtin").find_files({
         prompt_title = "< icons >",
         -- path_display = { shorten = 3 },
-        wrap_results = true, 
+        wrap_results = true,
         cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/components/icons",
     })
 end
@@ -155,7 +155,7 @@ end
 M.search_terminus = function()
     require("telescope.builtin").live_grep({
         prompt_title = "< Terminus >",
-        cwd = "~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/",
+        cwd = "~/terminus/",
     })
 end
 

@@ -1,6 +1,6 @@
 
 function! Bookmark()
-  redir >> ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md
+  redir >> ~/terminus/index.md
   echo "- [✗] [".expand("%t")."](" expand("%:p").':'.line('.').")"
   echo " "
   redir END

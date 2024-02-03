@@ -8,12 +8,12 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-  " Plug 'jose-elias-alvarez/null-ls.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
   Plug 'stevearc/dressing.nvim'
-  Plug 'dense-analysis/ale'
+  Plug 'MunifTanjim/nui.nvim'
+  Plug 'nvim-neo-tree/neo-tree.nvim'
   Plug 'folke/trouble.nvim'
-  Plug 'folke/flash.nvim'
+  " Plug 'folke/flash.nvim'
   Plug 'folke/todo-comments.nvim'
   Plug 'monaqa/dial.nvim'
   Plug 'kkharji/sqlite.lua'
@@ -73,7 +73,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
   " Plug 'junegunn/limelight.vim'
   " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors
-  " Plug 'kyazdani42/nvim-tree.lua'
   " Plug 'hrsh7th/cmp-path'
   " Plug 'jiangmiao/auto-pairs'                             " Auto pairs for '(' '[' '{'
     call plug#end()
