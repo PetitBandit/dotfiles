@@ -1,37 +1,27 @@
 " set leader key
     let g:mapleader = "\<Space>"
   " Colors {{{
- 
-    set t_Co=256                           " Support 256 colors
-    set background=dark                     " tell vim what the background color looks like
     set termguicolors
-" colorscheme base16-gruvbox-dark-hard
-" colorscheme base16-gruvbox-dark-medium
-" colorscheme base16-gruvbox-dark-pale
-" colorscheme base16-gruvbox-dark-soft
-" colorscheme base16-gruvbox-light-hard
-" colorscheme base16-gruvbox-light-medium
-" colorscheme base16-gruvbox-light-soft
 " }}}
   " Misc {{{
   syntax enable                           " Enables syntax highlighing
   set encoding=utf-8                      " The encoding displayed
   set hidden                              " Required to keep multiple buffers open multiple buffers
   set fileencoding=utf-8                  " The encoding written to file
-  set lazyredraw                          " prevent redrawing during macro 
+  set lazyredraw                          " prevent redrawing during macro
   set clipboard=unnamedplus               " Copy paste between vim and everything else
- " }}} 
+ " }}}
 " Undo settings {{{
   set undodir=~/.config/nvim/undo
   set undolevels=10000
   set undoreload=100000
-  set undofile          
+  set undofile
 " }}}
-" Folding {{{
-      set foldmethod=marker
-      set foldenable   "enable folding  
-      "zo to open / zc to close / zM to close all
-" }}}
+" " Folding {{{
+"       set foldmethod=marker
+"       set foldenable   "enable folding
+"       "zo to open / zc to close / zM to close all
+" " }}}
 "Spaces & Tabs {{{
   set tabstop=4     " 1 indentation level = 4 spaces
   set shiftwidth=0
@@ -47,9 +37,7 @@
 " }}}
   "UI Layout {{{
   set pumheight=10                        " Makes popup menu smaller
-  set ruler              			            " Show the cursor position all the time
   set mouse=a                             " Enable your mouse
-  set title
   set cursorline                          " Enable highlighting of the current line
   set splitbelow                          " Horizontal splits will automatically be below
   set splitright                          " Vertical splits will automatically be to the right
@@ -57,15 +45,15 @@
   set number                              " turn on numbered lines
   set relativenumber                      " turn on after number
   set showtabline=2                       " Always show tabs
-  set wildmenu                            " visual autocomplete for command menu 
+  set wildmenu                            " visual autocomplete for command menu
   set showmatch                           " highlight matching {[()]}
   set matchtime=10
   set cmdheight=2                         " More space for displaying messages
   set laststatus=0                        " Always display the status line
   set signcolumn=yes
   set scrolloff=8
-  colorscheme gruvbox
-  " colorscheme gruvbox-baby
+" colorscheme base16-gruvbox-light-soft
+colorscheme base16-everforest
 " }}}
   " Searching {{{
   noremap / /\v
@@ -75,10 +63,6 @@
   set wildmode=longest,list,full
   set completeopt=menuone,noinsert,noselect
 " }}}
-  " Plugin 
-    " - CoC
-    set nobackup                            " This is recommended by coc
-    set nowritebackup                       " This is recommended by coc
 
 " set spell spelllang=en_us
 set iskeyword+=-                      	" treat dash separated words as a word text object"

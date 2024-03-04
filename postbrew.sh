@@ -2,7 +2,7 @@
 set -e
 
 cd $HOME/dotfiles
-Repo=("kitty lazygit skhd nvim zsh ")
+Repo=("kitty lazygit nvim zsh ")
 for repo in $Repo
 do
   mkdir $HOME/.config/$repo

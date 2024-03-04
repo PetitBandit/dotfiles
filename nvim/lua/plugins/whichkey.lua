@@ -245,6 +245,7 @@ wk.register({
     C = {":CccPick<CR>", "colorPicker"},
     d = { ":cd %:p:h<CR>", "moves to the current directory"},
     p = { "yap<S-}>p", "copy paragraph under cursor and paste it under"},
+    o = { "console.log(VISUAL)"},
   },
 
   v = {":vsplit<cr><C-w><C-w>", "vsplit"},

@@ -167,6 +167,7 @@ inoremap jk <Esc>
     xnoremap <leader>ld :'<,'> sort u<cr>
     xnoremap <leader>lD :'<,'> %sort! u<cr>
     xnoremap <leader>lS :'<,'> %sort! <cr>
+    xnoremap <leader>co yoconsole.log(pA);
 " Tue Mar 28 23:02:27 2023
 " :echo strftime("%c")		   Sun Apr 27 11:49:23 1997
 " :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25

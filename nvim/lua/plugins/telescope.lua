@@ -159,6 +159,21 @@ M.search_terminus = function()
     })
 end
 
+M.search_terminus = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< Terminus FileName>",
+        cwd = "~/terminus/",
+    })
+end
+
+
+
+
+
+
+
+
+
 
 
 

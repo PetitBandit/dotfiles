@@ -1,4 +1,4 @@
-#case insensitive globing 
+#case insensitive globing
 setopt NO_CASE_GLOB
 export XDG_CONFIG_HOME="${HOME}/.config"
 export EDITOR=nvim
@@ -14,7 +14,7 @@ autoload -U ${ZSH_DIR}/functions/*(:t)
 zstyle ':completion:*:cd:*' tag-order local-directories path-directories
 #
 # Menu select
-zstyle ':completion:*' menu selectse up auto completion 
+zstyle ':completion:*' menu selectse up auto completion
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
@@ -170,7 +170,7 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 SAVEHIST=5000
 HISTSIZE=2000
 # expire duplicates first
-setopt HIST_EXPIRE_DUPS_FIRST 
+setopt HIST_EXPIRE_DUPS_FIRST
 # do not store duplications
 setopt HIST_IGNORE_DUPS
 #ignore duplicates when searching
@@ -197,7 +197,7 @@ bindkey "^[[B" history-beginning-search-forward
 
 
 ## Aliases {{{
-alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs' 
+alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs'
 
 if [[ "$(uname -s)" == "Darwin" ]]
 then
@@ -207,12 +207,27 @@ then
     TERMINUS_PATH="${HOME}/Sync/Documents/obsidian/terminus/"
 fi
 
-alias tt='cd $TERMINUS_PATH && git pull origin main && git add . && git commit -m"update knowledge" && git push origin main && cd -' 
+function nvims() {
+  items=("default" "kickstart" "nouveauvim")
+  config=$(printf "%s\n" "${item[@]}" | fzf --primt="Neovim Config" --height=~50% --layout=reverse --border --exit0)
+    if [[ -z $config ]]; then
+      echo "nothing selected"
+      return 0
+    elif [[ $config == "default" ]]; then
+      config=""
+    fi
+    NVIM_APPNAME=$config nvim $@
+}
+
+alias tt='cd $TERMINUS_PATH && git pull origin main && git add . && git commit -m"update knowledge" && git push origin main && cd -'
 alias config='cd $HOME/dotfiles && nvim $(fzf)'
 alias la='ls -aG'                   # Shorcut
+alias stowu='source ~/dotfiles/stow.sh'
 alias ls='ls -G'                   # Shorcut
 alias gg='lazygit'                   # Shorcut
 alias nn='nvim'                   # Shorcut
+alias mm='NVIM_APPNAME=nouveauvim nvim'
+alias bb='NVIM_APPNAME="nvim-kickstart" nvim'
 alias gf='git fetch --all'
 alias gfd='git fetch origin develop'
 alias gp='git pull origin'                   # Shorcut
@@ -315,15 +330,15 @@ source /$HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # requires bat to work
-export MANPAGER="sh -c 'col -bx | bat -l man -p'" 
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 #Autojump {{{
 if [[ "$(uname -s)" == "Darwin" ]]
 then
     [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
-else 
+else
     source "/home/cid/.config/autojump/bin/autojump.sh"
-fi 
+fi
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
 #}}}
 
@@ -338,7 +353,7 @@ if command -v fzf &>/dev/null; then
     then
         source "/usr/local/opt/fzf/shell/key-bindings.zsh"
     else #Linux
-        source "/usr/share/fzf/key-bindings.zsh" 
+        source "/usr/share/fzf/key-bindings.zsh"
     fi
 fi
 export NVM_DIR="$HOME/.nvm"
@@ -356,7 +371,7 @@ ssh-add;
 
     # if [[ "$(uname -s)" == "Darwin" ]]
     # else #Linux
-    # fi 
+    # fi
 
 # unameOut="$(uname -s)"
 # case "${unameOut}" in

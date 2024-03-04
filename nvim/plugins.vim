@@ -70,7 +70,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'onsails/lspkind-nvim'
   Plug 'tpope/vim-fugitive'
   Plug 'sindrets/diffview.nvim'
-  Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
+  " Plug 'code-biscuits/nvim-biscuits', {'do': ':TSUpdate'}
   " Plug 'junegunn/limelight.vim'
   " Plug 'norcalli/nvim-colorizer.lua'                      " colorize colors
   " Plug 'hrsh7th/cmp-path'

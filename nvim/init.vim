@@ -2,7 +2,7 @@
 scriptencoding utf-8
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/auto.vim
+" source $HOME/.config/nvim/general/auto.vim
 source $HOME/.config/nvim/plug-config/wiki.vim
 source $HOME/.config/nvim/plug-config/devdocs.vim
 source $HOME/.config/nvim/plug-config/ultisnip.vim
@@ -31,8 +31,8 @@ source $HOME/.config/nvim/plug-config/leap-spooky.vim
 source $HOME/.config/nvim/plug-config/legendary.vim
 source $HOME/.config/nvim/plug-config/dial.vim
 source $HOME/.config/nvim/plug-config/trouble.vim
-source $HOME/.config/nvim/plug-config/biscuits.vim
 source $HOME/.config/nvim/plug-config/whichkeylua.vim
+" source $HOME/.config/nvim/plug-config/biscuits.vim
 " source $HOME/.config/nvim/plug-config/flash.vim
 " source $HOME/.config/nvim/plug-config/nvimtree.vim
 " source $HOME/.config/nvim/plug-config/autopair.vim
@@ -42,7 +42,9 @@ source $HOME/.config/nvim/plug-config/whichkeylua.vim
 source $HOME/.config/nvim/functions/isolatebrackets.vim
 source $HOME/.config/nvim/functions/openandsearch.vim
 source $HOME/.config/nvim/functions/indentfile.vim
+source $HOME/.config/nvim/functions/consolelog.vim
 source $HOME/.config/nvim/functions/bookmark.vim
+source $HOME/.config/nvim/functions/highlightOnYank.vim
 
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/temporaryMappings.vim
