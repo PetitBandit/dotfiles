@@ -167,7 +167,7 @@ wk.register({
   },
   -- u = {},
 
-  i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},
+  i = {":e ~/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>j:let @/ = ''<cr>o", "today"},
   o = {
     name = "Lines", -- optional group name
     o = { ":call IsolateBracket()<cr>", "add a lign before {"},
@@ -226,7 +226,7 @@ wk.register({
         },
   },
 
-  K = {"Devdocs"},
+  K = {"<Plug>(devdocs-under-cursor)", "Devdocs"},
 
   L = {
     name = "LSP", -- optional group name

@@ -99,3 +99,9 @@ set nomodeline
 set pyxversion=3
 let g:loaded_python_provider = 0
 " }}}
+" insert fancy signifiers with abbrevs
+iabbrev todo ·
+iabbrev done ×
+
+" select the task list and hit `gq` to sort and group by status
+set formatprg=sort\ -V

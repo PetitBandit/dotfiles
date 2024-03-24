@@ -1,7 +1,7 @@
 set -e
 
 # install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install python
 brew install ipython
@@ -24,6 +24,7 @@ brew install ffmpeg
 brew install youtube-dl
 brew install tldr
 brew install gum
+brew install atuin
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 python3 -m pip install --user --upgrade pynvim
@@ -40,7 +41,7 @@ brew install --cask anki
 brew install --cask vlc
 brew install rectangle
 
-#social 
+#social
 brew install --cask telegram
 
 #work / code related
@@ -56,7 +57,7 @@ brew install git-delta
 
 
 # https://github.com/stedolan/jq
-# Lightweight and flexible command-line JSON processor 
+# Lightweight and flexible command-line JSON processor
 brew install jq
 #--------------------------------------
 # https://github.com/koekeishiya/skhd
@@ -65,7 +66,7 @@ brew install jq
 #--------------------------------------
 
 
-##add config files to 
+##add config files to
 # git clone https://github.com/PetitBandit/dotfiles.git $HOME/dotfiles
 
 

@@ -13,15 +13,10 @@ open_mapping = [[<c-\>]],
 
 local Terminal  = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-local neovim = Terminal:new({ cmd = "nvim +VimwikiMakeDiaryNote", hidden = true })
 
 function _lazygit_toggle()
   lazygit:toggle()
 end
 
-function _neovim_toggle()
-  neovim:toggle()
-end
 
 vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>gp", "<cmd>lua _neovim_toggle()<CR>", {noremap = true, silent = true})

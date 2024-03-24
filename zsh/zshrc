@@ -187,8 +187,8 @@ setopt complete_aliases
 # Input control
 bindkey '^B' backward-word    # Ctrl + LEFT
 bindkey '^W' forward-word     # Ctrl + RIGHT
-bindkey '\e[1~' beginning-of-line  # Debut
-bindkey '\e[4~' end-of-line        # fin
+bindkey '^Q' beginning-of-line  # Debut
+bindkey '^A' end-of-line        # fin
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 # bindkey '^K' history-substring-search-up
@@ -199,25 +199,8 @@ bindkey "^[[B" history-beginning-search-forward
 ## Aliases {{{
 alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs'
 
-if [[ "$(uname -s)" == "Darwin" ]]
-then
-    TERMINUS_PATH="${HOME}/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus"
-    # TERMINUS_PATH="${HOME}/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/"
-  else #Linux
-    TERMINUS_PATH="${HOME}/Sync/Documents/obsidian/terminus/"
-fi
+    TERMINUS_PATH="${HOME}/terminus/"
 
-function nvims() {
-  items=("default" "kickstart" "nouveauvim")
-  config=$(printf "%s\n" "${item[@]}" | fzf --primt="Neovim Config" --height=~50% --layout=reverse --border --exit0)
-    if [[ -z $config ]]; then
-      echo "nothing selected"
-      return 0
-    elif [[ $config == "default" ]]; then
-      config=""
-    fi
-    NVIM_APPNAME=$config nvim $@
-}
 
 alias tt='cd $TERMINUS_PATH && git pull origin main && git add . && git commit -m"update knowledge" && git push origin main && cd -'
 alias config='cd $HOME/dotfiles && nvim $(fzf)'
@@ -231,6 +214,7 @@ alias bb='NVIM_APPNAME="nvim-kickstart" nvim'
 alias gf='git fetch --all'
 alias gfd='git fetch origin develop'
 alias gp='git pull origin'                   # Shorcut
+alias ff='nvim `fzf --preview="bat {}"`'
 alias meteo='curl http://wttr.in'
 
 # Maiia specific aliases {{{
@@ -241,6 +225,22 @@ alias ypd='cd $MAIIA_PATH; yarn pro:dev'
 alias launchpro='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:dev;'
 alias launchstory='kitty @ set-tab-title server ; kitty @ launch --type=tab --tab-title "code" --keep-focus; cd $MAIIA_PATH/packages/pro-frontend; kitty @ focus-tab -m title:server;cd $MAIIA_PATH; yarn; yarn build:common; yarn pro:storybook;'
 
+#Set week to start on Monday in cal (macOS)
+function cale() {
+  cal | awk '{
+  print " "$0;
+  getline;
+  print " Mo Tu We Th Fr Sa Su";
+  getline;
+  if (substr($0,1,2) == " 1") print "                    1 ";
+  do {
+    prevline=$0;
+    if (getline == 0) exit;
+      print " " substr(prevline,4,17) " " substr($0,1,2) " ";
+    }
+    while (1)
+    }'
+  }
 function maiiaswitch() {
     if [ $# -ge 2 ]
  then
@@ -343,19 +343,18 @@ export PATH=$PATH:$HOME/Library/Python/3.9/bin
 #}}}
 
 #FZF ** autocomplete
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
 if command -v fzf &>/dev/null; then
   # Auto-completion
   [[ $- == *i* ]] &&
     source "/usr/share/fzf/completion.zsh" 2> /dev/null
 
   # Key bindings
-    if [[ "$(uname -s)" == "Darwin" ]]
-    then
         source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-    else #Linux
-        source "/usr/share/fzf/key-bindings.zsh"
-    fi
 fi
+export FZF_COMPLETION_TRIGGER='**'
+
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
@@ -382,3 +381,4 @@ ssh-add;
 #     *)          machine="UNKNOWN:${unameOut}"
 # esac
 # echo ${machine}
+eval "$(atuin init zsh)"

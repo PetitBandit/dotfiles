@@ -153,8 +153,6 @@ inoremap jk <Esc>
 
     "import clsx
    nnoremap <leader>jic mw?import<cr>oimport clsx from "clsx";`w
-    "add nothing --> makestyle
-
 
 
 "--------------------------------------------------------------------------

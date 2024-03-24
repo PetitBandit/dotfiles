@@ -1,14 +1,7 @@
 let g:vimwiki_markdown_link_ext = 1
-let g:vimwiki_listsyms = '✗○◐●✓'
+let g:vimwiki_listsyms = ' ○◐●✓'
+let g:vimwiki_list = [{'path':'~/terminus/', 'syntax':'markdown', 'ext':'.md'}]
 
-
-
-if has('mac')
-  let g:vimwiki_list = [{'path':'~/terminus/', 'syntax':'markdown', 'ext':'.md'}]
-
-elseif has('unix')
-  let g:vimwiki_list = [{'path':'~/Sync/Documents/obsidian/terminus', 'syntax':'markdown', 'ext':'.md'}]
-endif
 
 function! s:Fix_auto_diary_index()
   VimwikiDiaryGenerateLinks

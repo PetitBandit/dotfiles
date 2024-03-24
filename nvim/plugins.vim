@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/trouble.nvim'
   " Plug 'folke/flash.nvim'
   Plug 'folke/todo-comments.nvim'
+  Plug 'smoka7/hop.nvim'
   Plug 'monaqa/dial.nvim'
   Plug 'kkharji/sqlite.lua'
   Plug 'p00f/nvim-ts-rainbow'                             " rainbow paren
@@ -58,7 +59,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'nvim-lua/plenary.nvim' "Telescope
-  Plug 'nvim-lua/popup.nvim'
+  " Plug 'nvim-lua/popup.nvim'
   Plug 'akinsho/toggleterm.nvim' "toggleterm
   Plug 'tommcdo/vim-lion'
   Plug 'neovim/nvim-lspconfig'
