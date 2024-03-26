@@ -11,7 +11,7 @@ brew install tree
 brew install httrack
 brew install node
 brew install yarn
-brew install autojump
+brew install zoxide
 brew install bat
 brew install neovim
 brew install ranger

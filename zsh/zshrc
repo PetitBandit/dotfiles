@@ -382,3 +382,4 @@ ssh-add;
 # esac
 # echo ${machine}
 eval "$(atuin init zsh)"
+eval "$(zoxide init zsh --cmd j)"
